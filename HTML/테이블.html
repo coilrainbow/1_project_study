@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <table>
+        <tr>줄
+            <td>칸<td/>
+        </tr>
+    </table> -->
+    <h3>옛날 테이블의 기초</h3>
+        <table border="1" width="100%">
+            <tr>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+            </tr>
+            <tr>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+            </tr>
+            <tr>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+            </tr>
+    </table>
+
+
+
+
+
+
+    <h3>웹표준의 접근성 테이블</h3>
+        <table border="1" width="100%">
+            <thead>
+                <tr>
+                    <th>text</th>
+                    <th>text</th>
+                    <th>text</th>
+                    <th>text</th>
+                </tr>
+            </thead>
+            <tfoot>
+                  <tr>
+                     <td>foot</td>
+                     <td>foot</td>
+                     <td>foot</td>
+                     <td>foot</td>
+                 </tr>
+            </tfoot>
+            <tbody>
+                <tr>
+                    <td>text</td>
+                    <td>text</td>
+                    <td>text</td>
+                    <td>text</td>
+                </tr>
+                <tr>
+                    <td>text</td>
+                    <td>text</td>
+                    <td>text</td>
+                    <td>text</td>
+                </tr>
+                <tr>
+                    <td>text</td>
+                    <td>text</td>
+                    <td>text</td>
+                    <td>text</td>
+                </tr>
+            </tbody>
+        </table>
+    ex>영수증을 읽어주는 스마트리더기.
+
+
+    <h3>tbody 는 필수요소 tfoot, thead 생략가능</h3>
+    <table border="1" width="100%">
+        <tbody>
+            <tr>
+                <th>text</th>
+                <td>text</td>
+                <th>text</th>
+                <td>text</td>
+            </tr>
+            <tr>
+                <th>text</th>
+                <td>text</td>
+                <th>text</th>
+                <td>text</td>
+            </tr>
+            <tr>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+<h3>caption, colgroup추가</h3>
+    <table border="1" width="100%" summary="세부설명"><!-- 써머리 필수아님 -->
+        <caption>표의제목</caption> <!-- 캡션 필수요소 -->
+            <colgroup>
+                <col width="100" />
+                <col />
+                <col width="100" />
+                <col />
+            </colgroup>
+            <tbody>
+                  <tr>
+                     <td>text</td>
+                     <td>text</td>
+                     <td>text</td>
+                     <td>text</td>
+                  </tr>
+                  <tr>
+                     <td>text</td>
+                     <td>text</td>
+                     <td>text</td>
+                     <td>text</td>
+                  </tr>
+                  <tr>
+                     <td>text</td>
+                     <td>text</td>
+                     <td>text</td>
+                     <td>text</td>
+                  </tr>
+        </tbody>
+    </table>
+
+
+<h3>셀합치기</h3>
+    <table border="1" width="100%" summary="세부설명"><!-- 써머리 필수아님 -->
+        <caption>표의제목</caption> <!-- 캡션 필수요소 -->
+            <tbody>
+              <tr>
+                 <td rowspan="3">text</td> <!-- rowspan="*" * 숫자만큼 세로로 셀을 합친다. 각각의 <tr>영역에서 숫자를 맞춰준다 -->
+                 <td>text</td>
+                 <td>text</td>
+                 <td>text</td>
+              </tr>
+              <tr>
+                 <td>text</td>
+                 <td>text</td>
+                 <td>text</td>
+              </tr>
+              <tr>
+                 <td>text</td>
+                 <td>text</td>
+                 <td>text</td>
+              </tr>
+      </tbody>
+    </table>
+
+    <table border="1" width="100%" summary="세부설명">
+        <caption>표의제목</caption>
+            <tbody>
+          <tr>
+             <td colspan="2">text</td> <!-- colspan="*" * 숫자만큼 가로로 셀을 합친다. colspan="*"이 속한 <tr>영역에서 <td>숫자를 맞춰준다. -->
+             <td>text</td>
+
+          </tr>
+          <tr>
+             <td>text</td>
+             <td>text</td>
+             <td>text</td>
+          </tr>
+          <tr>
+             <td>text</td>
+             <td>text</td>
+             <td>text</td>
+          </tr>
+      </tbody>
+    </table>
+
+
+
+
+
+    <h3>장애인을 위한 스마트리더기가 읽는 방향을 설정하는 법</h3> <!--기계가 위에서부터만 읽는다. -->
+    <table border="1" width="100%">
+        <thead>
+            <tr>
+                <th scope="row">text</th>
+                <th scope="row">text</th>
+                <th scope="row">text</th>
+                <th scope="row">text</th>
+            </tr>
+        </thead>
+        <tfoot>
+              <tr>
+                 <td>foot</td>
+                 <td>foot</td>
+                 <td>foot</td>
+                 <td>foot</td>
+             </tr>
+        </tfoot>
+        <tbody>
+          <tr>
+             <td>text</td>
+             <td>text</td>
+             <td>text</td>
+             <td>text</td>
+          </tr>
+          <tr>
+             <td>text</td>
+             <td>text</td>
+             <td>text</td>
+             <td>text</td>
+          </tr>
+          <tr>
+             <td>text</td>
+             <td>text</td>
+             <td>text</td>
+             <td>text</td>
+          </tr>
+        </tbody>
+    </table>
+    th에만 적용되는 속성이다. scope="row" 가로로 읽고, scope="col" 세로로를 넣는다. 표 모양에 맞게 넣어주어야한다.
+    <!--th는 서체에 볼드적용 후 중앙정렬. -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
