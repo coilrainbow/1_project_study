@@ -4,28 +4,34 @@
     <meta charset="UTF-8">
     <title>12_이미지와링크</title>
 </head>
-<body>
-<!-- https://pixabay.com/ko/ 무료 이미지와 비디오 사이트-->
+    <body>
 
-<img src="../images/image1.jpg" alt="민들레사진" width="287" height="" />
-<!-- <img src="상대경로(위와같은 루트를 지칭)" alt="이미지에 대한 설명 225자 이상은 오류남(리딩기가 읽어주는 영역으로 최대한 상세한 설명을 해줘야한다.)" />
-    <img src="images/image1.jpg" alt=""> 폴더명/ 들어가는 경우
-    <img src="../images/image1.jpg" alt="" /> ../ 나가는 경우
-    <img src="/images/image1.jpg" alt="민들레사진" /> 절대경로:다음시간에 설명.
-    <img src="../images/image1.jpg" alt="민들레사진" width="287" height="" /> 위드 헤이트 값 설정 가능
-        <img src="../images/image1.jpg" alt="민들레사진" width="287" height="" /> 한쪽에 값 설정을 하지 않거나 한쪽을 입력하지 않은 경우 입력된쪽에 비율을 맞춰 크기가 수정됨.
-    주의할 점. scr로입력했는지 주의요망. 내용이 없더라도 속성 alt=""는 필수적으로 입력해야한다.
-     같은 폴더에 있으면 파일명만 입력. -->
-     <!-- <br />빈요소 끝에 한칸 안 띄면 유효성 검사에서 오류로 인식함  -->
+        <img src="../images/image1.jpg" alt="민들레사진" />
+             <!-- <img src="이미지의 경로 (상대경로 :현 위치의 폴더를 기준으로 나가고 들어가고 한다.)" alt="이미지에 대한 설명_225자 이상은 오류남(리딩기가 읽어주는 영역으로 최대한 상세한 설명을 해줘야한다.)" />
+                  <img src="images/image1.jpg" alt="">    폴더명/ : 현재폴더에서 **더 들어가는** 경우
+                  <img src="../images/image1.jpg" alt="" />    ../ : 현재폴더에서 **나가서 들어가는** 경우
+                  <img src="/images/image1.jpg" alt="민들레사진" />    절대경로:다음시간에 설명.
+              -->
 
-<!-- 사진에 있는 글을 읽어야할 경우
-<img src="../images/event.jpg" alt="" longdesc="12-1_longdesc.html" />
-접근성에 쓰이며 html에 접속하여 그 내용을 리딩기가 읽는다.
-longdesc="경로지정" 보통 롱디스크만 모여있는 폴더를 따로 생성하고 시작한다. -->
-
-****이미지 경로를 어떻게 잘 할지.****
+        <img src="../images/image1.jpg" alt="민들레사진" width="287" height="" /> 위드 헤이트 값 설정 가능
+                <!-- <img src="../images/image1.jpg" alt="민들레사진" width="287" height="" />
+                한쪽에 값 설정을 하지 않거나 한쪽을 입력하지 않은 경우 입력된쪽을 기준으로 비율을 맞춰 크기가 수정됨. -->
 
 
+            <!-- 주의할 점. scr로입력했는지 주의요망.
+                내용이 없더라도 속성 alt=""는 필수적으로 입력해야한다.
+                이미지가 같은 폴더에 있으면 파일명만 입력.
+                <br />빈요소 끝에 한칸 안 띄면 유효성 검사에서 오류로 인식함 -->
 
-</body>
+    <!-- 읽어야 할 글이 길거나, 이미지 파일로 존재할 경우 속성 longdesc를 입력한다.
+        <img src="../images/event.jpg" alt="" longdesc="12-1_longdesc.html" />
+        접근성에 쓰이며 (따로 지정한).html에 접속하여 그 내용을 리딩기가 읽는다.
+        longdesc="경로지정" 보통 롱디스크만 모여있는 폴더를 따로 생성하고 시작한다. -->
+
+    ****이미지 경로를 어떻게 잘 지정 할지가 포인트.****
+    <!-- https://pixabay.com/ko/ 무료 이미지와 비디오 사이트-->
+
+
+
+    </body>
 </html>
