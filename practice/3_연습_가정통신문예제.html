@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+     #a1 { }
+        .a2 {border:0px;}
+    </style>
 </head>
 <fieldset>
     <legend></legend>
@@ -94,7 +98,7 @@
     <tr>
         <th width="10%">신청자</th>
         <td>
-        (<input type="text" name="신청자" id="학년" value="" size="2">)<label for="학년">학년</label>
+        (<input type="text" name="신청자" id="학년" value="" size="2" class="a2">)<label for="학년">학년</label>
         (<input type="text" name="신청자" id="반" value="" size="2">)<label for="반">반</label>
         (<input type="text" name="신청자" id="번" value="" size="2">)<label for="번">번</label>
         <input type="text" name="신청자" id="이름" value="" placeholder="이름">
@@ -102,11 +106,18 @@
 
     </tr>
     <tr>
-        <td width="10%">연락처</td>
-        <td></td>
+        <th width="10%">연락처</th>
+        <td>
+            <select>
+                <option value="개발">010</option>
+                <option value="개발">011</option>
+                <option value="개발">016</option>
+            </select>
+
+        </td>
     </tr>
     <tr>
-        <td colspan="2"></td>
+        <th colspan="2"></th>
     </tr>
 
 
