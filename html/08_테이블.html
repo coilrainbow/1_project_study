@@ -79,7 +79,7 @@
     ex>영수증을 읽어주는 스마트리더기.
 
 
-    <h3>tbody 는 필수요소. tfoot, thead 생략가능</h3>
+    <h3>tbody 는 필수요소 tfoot, thead 생략가능</h3>
     <table border="1" width="100%">
         <tbody>
             <tr>
@@ -228,12 +228,15 @@
 
 
 
-    <h3>스마트 리더기에서의 읽는 방향 설정?</h3>
-    <!--  헤더스 사용방법 https://www.w3.org/TR/WCAG20-TECHS/H43.html -->
-
+    <h3>...</h3>
     <table border="1" width="100%" summary="세부설명">
         <caption>표의제목</caption>
-
+        <colgroup>
+            <col width="100"/>
+            <col />
+            <col width="100"/>
+            <col />
+        </colgroup>
         <thead>
             <tr>
                 <th colspan="4" scope="colgroup" id="f1">text</th>
@@ -248,23 +251,19 @@
 
         <tbody>
             <tr>
-                <td scope="rowgroup" id="c44">text</td>
+                <th scope="rowgroup" rowspan="3" id="c44">text</th>
                 <td>text</td>
                 <td>text</td>
                 <td>text</td>
             </tr>
             <tr>
-                <td>text</td>
-                <td>text</td>
+                <td rowspan="2" id="g11">text</td>
                 <td>text</td>
                 <td>text</td>
             </tr>
             <tr>
                 <td headers="f1 f24 c44 g11">text</td>
                 <td>text</td>
-                <td>text</td>
-                <td>text</td>
-
             </tr>
         </tbody>
     </table>
@@ -272,6 +271,62 @@
 </body>
 </html>
 
-<!--  시각적 요소는 반드시 빼먹으면 안된다.
-      접근성에 필요한 것들은 있다는것만 알아두기
-      ex> ***콜그룹은 시각적***, 스코프는 접근성. -->
+
+
+
+
+
+
+
+
+
+<!--  시각적 요소는 반드시 빼먹으면 안된다. 접근성에 필요한 것들은 있다는것만 알아두기
+콜그룹은 시각적. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+ <!--  헤더스 사용방법 https://www.w3.org/TR/WCAG20-TECHS/H43.html -->
+
+     <table border="1" width="100%" summary="세부설명">
+        <caption>표의제목</caption>
+        <colgroup>
+            <col width="100"/>
+            <col />
+            <col width="100"/>
+            <col />
+        </colgroup>
+        <thead>
+            <tr>
+                <th colspan="4" scope="colgroup" id="f1">text</th>
+            </tr>
+            <tr>
+                <th scope="col" id="f22">text</th>
+                <th scope="col" id="f23">text</th>
+                <th scope="col" id="f24">text</th>
+                <th scope="col" id="f25">text</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <th scope="rowgroup" rowspan="3" id="c44">text</th>
+                <td>text</td>
+                <td>text</td>
+                <td>text</td>
+            </tr>
+            <tr>
+                <td rowspan="2" id="g11">text</td>
+                <td>text</td>
+                <td>text</td>
+            </tr>
+            <tr>
+                <td headers="f1 f24 c44 g11">text</td>
+                <td>text</td>
+            </tr>
+        </tbody>
+    </table>
