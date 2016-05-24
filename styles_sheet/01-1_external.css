@@ -1,0 +1,9 @@
+p {border:1px red solid;}
+.blue {background-color:blue}
+body {background-color: skyblue}
+
+
+    /*
+    테그명 {속성: 속성값}
+    .파일명 {속성: 속성값}
+문법 : 테그명 {속성: 속성값; 속성: 속성값; 속성: 속성값; 속성 속성값 }*/

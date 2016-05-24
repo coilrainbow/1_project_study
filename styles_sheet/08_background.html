@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08_background</title>
+    <style>
+    .box{
+        border:1px red solid;
+        height:2000px;
+        /*background-color:green;
+          height이 지정되어있어야 색이 채워짐.
+        */
+        background-image:url(../images/image1.jpg);
+        /*height으로 영역지정 백그라운드 경로확인 혹은 영역이 설정 되었는지.
+        기본이 반복형태로 되어있다.*/
+        background-repeat: no-repeat;
+                           /*repeat
+                           repeat-x 가로로 반복. 더 많이 쓰임
+                           repeat-y 세로로 반복*/
+        /*background-position:center bottom 20px;*/
+        /*background-position:center center;*/
+        background-position:center;
+        background-size: 200px 200px;
+        /*background-size: widthpx heightpx;*/
+        background-size: cover ;
+        /*가장 긴값을 기준으로 화면에 맞춘다.*/
+        background-size: contain;
+        background-attachment: fixed;
+
+        }
+
+    </style>
+</head>
+<body>
+    <!-- background
+    background-image
+    background-color
+    background-position     이미지에만 적용이 됨.
+    background-repeat
+    background-size         css3에만 조정이 됨.
+    background-attachment
+    - 이 붙은 것은 한방에 나열하여 쓸 수 있다.
+-->
+    <div class="box">    </div>
+
+
+
+
+
+
+</body>
+</html>
