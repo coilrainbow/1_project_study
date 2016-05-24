@@ -13,37 +13,44 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <!-- /*1<style>
 
+
+<!-- 1 -->
+<!--
+    <style>
     div{ width:200px;
          height:200px;
          border:1px red solid;
          padding:10px;
          margin:20px;
-     }
+       }
+    </style>
+-->
+<!-- 박스모델 사이즈 값을 잘 계산을 해야한다.양 옆의 위드값+보더값+패딩값을 더해야한다.
+     크롬에서 f12 개발자도구 -->
 
-     /*박스모델 사이즈 값을 잘 계산을 해야한다.양 옆의 위드값+보더값+패딩값을 더해야한다. */
 
 
-    </style>*/ -->
-<!-- 크롬에서 f12 개발자도구 -->
-
-<!-- 2
+<!-- 2 -->
+<!--
     <style>
     html의 부모는 바탕화면 사이즈
-    body는 기본적으로 8픽셀식 마진을 가지고있다
+    body는 기본적으로 8픽셀식 마진을 가지고있다.부모는 html
     박스형태는 위드값이 기본적으로 오토임. auto 나의 부모만큼 커져라
 
     html{border:1px red solid}
     body{border:1px red solid}
     div{ border:1px red solid; width:100%;   }
     바디에 <div>tex</div>만 걸려있을 경우의 예제
+    </style>
+ -->
 
-</style> -->
 
 
 
-<!-- 3
+
+<!-- 3 -->
+<!--
     <style>
     .menu{border:1px red solid; width:350px; }
     .menu div{ border:1px red solid;
@@ -52,39 +59,27 @@
     </style>
  -->
 
-4<style>
-    .menu{border:1px red solid;
-    width:350px;
-    }
-    .menu div{
-        border:1px red solid;
-        width:auto;
-        margin:20px;
-    }
-</style>
-
-
-
-
-
-
-
-
+<!-- 4 -->
+    <style>
+        .menu{border:5px red solid;
+        width:350px;
+        }
+        .menu div {
+                border:5px blue solid;
+                width:auto;
+                margin:20px;
+            }
+    </style>
 
 
 </head>
+
+
 <body>
 <!-- 2<div>box</div> -->
-<!-- 3<div class="menu">
-    <div >
-        <a href="#">test</a><br />
-        <a href="#">test</a><br />
-        <a href="#">test</a><br />
-        <a href="#">test</a><br />
-        <a href="#">test</a><br />
-    </div> -->
 
-4.<div class="menu">
+<!-- 3.4 -->
+<div class="menu">
     <div >
         <a href="#">test</a><br />
         <a href="#">test</a><br />
@@ -92,12 +87,10 @@
         <a href="#">test</a><br />
         <a href="#">test</a><br />
     </div>
-
-
-
-
-
-
+    </div>
 
 </body>
+
+
+
 </html>
