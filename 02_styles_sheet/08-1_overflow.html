@@ -1,0 +1,57 @@
+<!-- text쓸 때 주의할점.
+한줄로 막 쓰면 뚫고 나감
+중간에 스페이스바를 치면 칸 안에 넣어짐
+스페이스 없으면 한 단어로 인식함. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08_overflow</title>
+        <style>
+        .box{
+            overflow: hidden;
+            width: 200px;
+            height: 200px;
+            border:1px red solid;
+        }
+        .box img{width:100%;
+                 margin-top:30px;
+             }
+        /*부모위드만큼만 가로비율로 축소됨???*/
+
+        </style>
+    </head>
+<body>
+        <!-- overflow : 주어진영역을 벗어났을때 박스안에 보여줄거냐 마냐.
+                        hidden(숨기고) :     주어진 영역을 넘어가면 넘어간 부분을 숨긴다.
+                        visible(보여준다.) : 주여진 영역을 넘어가도 보인다.
+
+                     어떤 구조의 마크업도 표현할 수 있다.
+                     오남용도 많다.
+                     firefox.stlye편집기.shift f5 = chrome f12 -->
+
+         <div class="box">
+             <!-- ㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁㅁ -->
+             <img src="../images/image1.jpg" alt="">
+         </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
