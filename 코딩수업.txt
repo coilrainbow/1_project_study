@@ -312,8 +312,48 @@ outline: 위드값에 추가되지 않음. 박스 내부에 포함된 것. 선택된것을 보여주는용도.
 좌우 따로 안되고 전체테두리를 감싼다.
 
 clear
+left
+right
+both: l, r 모두에서 height가 가장 긴 밑으로 붙는다.
+시각상은 l,r 밑이지만 실질적인 시작은 맨 위부터 시작한다. 
+마진은 l, r 둘 중 하나의 박스에 붙인다
 float 의 싸움에서 빠져 새로 시작하겠다.
 height값이 가장 긴 놈 밑에 붙는다.
+
+
+em중요
+strong 강조
+ul,ol{list-style:none .표시가 없어진다.}
+overflow:hidden; white-space:nowrap; text-overflow:ellipsis : 텍스트에 ... 붙을 경우
+
+
+
+
+jsfiddle.net
+css cast style sheet
+
+ㅁ케스케이딩의 레벨값
+저작자 내가 변경해서 내가 저작권이 갖고 우선순위됨 ex p{color:red}
+명시도
+우선순
+
+p{color}<.p{color}<#p{color}
+
+css보다 바디에 잡힌 인라인 방식의 css가 더 쎄다.
+
+
+
+css에 !important(저작자에 속함 )를 주게 되면 모든 걸 무시함
+
+<p class="text" id="text" style="color:#F00">text</p>
+
+.text{color:#0F0}
+p{color:#F0F !important} 
+#text{color:#FF0}
+
+
+
+
 
 
 
