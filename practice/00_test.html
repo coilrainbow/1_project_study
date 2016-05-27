@@ -7,7 +7,7 @@
         *{padding: 0;margin: 0;list-style:none;}
         .menu{border:1px #F00 solid; width:200px;}
         .menu>ul{margin:20px;}
-        .menu ul>li>a:target{height: 150px;}
+        .menu ul>li :target{height: 150px;}
         .menu ul ul{border:1px #F00 solid; text-indent:20px; overflow:hidden; height:0; transition:1s;}
     </style>
 </head>
@@ -18,26 +18,26 @@
         <ul>
             <li>
                 <a href="#menu1">menu1</a>
-                <ul>
-                    <li><a href="menu1" id="menu1">menu1</a></li>
-                    <li><a href="menu1" id="menu1">menu1</a></li>
-                    <li><a href="menu1" id="menu1">menu1</a></li>
+                <ul id="menu1">
+                    <li><a href="menu1" >menu1</a></li>
+                    <li><a href="menu1" >menu1</a></li>
+                    <li><a href="menu1" >menu1</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#menu2">menu2</a>
-                <ul>
-                    <li><a href="menu2"id="menu2">menu2</a></li>
-                    <li><a href="menu2"id="menu2">menu2</a></li>
-                    <li><a href="menu2"id="menu2">menu2</a></li>
+                <ul id="menu2">
+                    <li><a href="menu2">menu2</a></li>
+                    <li><a href="menu2">menu2</a></li>
+                    <li><a href="menu2">menu2</a></li>
                 </ul>
             </li>
             <li>
                 <a href="#menu3">menu3</a>
-                <ul>
-                    <li><a href="menu3"id="menu3">menu3</a></li>
-                    <li><a href="menu3"id="menu3">menu3</a></li>
-                    <li><a href="menu3"id="menu3">menu3</a></li>
+                <ul id="menu3">
+                    <li><a href="menu3">menu3</a></li>
+                    <li><a href="menu3">menu3</a></li>
+                    <li><a href="menu3">menu3</a></li>
                 </ul>
             </li>
         </ul>
