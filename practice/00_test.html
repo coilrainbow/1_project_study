@@ -1,43 +1,50 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-
-    <style>
-
-
+    <style type="text/css">
+        *{padding: 0;margin: 0;list-style:none;}
+        .menu{border:1px #F00 solid; width:200px;}
+        .menu>ul{margin:20px;}
+        .menu ul>li>a:target{height: 150px;}
+        .menu ul ul{border:1px #F00 solid; text-indent:20px; overflow:hidden; height:0; transition:1s;}
     </style>
-
 </head>
-    <body>
-        <div class="dismenu">
-            <ul>
-                <li>
-                    <a href="#menu1">menu1</a>
-                    <div id="menu1">menu1</div>
-                <li>
-                </li>
-                    <a href="#menu2">menu2</a>
-                    <div id="menu2">menu2</div>
-                </li>
-                <li>
-                    <a href="#menu3">menu3</a>
-                    <div id="menu3">menu3</div>
-                </li>
-            </ul>
-        </div>
+<body>
+    <div class="menu">
+    <!--table>(colgroup>col*4)+(thead>tr>th*4)+(tbody>tr*5>td{text}*4)+(tfoot>tr>td{text}*4)-->
+     <!--div.menu>ul>li*3>a{text}+ul>(li>a{test})*3-->
+        <ul>
+            <li>
+                <a href="#menu1">menu1</a>
+                <ul>
+                    <li><a href="menu1" id="menu1">menu1</a></li>
+                    <li><a href="menu1" id="menu1">menu1</a></li>
+                    <li><a href="menu1" id="menu1">menu1</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#menu2">menu2</a>
+                <ul>
+                    <li><a href="menu2"id="menu2">menu2</a></li>
+                    <li><a href="menu2"id="menu2">menu2</a></li>
+                    <li><a href="menu2"id="menu2">menu2</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#menu3">menu3</a>
+                <ul>
+                    <li><a href="menu3"id="menu3">menu3</a></li>
+                    <li><a href="menu3"id="menu3">menu3</a></li>
+                    <li><a href="menu3"id="menu3">menu3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
 
 
 
 
-
-
-
-
-
-
-
-
-    </body>
+</body>
 </html>

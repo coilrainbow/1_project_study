@@ -61,7 +61,7 @@ a안에서 링크가 걸린 행위 자체가 타겟임.
 
 
 
-<!-- 슬라이드 메뉴 --> 
+<!-- 슬라이드 메뉴 -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -104,6 +104,10 @@ a안에서 링크가 걸린 행위 자체가 타겟임.
 
 
 <!--에니메이션-->
+<!-- 트렌지션에 ease를 넣고
+크롬의 개발자 도구에서 ease찾고
+움직일 애니메이션 값을 입력한다
+혹은 animate.css 홈페이지에서 값을 다운받는다. -->
 <!doctype html>
 <html lang="en">
 <head>
@@ -111,20 +115,14 @@ a안에서 링크가 걸린 행위 자체가 타겟임.
     <title>Document</title>
     <style type="text/css">
 
-    /*p:target{color:#F00;}*/
     .dismenu{border:1px #F00 solid; width:250px; }
     .dismenu div{height:0; overflow:auto; transition:1s cubic-bezier(0.18, 0.89, 0.32, 1.28);}
     .dismenu div:target{height:150px;}
 
 
-
     </style>
 </head>
 <body>
-    <!--<a href="#text1">text1</a>-->
-    <!--<a href="#text2">text2</a>-->
-    <!--<p id="text1">text1</p>-->
-    <!--<p id="text2">text2</p>-->
 
     <div class="dismenu">
         <ul>
