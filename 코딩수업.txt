@@ -341,15 +341,15 @@ p{color}<.p{color}<#p{color}
 
 css보다 바디에 잡힌 인라인 방식의 css가 더 쎄다.
 
-
-
-css에 !important(저작자에 속함 )를 주게 되면 모든 걸 무시함
+css에 !important를 주게 되면 모든 걸 무시하고 우선순위 됨.
 
 <p class="text" id="text" style="color:#F00">text</p>
 
 .text{color:#0F0}
 p{color:#F0F !important} 
 #text{color:#FF0}
+
+생활코딩사이트 참고!
 
 
 
