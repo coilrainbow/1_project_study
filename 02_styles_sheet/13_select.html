@@ -1,0 +1,365 @@
+선택자. 엘리먼트에게 스타일명령을 하기위한 방법이다.
+
+p 테그를 선택하는방법.
+
+.className 클래스 선택방법
+
+# idname 아이디선택방법
+
+[속성명] ex> <a href="">
+    [href]{style} 속성을 갖은 것 모두선택
+    [href="http://naver.com"] 속성값을 가진 속성이 선택됨
+    
+
+a,p 테그 동시선택자
+
+
+[href^="foo"] 속성의 값 중에 foo 라는 문자로 시작되는 엘리먼트를 선택한다.
+[href$="foo"] 속성의 값 중에 foo 라는 문자로 끝나는 엘리먼트를 선택한다.
+[href*="foo"] 속성의 값 중에 foo 라는 문자가 포함된 엘리먼트를 선택한다.                    
+제이쿼리에서도 동일하게 사용된다.
+
+
+
+:필터 선택자
+a
+a:link      링크가있는 선택자
+a:hover     마우스가 오버된 선택자
+a:visited  한번 방문한 선택자
+a:active    마우스를 클릭했을 때 발생하는 선택자
+:target     타겟 선택자는 아이디가 발생된 엘리먼트와 연관관계를 만들어 클릭시 해당 타겟 엘리먼트에게 스타일 시트를 부여 할 수 있다.
+:first-child 엘리먼트들 중 첫번째에 해당하는 엘리먼트를 선택한다.
+
+호환성이 떨어지는 선택자.
+:last-child  엘리먼트들 중 마지막에 해당하는 엘리먼트를 선택한다.
+    (호환성이 떨어짐으로 되도록 first-child가 사용될 수 있는 조건을 만들어줘야한다.)
+::before 엘리먼트의 전 부분에 다른 컨텐츠로 엘리먼트를 만들어 사용할 수 있다.
+::after  엘리먼트의 뒷 부분에 다른 컨텐츠로 엘리먼트를 만들어 사용할 수 있다.
+
+next 선택자 (다음 선택자)
++ 부호를 이용해서 지정 선택자는 다음선택자이다.
+ex>li:first-child+li = 두번째 li가 선택된다.
+
+~ 선택자
+~:next all 선택자는 선택된 엘리먼트를 제외하고 그 다음 엘리먼트부터 마지막 엘리먼트까지 선택할 수 있다.
+
+자식요소 선택자
+    div p  자식요소 선택자중 처음 시작으로부터 마지막에 작성된 선택자는 하위 모든 컨텐츠의 p태그를 검색한다.          a 안에 p 선택자
+    div>p 조건선택자
+        
+
+
+
+
+
+
+
+
+  <style type="text/css">
+  
+        자식요소 선택법
+        ex>
+        #menu li    # = id : 아이디 안에 모든 li들이 선택됨
+        #menu li li # = id : 아이디 안에 li안에 li들이 선택됨
+        
+        
+        > 꺽쇠선택자
+        오버플로우랑 비슷하다.= **바로 하위덱스에 그녀석이 있어야한다.
+        ex>
+        #menu>ul>li{border:1px red solid; } 메뉴안에 ul안에 li 만 선택이 된다.
+        #menu ul>li{border:1px red solid; } 메뉴 안에 모든 ul안에 li만 선택이 된다.
+        반드시 기억해야할 것은. 속성이 나열되는 순서가 반드시 일치해야 한다.
+
+
+
+        next 선택자 = + 
+        내가 선택한 속성값.이놈 바로 다음 li 을 단독적으로 선택됨
+        젠코딩에선  그룹생성
+        ex>
+        .이놈+li+li{border:1px #F00 solid;}
+        
+    <div id="menu">
+        <ul>
+            <li class="이놈"><a href="">text</a>
+                <ul>
+                    <li><a href="">하위</a></li>
+                    <li><a href="">하위</a></li>
+                    <li><a href="">하위</a></li>
+                </ul>
+            </li>
+            /*<li><a href="">text</a></li>*/ 얘가 선택됨. (위에서 +li 붙이면 밑에 애가 선택됨.)
+            <li><a href="">text</a></li>
+            <li><a href="">text</a></li>
+            <li><a href="">text</a></li>
+            <li><a href="">text</a></li>
+            <li><a href="">text</a></li>
+        </ul>
+    </div>
+        
+
+
+        ~ 선택자
+        이놈이란 속성값을 갖고 있는 li 다음 li부터 포괄적으로 선택이됨.
+        .이놈~li{border:1px #F00 solid;}
+    <div id="menu">
+        <ul>
+            <li class="이놈"><a href="">text</a>
+                <ul>
+                    <li><a href="">하위</a></li>
+                    <li><a href="">하위</a></li>
+                    <li><a href="">하위</a></li>
+                </ul>
+            </li>
+        /*    <li><a href="">text</a></li>*/ 이것들이 선택됨
+        /*    <li><a href="">text</a></li>*/
+        /*    <li><a href="">text</a></li>*/
+        /*    <li><a href="">text</a></li>*/
+        /*    <li><a href="">text</a></li>*/
+        /*    <li><a href="">text</a></li>*/
+        /*</ul>*/
+    </div>
+    
+        
+        
+        
+        
+        
+        
+        
+        
+
+        속성선택자
+        속성명을 가지고 있는 애가 선택이 됨.
+        [속성명]{}
+        [속성명="갑"]{} 속성명안에 속성값 갑 선택됨 
+        [class^="color-"]{border:1px #F00 solid;} ^컬러로 시작하는 말로 시작할 경우
+        [class$="-model"]  $라는 말로 끝나는 경우 선택이됨
+        [class*="text"]    *포함되어 있으면
+        제이쿼리에서도 같이 선택됨.
+        
+    </style>
+    
+    
+    
+    
+    
+    
+    참고
+    디자인의 재사용성 유지보수가 힘들다.
+    <style></style>
+        #menu>ul>li:first-child+li{border:1px #F00 solid;}    
+        #menu>ul>li:first-child+li+li{border:1px #00F solid;}
+        #menu>ul>li:first-child+li+li+li>a{margin:10px;}
+        
+    </style>
+</head>
+<body>
+    
+    
+    <div id="menu">
+        <ul>
+            <li class="이놈"><a href="">text</a>
+                <ul>
+                    <li><a href="" title="을" class="color-text-model">하위</a></li>
+                    <li><a href="">하위</a></li>
+                    <li><a href="">하위</a></li>
+                </ul>
+            </li>
+            <li><input type="text"></li>
+            <li><a href="">text</a></li>
+            <li><a href="">text</a></li>
+            <li><a href="" title="하위">text</a></li>
+            <li><a href="">text</a></li>
+            <li><a href="">text</a></li>
+        </ul>
+    </div>
+    
+    3에서 나온건 호환성이 떨어질 수 있음 
+    ~(2) ^(2)제외, {after(2),before(2)=익플 8이상아니면 안나옴.}
+    
+    
+    
+    
+       
+      
+      
+      
+      
+      
+      
+      
+       
+        
+        #menu>ul>li:first-child{border:1px #F00 solid;}
+        #menu>ul>li:last-child{border:1px #F00 solid;}
+        
+        
+    </style>
+</head>
+<body>
+    
+    
+    <div id="menu">
+        <ul>
+            <li class="이놈"><a href="">text</a>
+                <ul>
+                    <li><a href="" title="을" class="color-text-model">하위</a></li>
+                    <li><a href="">하위</a></li>
+                    <li><a href="">하위</a></li>
+                </ul>
+            </li>
+            <li><input type="text"></li>
+            <li><a href="">text</a></li>
+            <li><a href="">text</a></li>
+            <li><a href="" title="하위">text</a></li>
+            <li><a href="">text</a></li>
+    first 다먹음
+    last 익스9이상에서만 먹는다
+    
+    
+    
+    항상 퍼스트로 쓸수 있는 상황으로 만들어라
+    <!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+/*http://www.w3schools.com/cssref/css_selectors.asp*/
+
+       *{margin:0; padding:0;}
+           /*[href$=".pdf"][*/
+       
+        /*[class^="color-"]{border:1px #F00 solid;}*/
+        /*[class$="-model"]{border:1px #F00 solid; margin-left:100px;}*/
+        /*[class*="text"]{border-width:3px;}*/
+        
+        /*#menu>ul>li:first-child+li{border:1px #F00 solid;}    */
+        /*#menu>ul>li:first-child+li+li{border:1px #00F solid;}*/
+        /*#menu>ul>li:first-child+li+li+li>a{margin:10px;}*/
+        ul{list-style:none;}
+        #menu{margin:100px;}
+        #menu ul ul{display:none;}
+        #menu>ul>li{border-left:1px #F00 solid; padding:10px 0; float:left; margin:0 20px;}        
+        #menu>ul>li:first-child{border-left:0;}
+        
+        
+        
+    </style>
+</head>
+<body>
+    
+    
+    <div id="menu">
+        <ul>
+            <li class="이놈"><a href="">text</a>
+                <ul>
+                    <li><a href="" title="을" class="color-text-model">하위</a></li>
+                    <li><a href="">하위</a></li>
+                    <li><a href="">하위</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="">text</a></li>
+            <li><a href="">text</a></li>
+            <li><a href="" title="하위">text</a></li>
+            <li><a href="">text</a></li>
+            <li><a href="">text</a></li>
+        </ul>
+    </div>
+    
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+하버 마우스가 올라갔을때 색상이 변경됨 
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+/*http://www.w3schools.com/cssref/css_selectors.asp*/
+
+       *{margin:0; padding:0;}
+           /*[href$=".pdf"][*/
+       
+        /*[class^="color-"]{border:1px #F00 solid;}*/
+        /*[class$="-model"]{border:1px #F00 solid; margin-left:100px;}*/
+        /*[class*="text"]{border-width:3px;}*/
+        
+        /*#menu>ul>li:first-child+li{border:1px #F00 solid;}    */
+        /*#menu>ul>li:first-child+li+li{border:1px #00F solid;}*/
+        /*#menu>ul>li:first-child+li+li+li>a{margin:10px;}*/
+        ul{list-style:none;}
+        #menu{margin:100px;}
+        #menu ul ul{display:none;}
+        #menu>ul>li{border-left:1px #F00 solid; padding:10px 0; float:left; margin:0 20px;}        
+        #menu>ul>li:first-child{border-left:0;}
+        
+        a:link{color:#F00;}    링크 글씨의 색상.
+        a:hover{color:#00F;}   마우스가 올라갔을때
+        a:visited{color:#FF0;} 방문하고 온 경우
+        a:active{color:#F0F;}  클릭한 경우
+        
+        
+            
+        /*
+        p
+        .
+        #
+        +
+        []
+        >
+        first-child
+        
+        */
+        
+        
+        
+    </style>
+</head>
+<body>
+    
+    
+    <div id="menu">
+        <ul>
+            <li class="이놈"><a href="sdfsf">text</a>
+                <ul>
+                    <li><a href="#" title="을" class="color-text-model">하위</a></li>
+                    <li><a href="#">하위</a></li>
+                    <li><a href="#dsdf">하위</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="sdfsdf">text</a></li>
+            <li><a href="sdfsdf">text</a></li>
+            <li><a href="ssdfsdf" title="하위">text</a></li>
+            <li><a href="sdf">text</a></li>
+            <li><a href="">text</a></li>
+        </ul>
+    </div>
+    
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
