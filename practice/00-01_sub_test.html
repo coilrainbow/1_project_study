@@ -4,9 +4,9 @@
     <title>Document</title>
     <style type="text/css">
     *{list-style:none;}
-    #menu{border:3px blue solid; padding:0 10px; float: left;}
-    .이놈>ul>li{border:2px yellow solid; height: 0; overflow:hidden; transition:1s;}
-    :hover{height: 150px;}
+    #menu{border:3px blue solid; padding:0 10px; width: 250px;}
+    .이놈>ul{outline:1px yellow solid; overflow:hidden; height: 0; transition:1s;}
+    #menu :target{height: 200px;}
         
         
     </style>
@@ -16,7 +16,8 @@
     
     <div id="menu">
         <ul>
-            <li class="이놈"><a href="pp">text</a>
+            <li class="이놈">
+                <a href="#pp">text</a>
                 <ul id="pp">
                     <li>하위</li>
                     <li>하위</li>

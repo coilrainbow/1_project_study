@@ -2,16 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>dropmenu</title>
+    <title>text</title>
     
     <style type="text/css">
-    *{padding: 0; margin: 0; list-style:none;}
-    .menu{border:1px red solid;}
-    .menu>ul{margin:20px;}
-    .menu ul ul{border:5px blue solid; text-indent:20px; display:none;}
-    .menu>ul>li:hover ul{display:block;}
-
-    </style>
+        *{list-style:none; padding:0; margin:0;}
+        .menu{border:1px red solid; width: 250px;}
+        .menu>ul{margin: 20px;}
+        .menu ul ul{border:1px red solid; overflow:hidden; ;text-indent:20px; height: 0px; transition:1s; }
+        .menu>ul>li:hover ul{height: 150px; padding-top:10px; }
+        
+        
+        
+        
+    </style>    
+    
     
 </head>
 <body>
@@ -19,8 +23,16 @@
     <div class="menu">
         <ul>
             <li>
-                <a href="">text1</a>
-                <ul>
+                <a href="#menu1">text1</a>
+                <ul id="menu1">
+                    <li><a href="">text</a></li>
+                    <li><a href="">text</a></li>
+                    <li><a href="">text</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">text</a>
+                <ul >
                     <li><a href="">text</a></li>
                     <li><a href="">text</a></li>
                     <li><a href="">text</a></li>
@@ -29,6 +41,24 @@
             <li>
                 <a href="">text</a>
                 <ul>
+                    <li><a href="">text</a></li>
+                    <li><a href="">text</a></li>
+                    <li><a href="">text</a></li>
+                </ul>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#menu2">text2</a>
+                <ul id="menu2">
+                    <li><a href="">text</a></li>
+                    <li><a href="">text</a></li>
+                    <li><a href="">text</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">text</a>
+                <ul >
                     <li><a href="">text</a></li>
                     <li><a href="">text</a></li>
                     <li><a href="">text</a></li>
@@ -44,6 +74,9 @@
             </li>
         </ul>
     </div>
+    
+    
+    
     
 </body>
 </html>
