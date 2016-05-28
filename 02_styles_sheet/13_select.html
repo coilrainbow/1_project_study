@@ -60,7 +60,7 @@ ex>li:first-child+li = 두번째 li가 선택된다.
         자식요소 선택법
         ex>
         #menu li    # = id : 아이디 안에 모든 li들이 선택됨
-        #menu li li # = id : 아이디 안에 li안에 li들이 선택됨
+        #menu li li # = id : 아이디 안에 모든 li안에 모든 li들이 선택됨
         
         
         > 꺽쇠선택자
@@ -76,7 +76,8 @@ ex>li:first-child+li = 두번째 li가 선택된다.
         내가 선택한 속성값.이놈 바로 다음 li 을 단독적으로 선택됨
         젠코딩에선  그룹생성
         ex>
-        .이놈+li+li{border:1px #F00 solid;}
+        1번  .이놈+li{color:yellow;}
+        2번  .이놈+li+li{border:1px #F00 solid;}
         
     <div id="menu">
         <ul>
@@ -87,7 +88,7 @@ ex>li:first-child+li = 두번째 li가 선택된다.
                     <li><a href="">하위</a></li>
                 </ul>
             </li>
-            /*<li><a href="">text</a></li>*/ 얘가 선택됨. (위에서 +li 붙이면 밑에 애가 선택됨.)
+            /*<li><a href="">text</a></li>*/ 1번은 얘가 선택됨. (2번은 밑에 애가 선택됨.이런식으로 연장 가능)
             <li><a href="">text</a></li>
             <li><a href="">text</a></li>
             <li><a href="">text</a></li>
@@ -131,7 +132,7 @@ ex>li:first-child+li = 두번째 li가 선택된다.
         속성선택자
         속성명을 가지고 있는 애가 선택이 됨.
         [속성명]{}
-        [속성명="갑"]{} 속성명안에 속성값 갑 선택됨 
+        [속성명="갑"]{이 부분에는 원하는 값을 입력한다.} 속성명안에 속성값 갑 선택되고 원하는 값으로 바뀜 
         [class^="color-"]{border:1px #F00 solid;} ^컬러로 시작하는 말로 시작할 경우
         [class$="-model"]  $라는 말로 끝나는 경우 선택이됨
         [class*="text"]    *포함되어 있으면
@@ -176,7 +177,7 @@ ex>li:first-child+li = 두번째 li가 선택된다.
     
     3에서 나온건 호환성이 떨어질 수 있음 
     ~(2) ^(2)제외, {after(2),before(2)=익플 8이상아니면 안나옴.}
-    
+   
     
     
     
@@ -213,7 +214,7 @@ ex>li:first-child+li = 두번째 li가 선택된다.
             <li><a href="">text</a></li>
             <li><a href="" title="하위">text</a></li>
             <li><a href="">text</a></li>
-    first 다먹음
+    first 전부 호환됨
     last 익스9이상에서만 먹는다
     
     

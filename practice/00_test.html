@@ -2,49 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>dropmenu</title>
+    
     <style type="text/css">
-        *{padding: 0;margin: 0;list-style:none;}
-        .menu{border:1px #F00 solid; width:200px;}
-        .menu>ul{margin:20px;}
-        .menu ul>li :target{height: 150px;}
-        .menu ul ul{border:1px #F00 solid; text-indent:20px; overflow:hidden; height:0; transition:1s;}
+    *{padding: 0; margin: 0; list-style:none;}
+    .menu{border:1px red solid;}
+    .menu>ul{margin:20px;}
+    .menu ul ul{border:5px blue solid; text-indent:20px; display:none;}
+    .menu>ul>li:hover ul{display:block;}
+
     </style>
+    
 </head>
 <body>
+    
     <div class="menu">
-    <!--table>(colgroup>col*4)+(thead>tr>th*4)+(tbody>tr*5>td{text}*4)+(tfoot>tr>td{text}*4)-->
-     <!--div.menu>ul>li*3>a{text}+ul>(li>a{test})*3-->
         <ul>
             <li>
-                <a href="#menu1">menu1</a>
-                <ul id="menu1">
-                    <li><a href="menu1" >menu1</a></li>
-                    <li><a href="menu1" >menu1</a></li>
-                    <li><a href="menu1" >menu1</a></li>
+                <a href="">text1</a>
+                <ul>
+                    <li><a href="">text</a></li>
+                    <li><a href="">text</a></li>
+                    <li><a href="">text</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#menu2">menu2</a>
-                <ul id="menu2">
-                    <li><a href="menu2">menu2</a></li>
-                    <li><a href="menu2">menu2</a></li>
-                    <li><a href="menu2">menu2</a></li>
+                <a href="">text</a>
+                <ul>
+                    <li><a href="">text</a></li>
+                    <li><a href="">text</a></li>
+                    <li><a href="">text</a></li>
                 </ul>
             </li>
             <li>
-                <a href="#menu3">menu3</a>
-                <ul id="menu3">
-                    <li><a href="menu3">menu3</a></li>
-                    <li><a href="menu3">menu3</a></li>
-                    <li><a href="menu3">menu3</a></li>
+                <a href="">text</a>
+                <ul>
+                    <li><a href="">text</a></li>
+                    <li><a href="">text</a></li>
+                    <li><a href="">text</a></li>
                 </ul>
             </li>
         </ul>
     </div>
-
-
-
-
+    
 </body>
 </html>
