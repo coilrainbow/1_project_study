@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07_news</title>
+    
+    <style type="text/css">
+        *{margin: 0; padding: 0;}
+        .wrap{outline:1px red solid; width: 900px; height: 540px; margin:0 auto; }
+        
+        .header{border-bottom:2px black solid; width: 840px; height: 109px; margin:0 30px;  }
+        
+        .content {outline:1px red solid; width: 840px; height: 380px; margin:20px 30px 0; }
+        .content .lc{outline:1px red solid; width:500px; height:380px; float:left; }
+        .content .rc{outline:1px red solid; width:320px; height:380px; margin-left:520px;  }
+        
+        .content .lc .lct{outline:1px green solid; width:500px; height:217px; }
+        .content .lc .lcb{outline:1px green solid; width:500px; height:163px; }
+        
+        .content .lc .lct .lctt{outline:1px green solid; width:500px; height:98px;}
+        .content .lc .lct .lctb{border-bottom:3px black solid; width:500px; height:100px; margin-top:15px;}
+        .content .lc .lct .lctt .lcl{outline:1px green solid; width:142px; height:85px; float:left;}
+        .content .lc .lct .lctt .lctx{outline:1px green solid; width:300px; height:85px; margin-left:152px;}
+        .content .lc .lct .lctb .lcbl{outline:1px green solid; width:142px; height:85px; float:left;}
+        .content .lc .lct .lctb .lcbltx{outline:1px green solid; width:300px; height:85px; margin-left:152px;}
+        
+        .content .lc .lcb .lcbl{outline:1px green solid; width:265px; height:163px; float:left; }
+        .content .lc .lcb .lcbr{outline:1px green solid; width:235px; height:163px; margin-left:265px; }
+        
+        
+        
+        .content .rc .rct{outline:1px blue solid; width:320px; height:140px;}
+        .content .rc .rcb{outline:1px blue solid; width:320px; height:240px;}
+        
+        .content .rc .rcb .rcb1{outline:1px blue solid; width:320px; height:120px;}
+        .content .rc .rcb .rcb2{outline:1px blue solid; width:320px; height:120px;}
+        
+        
+        
+    </style>
+    
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">header</div>
+        <div class="content">
+            <div class="lc">
+                <div class="lct">
+                    <div class="lctt">
+                        <div class="lcl">lcl</div>
+                        <div class="lctx">lctx</div>    
+                    </div>    
+                    <div class="lctb">
+                        <div class="lcbl">lcbl</div>
+                        <div class="lcbltx">lcbltx</div>    
+                    </div>
+                </div>
+                <div class="lcb">
+                    <div class="lcbl">lcbl</div>
+                    <div class="lcbr">lcbr</div>
+                </div>
+            </div>
+            <div class="rc">
+                <div class="rct">rct</div>
+                <div class="rcb">
+                    <div class="rcb1">rcb1</div>
+                    <div class="rcb2">rcb2</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+</body>
+
+</html>
