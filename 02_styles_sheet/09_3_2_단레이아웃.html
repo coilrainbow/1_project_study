@@ -1,0 +1,168 @@
+<!-- 1 -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .content{border:1px #F00 solid;
+            width: 900px;
+            height: 380px;
+        }
+        .left{outline:1px #F00 solid;
+            width:33.333333%;
+            height:100%;
+            float:left;
+            
+        }
+        .center{outline:1px #F00 solid;
+            width:33.333333%;
+            height:100%;
+            float:left;
+        }
+        .right{outline:1px #F00 solid;
+            width:33.333333%;
+            height:100%;
+            float:left;
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    
+    <div class="content">
+        <div class="left">boxboxboxboxboxboxboxboxbox</div>
+        <div class="center">box</div>
+        <div class="right">box</div>
+        
+    </div>
+    
+    
+    
+    
+<!-- 2 -->
+</body>
+</html><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .content{border:1px #F00 solid;
+            width: 900px;
+            height: 380px;
+        }
+        .left{outline:1px #F00 solid;
+            width:33.333333%;
+            height:100%;
+            float:left;
+        }
+        
+        .left>div{
+            border:1px #00F solid;
+            margin:20px;
+            max-height:340px;
+            overflow: hidden;
+        }
+        /*헤이트 값을 계산을 하거나 멕스헤이트를 넣는다. */
+        .center{outline:1px #F00 solid;
+            width:33.333333%;
+            height:100%;
+            float:left;
+        }
+        .right{outline:1px #F00 solid;
+            width:33.333333%;
+            height:100%;
+            float:left;
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    
+    <div class="content">
+        <div class="left">
+            <div>sdfsfs<br/>sdfsdf</div>
+        </div>
+        <div class="center">box</div>
+        <div class="right">box</div>
+        
+    </div>
+    
+    
+    
+    
+</body>
+</html>
+
+
+
+
+<!-- 3 -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .content{
+            width: 900px;
+            height: 380px;
+        }
+        .left{
+            width:33.333333%;
+            height:100%;
+            float:left;
+        }
+        
+        .line>div{
+            border-right:1px #00F solid;
+            padding:20px;
+            height:340px;
+            overflow: hidden;
+        }
+        
+        
+        .center{
+            width:33.333333%;
+            height:100%;
+            float:left;
+        }
+        .right{
+            width:33.333333%;
+            height:100%;
+            float:left;
+            
+        }
+        
+        
+    </style>
+</head>
+<body>
+    
+    <div class="content">
+        <div class="left line">
+            <div>sdfsfs<br/>sdfsdf</div>
+        </div>
+        <div class="center line">
+            <div>sdfsfs<br/>sdfsdf</div>
+        </div>
+        <div class="right line">
+            <div style="border:0;"><div>sdfsfs<br/>sdfsdf</div></div>
+        </div>
+        
+    </div>
+    
+    <!--
+        클레스를 여러가지 줄 수 있다. <div class="right line">
+    border-right 지울때 단독으로 인라인 해버린다. -->
+    
+    
+</body>
+</html>
+
+가변 그리드 형식. 겉에 있는렙퍼가 바뀌어도 w h 값을 % 했기때문에 가변성이 좋다.
