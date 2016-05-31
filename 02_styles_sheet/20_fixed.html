@@ -1,0 +1,73 @@
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Document</title>-->
+<!--    <style type="text/css">-->
+<!--        .top{height:80px; border:1px #F00 solid; background-color: rgba(0,0,0,.5); position:fixed; width:100%;top:0;}-->
+<!--        .fly{width:80px; height:200px; border:1px #F00 solid; position:fixed; left:50%; margin-left:410px; top:90px}-->
+<!--        .contents{width:800px; height:2000px; border:1px #F00 solid; margin:0 auto; position:relative; }-->
+<!--        body{padding-top:80px;}-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="top"></div>-->
+    
+<!--    <div class="contents">-->
+        
+<!--        <div class="fly"></div>-->
+        
+<!--    </div>-->
+    
+<!--</body>-->
+<!--</html>-->
+
+<!--fixed 고정된것. 스크롤을 내려도 따라다님
+          부모자식관계가 성립이 안됨(위에 contents에 position:relative를 넣어도 적용이 안됨). 
+          fixed의 부모가 될 수 있는 것은 무조건 브라우저. fixed가 다른 것의 부모가 될 수는 있음(있는 경우가 잘 없음)-->
+<!--엡솔루트가 설정되면 마진 0 오토는 안먹음-->
+<!--위키에서 '사실상표준' 검색해서 보기 > 한국산업표준-->
+
+
+
+
+<!--참고. 스태틱. 반응형 할때 해상도로 인해서 틀어진 레이아웃을 기본값으로 돌릴때-->
+
+
+마크업 구조, css
+
+
+
+
+
+
+
+<!--연습-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        
+        .top{height: 80px;border:1px red solid; background-color:rgba(0,0,0,.5); width:100%; position:fixed;top:0;}
+        .fly{width:80px; height:200px; border:1px red solid; position:fixed; left:50%; margin-left: 410px; top:90px;}
+        .contents{width:800px; height:2000px; border:1px red solid; margin:0 auto; }
+        body{padding-top:80px; margin: 0;}
+        
+    </style>
+    
+</head>
+<body>
+    <div class="top">메뉴</div>
+    <div class="contents">
+        <div class="fly"></div>
+    </div>
+    
+    
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,191 @@
+<!--position-->
+<!--    static     기본값. 포지션을 입력하지 않은 상태-->
+<!--    relative     상대적. 현재 위치로부터 상대적으로 움직임-->
+<!--    absolute     절대적. xy축을 이용하여 좌표위치 지정-->
+<!--    fixed        고정적-->
+    <!--top      위치값-->
+    <!--left-->
+    <!--right-->
+    <!--bottom-->
+    
+    
+<!--relative 기본적으로 지정한 위치는 보존하며 유체이탈하듯 이동한것 처럼 보여진다.
+            top
+            left
+            right
+            bottom-->
+<!--기본위치에서 시작점을 두고 설정한 방향으로 **px 픽셀 밀어낸다. -->
+<!--다른 엘리먼트랑 겹칠 수 있다. -->
+
+
+
+
+
+
+
+<!--1. relative    -->
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>position</title>-->
+<!--    <style type="text/css">-->
+<!--        *{margin: 0; padding: 0;}-->
+<!--        .box1{border:1px red solid;-->
+<!--            width: 200px;-->
+<!--            height: 200px;-->
+<!--            position:relative;-->
+<!--            right:50px;-->
+<!--            bottom:50px;-->
+<!--            font-size:3em;-->
+<!--        }-->
+<!--        .box2{border:1px red solid;-->
+<!--            width: 200px;-->
+<!--            height: 200px;-->
+<!--            position:relative;-->
+<!--            top:100px;-->
+<!--            left:100px;-->
+            
+<!--            font-size:3em;-->
+<!--        }-->
+        
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="box1">1</div>-->
+<!--    <div class="box2">2</div>-->
+<!--    글자의 위치는 relative를 설정하고 위치값을 지정 하기 전 위치 부터 시작한다.-->
+<!--</body>-->
+<!--</html>-->
+
+
+
+
+
+
+
+
+<!--2.absolute-->
+<!--<!doctype html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Document</title>-->
+<!--    <style type="text/css">-->
+<!--        *{margin:0; padding:0;}-->
+<!--        div{font-size:3em}-->
+        
+      
+<!--         .box1{-->
+<!--            border:1px #F00 solid;-->
+            
+<!--            position:absolute;-->
+           
+<!--            background: red;-->
+<!--            top:20px;-->
+<!--            right:20px;-->
+<!--            bottom:20px;-->
+<!--            left:20px;-->
+<!--         }-->
+        
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="box1"></div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!--    absolute
+<!--        right-->
+<!--        left-->
+<!--        top-->
+<!--        bottom 와같은 방향을 입력해 주면 0점의 시작위치를 설정할 수 있다.-->
+<!--           방향의 값을 전부 0으로 설정하고 값을 주면 전체화면이됨.
+<!--               방향의 값을 전부 10px로 입력하면 마진준것같은 효과를 얻는다.  -->
+<!--    글자의 위치는 absolute를 설정하고 위치값을 지정 하기 전 위치 부터 시작한다.-->
+<!--    플룻과 상관없이 모든것 위에 덮을 수 있다. 단 화면상 가장 위로 보여질 이미지가 구조상 다른것보다 가장 밑에 있어야한다.-->
+<!--    앱솔루트로 만들면 플룻과같이 깨질 위험이 줄어든다.-->
+    
+    
+    
+    
+    
+    
+    
+<!--absolute 예제-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        *{margin:0; padding:0;}
+        div{font-size:3em}
+        
+        .box{
+            border:1px #F00 solid;
+            position:absolute;
+            -webkit-background-size: cover;
+            background-size: cover;
+            background-position: center;
+         }
+         .box1{
+            left:0;
+            right:50%;
+            top:0;
+            bottom:50%;
+           
+           background-image: url(../images/img1.jpg);
+         }
+         .box2{
+            left:50%;
+            right:0;
+            top:0;
+            bottom:50%;
+           
+           background-image: url(../images/img2.jpg);
+         }
+         .box3{
+            left:0;
+            right:50%;
+            top:50%;
+            bottom:0;
+              background-image: url(../images/img3.jpg);
+          
+         }
+         .box4{
+            left:50%;
+            right:0;
+            top:50%;
+            bottom:0%;
+            background-image: url(../images/img4.jpg);
+          
+         }
+         
+         .box5{
+             let:30px;
+             right:300px;
+             top:40%;
+             width: 100px;
+             height: 100px;
+             background-image: url(../images/img3.jpg);
+         }
+        
+    </style>
+</head>
+<body>
+    
+    <div class="box1 box"></div>
+    <div class="box2 box"></div>
+    <div class="box3 box"></div>
+    <div class="box4 box"></div>
+    <div class="box5 box"></div>
+</body>
+</html>
+
+<!--반응형에서 많이 볼 수 있는 구조.-->
+
+
+
+
+

@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>position2</title>
+    <style type="text/css">
+        .box{width:200px; height: 200px; border:1px #F00 solid; position:relative;}
+        .box1{background-color: #f0f; top:350px; z-index:3;}
+        .box2{background-color: #0f0; z-index:1;}
+        .box3{background-color: #f00;bottom:100px; z-index:2;}
+    </style>
+</head>
+<body>
+    <div class="box1 box">1</div>
+    <div class="box2 box">2</div>
+    <div class="box3 box">3</div>
+    
+</body>
+</html>
+
+코딩구조상 가장 밑에 입력된 엘리먼트가 가장 위에서 보여진다.
+z-index:1; 숫자가 높을 수록 가장 위에서 보여지게된다.
+    다른 그룹일 경우 적용되지 않는다
+    포지션이 사용된 상태에서만 쓸 수 있다.
+
+
