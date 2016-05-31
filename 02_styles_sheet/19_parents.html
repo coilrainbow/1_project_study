@@ -5,7 +5,7 @@
     <title>Document</title>
     <style>
         .wrapper{border:1px #F00 solid; width:600px; height:600px; position:relative;}
-        .wrap{width: 500px; height: 500px; border:1px #F00 solid;}
+        .wrap{width: 500px; height: 500px; border:1px #F00 solid; position:relative;}
         .box{width: 200px; height: 220px; border:1px #F00 solid; position:absolute;}
     </style>
 </head>
@@ -19,5 +19,32 @@
 
 </html>
 
-나보다 상위의 포지션으로 선언되어있으면 부모선언이 된다.
-overflow:hidden; 은 부모요소에 적용된다.
+
+<!--overflow:hidden; 은 부모요소에 적용된다.-->
+<!--엡솔루트가 설정되면 마진 0 오토는 안먹음-->
+
+
+상위의 엘리먼트가 포지션으로 선언되어있으면 부모 하위 엘리먼트의 부모가 된다.
+
+부모설정하기
+(부모자식으로 연결할 엘리먼트에 포지션이 선언되어 있다는 가정 하에)
+마크업 구조상 가장 가까운(혹은 상위의) (포지션을 가지고 있는)엘리먼트와 연결된다.
+
+가장 가까운 경우
+    .wrapper{border:1px #F00 solid; width:600px; height:600px; position:relative;}
+    .wrap{width: 500px; height: 500px; border:1px #F00 solid; }
+    .box{width: 200px; height: 220px; border:1px #F00 solid; position:absolute;}
+.box의 부모는 wrapper
+
+혹은 상위의 경우
+    .wrapper{border:1px #F00 solid; width:600px; height:600px; }
+    .wrap{width: 500px; height: 500px; border:1px #F00 solid; position:relative;}
+    .box{width: 200px; height: 220px; border:1px #F00 solid; position:absolute;}
+.box의 부모는 wrap
+
+참고
+    .wrapper{border:1px #F00 solid; width:600px; height:600px; position:relative;}
+    .wrap{width: 500px; height: 500px; border:1px #F00 solid; position:relative;}
+    .box{width: 200px; height: 220px; border:1px #F00 solid; position:absolute;}
+
+.box의 부모는 .wrap 이지 .wrapper가 아니다. 
