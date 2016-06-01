@@ -340,7 +340,7 @@ overflow:hidden; white-space:nowrap; text-overflow:ellipsis : 텍스트에 ... �
 jsfiddle.net
 css cast style sheet
 
-ㅁ케스케이딩의 레벨값
+케스케이딩의 레벨값
 저작자 내가 변경해서 내가 저작권이 갖고 우선순위됨 ex p{color:red}
 명시도
 우선순
@@ -414,3 +414,94 @@ s
 http://docs.emmet.io/abbreviations/syntax/
 
 animate.css
+
+
+
+
+
+
+
+
+
+
+
+
+
+160530
+마진에 음수값은 익스7에서 안먹는다.
+
+
+
+
+
+
+
+
+
+
+
+160530
+이미지털어오기
+개발자모드
+리소스
+프레임
+
+
+160531
+파폭 에서 플러그인 설치
+headings map :목차보기 디자인 없이 목차가 순서대로 구성되어있나 .접근성작업
+html validator : 오류보기. 절대적이지 않다.
+
+
+sublime text
+emmeet.io 라이프스타일 다운받아서 쓰면 아톰보다 좋음 = 웹에서 스타일 편집기 한개 작업창에 바로 적용됨
+review
+
+마진겹침현상 h1이 마진 패딩을 갖고 있음.
+자식간
+
+
+접근성의 ir 기법
+실제로는 있지만 눈에 안보이게 하기. 
+.hide{width:0; height:0; overflow:hidden; position:absolute; left:-9999px; top:-9999px}
+display:none;은 아예없애버리는것
+
+밑줄없애기
+
+
+css활용하여 컬러 지정한다. 복붙활용
+
+
+캐스케이딩 값.
+
+
+
+디자인과 레이아웃적인 요소를 분리해서 각을 잡아야 노가다가 줄어든다.
+
+
+
+
+스택오버플로우
+
+
+
+
+
+
+20160601
+
+span 인라인 태그 대표.텍스트요소 꾸밀때 사용
+div 블럭태그 대표. 레이아웃 요소 구성할 때 사용
+
+p = div 
+h1 = div
+strong = span
+같은 기능이지만 p,h1, strong 처럼이름을 붙이는게 더 효율적이기 때문에.
+div로 가능은 하지만 구성 하려면 번거롭고 복잡해진다. 
+
+
+
+
+
+
+
