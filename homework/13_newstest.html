@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style type="text/css">
+        *{padding: 0;margin: 0; list-style:none;}
+        .wrap{outline:1px red solid; width: 900px; height: 540px; margin:0 auto;}
+        .header{outline:1px red solid; height: 111px; margin:0 30px 15px; }
+        .content{outline:1px red solid;  width:840px; height:380px; margin:0 30px; position:relative; }
+        
+        .content .lc{outline:1px green solid; width: 600px; height: 380px; position:absolute; left:0;   }
+        .content .rc{outline:1px blue solid; width: 220px; height:380px; position:absolute; left:620px;  }
+        
+        .content .lc .top_wrap{outline:1px green solid; widht:600px; height: 250px; }
+        .content .lc .bot_wrap{outline:1px green solid; widht:600px; height: 130px; }
+        
+        .content .lc .top_wrap .top_lc{outline:1px green solid; width: 360px; height: 240px; position:absolute; left:0; overflow:hidden; }
+        .content .lc .top_wrap .top_rc{outline:1px green solid; width: 235px; height:240px; position:absolute; left:365px; overflow:hidden;}
+        
+        .content .lc .top_wrap .top_lc img{width:100%;}
+        .content .lc .top_wrap .top_rc li span img{width:100%;}
+        
+        
+        .content .rc .rc_top{outline:1px blue solid; width: 220px; height: 215px; left:620px;}
+        .content .rc .rc_mid{outline:1px blue solid; width: 220px; height: 65px;  left:620px; top:340px;}
+        .content .rc .rc_bot{outline:1px blue solid; width: 220px; height: 100px;  left:620; top:400px;}
+        
+        .content .lc .top_wrap .top_rc ul li{border:1px red solid; width: 115px; height: 60px; float:left; margin-bottom:3px }
+        .content .lc .bot_wrap ul li{border:1px red solid; width: 115px; height: 115px; float:left; margin:6px 3px 0 0; }
+    
+        
+    
+    </style>
+    
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">header</div>
+        <div class="content">
+            <div class="lc">
+                <div class="top_wrap">
+                    <div class="top_lc">
+                        <a href="">
+                            <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt="" /></span>
+                        </a>
+                    </div>
+                    <div class="top_rc">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""/></span>
+                                    <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""/></span>
+                                    <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                                </a>
+                            </li>
+                                                        <li>
+                                <a href="#">
+                                    <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""/></span>
+                                    <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span><img src="http://static.naver.net/newsstand/2016/0531/pressian/132901/001.jpg" alt=""/></span>
+                                    <span>안철수, 19세 노동자 사망에 "여유 발언 논란"</span>
+                                </a>
+                            </li>                            
+                        </ul>
+                        
+                    </div>
+                </div>
+                <div class="bot_wrap">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="rc">
+                <div class="rc_top">
+                    <h2>뉴스클럽</h2>
+                    <ol>
+                        <li><a class="point" href="">기사내용</a></li>
+                        <li><a class="point" href="">기사내용</a></li>
+                        <li><a class="point" href="">기사내용</a></li>
+                        <li><a class="point" href="">기사내용</a></li>
+                        <li><a class="point" href="">기사내용</a></li>
+                        <li><a href="">기사내용</a></li>
+                        <li><a href="">기사내용</a></li>
+                        <li><a href="">기사내용</a></li>
+                        <li><a href="">기사내용</a></li>
+                        <li><a href="">기사내용</a></li>
+                    </ol>
+                </div>
+                <div class="rc_mid">
+                    <h2>오늘의  이슈</h2>
+                    <div>
+                        <a href=""><strong>여동생을 미끼로 노벨상을 받아</strong></a>
+                        <a><span>월요일의 과학고</span></a>
+                    </div>
+                </div>
+                <div class="rc_bot">
+                    <h2>오늘의 서평</h2>
+                    <div>
+                        <a href="">
+                        <span class="thumb"><img src="" alt=""></span>
+                        <strong>나는 국정원보다 페북이 더 무섭다.</strong>
+                        </a>
+                        
+                    </div>
+                    <div>
+                        <a href="">
+                        <span class="thumb"><img src="" alt=""></span>
+                        <strong>다라마바사가나.</strong>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
