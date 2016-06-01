@@ -1,8 +1,8 @@
 <!--
-        width   가로 . auto 나의 부모만큼 늘어나라. min-width
-                                                  max-width
+        width   가로 . auto 나의 부모만큼 늘어나라.  min-width
+                                                     max-width
         height  세로 . auto 나의 컨텐츠만큼 늘어나라 min-height
-                                                   max-height
+                                                     max-height
         padding 안쪽여백
         border  테두리선
         margin  바깥여백 *절대로 위치잡는 용도가 아님.
@@ -15,8 +15,8 @@
     <title>Document</title>
 
 
-<!-- 1 -->
-<!--
+ 1
+
     <style>
     div{ width:200px;
          height:200px;
@@ -25,41 +25,41 @@
          margin:20px;
        }
     </style>
--->
-<!-- 박스모델 사이즈 값을 잘 계산을 해야한다.양 옆의 위드값+보더값+패딩값을 더해야한다.
-     크롬에서 f12 개발자도구 -->
+
+    <!--박스모델 사이즈 값을 잘 계산을 해야한다. ex>전체 가로의 값은= 위드값+보더값+양 옆의 마진,패딩값 -->
+    <!--크롬에서 f12 개발자도구 -->
 
 
 
-<!-- 2 -->
-<!--
+ 2 
+
     <style>
     html의 부모는 바탕화면 사이즈
-    body는 기본적으로 8픽셀식 마진을 가지고있다.부모는 html
-    박스형태는 위드값이 기본적으로 오토임. auto 나의 부모만큼 커져라
+    body는 기본적으로 8픽셀식 마진을 가지고있다.body의 부모는 html.
+    박스형태는 위드값이 기본적으로 오토임. width:auto; 는 가로 값을 나의 부모 엘리먼트만큼 커져라
 
     html{border:1px red solid}
     body{border:1px red solid}
-    div{ border:1px red solid; width:100%;   }
-    바디에 <div>tex</div>만 걸려있을 경우의 예제
+    div {border:1px red solid; width:100%;}
+    바디에 <div>text</div>만 걸려있을 경우의 예제
     </style>
- -->
+ 
 
 
 
 
 
-<!-- 3 -->
-<!--
+ 3 
+
     <style>
     .menu{border:1px red solid; width:350px; }
     .menu div{ border:1px red solid;
                 width:auto;
                 margin:20px;    }
     </style>
- -->
 
-<!-- 4 -->
+
+ 4 
     <style>
         .menu{border:5px red solid;
         width:350px;
@@ -70,7 +70,7 @@
                 margin:20px;
             }
     </style>
-    <!-- width값 auto는 사이즈 변동시 유동적 변화가 가능하다. -->
+     width값 auto는 사이즈 변동시 유동적으로 변화된다.
 
 
 </head>
