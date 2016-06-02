@@ -3,26 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>sbs_news</title>
-    
+
     <style type="text/css">
         *{margin: 0;padding: 0; list-style:none;}
         body{background-image:url(img/bg_background.png); width:100%;}
-        
+
         .head{height: 61px; background-image:url(img/bg_head.png);}
-        
+
         .btn {cursor:pointer; background-image:url(img/icon.png); text-indent:-9999999px }
-        
+
         .head1{width: 111px; height: 12px; background-position:0 -90px; position:absolute; top: 15px; left: 17px; }
-        .head2{width: 256px; height: 12px; background-position:-120px -91px; position:absolute; top: 15px; left: 136px; } 
-        
-        .mid1{width: 87px; height: 29px; background-position:-1px -116px; position:absolute; top: 5px; left: 873px; }
-        .mid2{width: 87px; height: 29px; background-position:-88px -150px; position:absolute; top: 5px; left: 959px; }
-    
-        .head_mid{border:1px red solid; position:absolute; top:5px; left: 50%; }
-    
-        
+        .head2{width: 256px; height: 12px; background-position:-120px -91px; position:absolute; top: 15px; left: 136px; }
+
+        .mid1{width: 87px; height: 29px; background-position:-1px -116px; float: left;}
+        .mid2{width: 87px; height: 29px; background-position:-88px -150px; display: inline-block; }
+
+        .head_mid{width: 300px;height: 300px;position:absolute; top:5px; left: 50%;  }
+
+        .head_right .btn{border:1px red solid;}
+        .naver{}
+            
+
+
     </style>
-    
+
 </head>
 <body>
     <div class="warp">
@@ -36,11 +40,11 @@
                 <span class="btn mid2"><a href="">전체언론사</a></span>
             </div>
             <div class="head_right">
-                <span class="btn "><a href="">naver</a></span>>
-                <span class="btn "><a href="">설정</a></span>
-                <span class="btn "><a href="">새로고침</a></span>
-                <span class="btn "><a href="">바둑판</a></span>
-                <span class="btn "><a href="">로그인</a></span>
+                <span class="btn naver "><a href="">naver</a></span>
+                <span class="btn setup"><a href="">설정</a></span>
+                <span class="btn refresh"><a href="">새로고침</a></span>
+                <span class="btn badook"><a href="">바둑판</a></span>
+                <span class="btn login"><a href="">로그인</a></span>
             </div>
         </div>
         <div class="body">
@@ -185,9 +189,9 @@
                                     </a>
                                 </li>
                             </ul>
-                            
+
                         </div>
-                        
+
                     </div>
                 </div>
             <span>사이트 바로 가기</span>
@@ -215,10 +219,10 @@
             <div class="footer"></div>
         </div>
     </div>
-    
-    
-    
-    
-    
+
+
+
+
+
 </body>
 </html>
