@@ -1,0 +1,78 @@
+버티컬
+
+테이블 셀을 제외하고는 인라인이 있는 상황에서만 버티컬이 동작한다.
+상속되는 속성이 아님.
+
+블록한테 주는게 아니라 
+인라인의 경우 라인헤이트 영역 안에서 정렬 
+테이블일 경우 박스 안에서 정렬
+인라인 블락 
+디스플레이가 인라인-블락일 경우 레이아웃의 기준점을 설정하는 역할.
+블럭 속성을 정렬할때도 마찬가지
+top
+middle
+bottom  
+ex>
+인풋같은경우 박스와 글자가 속성이 다르다.
+모든 브라우저 마다 위치가 다름.
+vertical-align:middle 미들로 주면 정렬한다.
+
+<!--참고.인라인 블락-인라인의 옆으로 늘어나는 속성과 블럭의 레이아웃 속성의 결함-->
+
+
+
+
+**인라인일때 텍스트를 꾸밀때**
+baseline 기본.중앙정렬.
+sub
+super 라인헤이트 영역 안에서 배치됨
+text-top 
+text-bottom
+글자의 시작점의 높이를 설정한다. 
+수치와 퍼센트로도 높이 조절이 가능.
+
+글자의 시작위치를 어느지점에서 할건지 설정.
+
+
+
+
+참고.
+http://www.w3schools.com/cssref/pr_pos_vertical-align.asp
+모든 속성들이 다 갖고 있다.
+initial	상속 받음 
+inherit	상속 받지 않음
+
+
+
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+      li{list-style: none;border:1px #F00 solid; display:inline-block; vertical-align:middle;}
+     input[type="checkbox"] {vertical-align:middle;}
+    </style>
+</head>
+<body>
+    <input type="checkbox" name=""/> <label for="">아이디 저장</label>
+    
+   <div>
+       <ul>
+           <li style="width:200px; height:300px;"></li>
+           <li style="width:200px; height:200px;"></li>
+           <li style="width:200px; height:400px;"></li>
+       </ul>
+   </div>
+    
+    
+    
+    
+</body>
+</html>
