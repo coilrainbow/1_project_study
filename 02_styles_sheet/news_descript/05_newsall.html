@@ -5,61 +5,112 @@
     <title>sbs_news</title>
 
     <style type="text/css">
-        *{margin: 0;padding: 0; list-style:none;}
-        body{background-image:url(img/bg_background.png);}
-        
-        .warp     {width:100%; min-width:1170px; height:100%; position:relative;}
-        /*위드값이 100%이지만 1170까지만 줄어들게한다. %, px 같이 먹음.*/
-        .head {height: 43px; background-image:url(img/bg_head.png);}
-        
+        *{margin: 0;padding: 0; list-style:none; font-size:12px;}
+        .skyblue{color:skyblue; !important}
+        .black{color:black; font-weight:900; !important} 
+        .white{color:white; font-weight:900;}
         .btn {cursor:pointer; background-image:url(img/icon.png); text-indent:-9999px }
+        a{text-decoration:none;}
         
-        .head_left {position:absolute; top:12px; left:17px; float:left; }
-        .head1     {width: 111px; height: 14px; background-position:0 -89px; display:inline-block; float:left; }
-        .head2     {width: 256px; height: 12px; background-position:-120px -91px; display:inline-block; margin:2px 0 0 10px; cursor:none;}
+        html{height: 100%; min-width:1152px; min-height: 826px}
+        body{height: 100%; background-image:url(img/bg_background.png);}
         
-        .head_mid {text-align:center; padding-top:5px;}
-        .head_mid li{display:inline-block }
-        .mid1     {width: 174px; height: 29px; background-position:-1px -116px; }
-        .head_mid .mid2     {width: 87px; height: 29px; background-position:-88px -150px; display:none;}
+        .warp     {width:100%; height: 100%;  position:relative; }
+        /*위드값이 100%이지만 1170까지만 줄어들게한다. %, px 같이 먹음.*/
+        .head {height: 50px; background-image:url(img/bg_head.png);}
+        
+        
+        
+        .head_left         {position:absolute; top:12px; left:16px; float:left; }
+        .head_left .head1  {width: 112px; height: 14px; background-position:0 -89px; display:inline-block; float:left; }
+        .head_left .head2  {width: 256px; height: 12px; background-position:-120px -91px; display:inline-block; margin:2px 0 0 8px; cursor:none;}
+        
 
-        .head_right {position:absolute; top:6px; right:14px; float:right;}
-        .head_right span{display:inline-block; vertical-align:middle; }
-        .login     {width: 45px;height: 20px; background-position:-187px -174px; margin-right:15px;}
-        .refresh   {width: 58px;height: 20px; background-position:-255px -150px; margin-right: 6px;}
-        .setup     {width: 38px;height: 20px; background-position:-335px -150px; margin-right: 6px;}
-        .lll       {width: 2px;height: 20px;  background-position:-244px -150px; margin-right: 6px;}
-        .naver     {width: 50px;height: 20px; background-position:-541px -272px; }
-        .badook    {width: 20px;height: 20px; background-image:url(img/bg_badook.gif); background-position:center; text-indent:-9999px; background-repeat:no-repeat; cursor:pointer; margin-right:10px;}
+        
+        .head_mid       {text-align:center; width:100%;padding-top: 5px;}
+        .head_mid li    {display:inline-block }
+        .head_mid .mid1 {width: 87px; height: 29px; background-position:-1px -116px; }
+        .head_mid .mid2 {width: 87px; height: 29px; background-position:-88px -150px; margin-left:-6px;}
+
+        
+
+        .head_right            {position:absolute; top:10px; right:14px; float:right;}
+        .head_right span       {display:inline-block; vertical-align:middle; }
+        .head_right .login     {width: 43px;height: 18px; background-color:white; margin:-2px 12px 0 0; text-align:center;}
+        .head_right .refresh   {width: 58px;height: 20px; background-position:-255px -150px; margin:0 6px 0 2px;}
+        .head_right .setup     {width: 38px;height: 20px; background-position:-335px -150px; margin:0 6px 0 -2px;}
+        .head_right .lll       {width: 2px;height: 20px;  background-position:-244px -150px; margin:0px 5px 0 2px;}
+        .head_right .naver     {width: 50px;height: 20px; background-position:-541px -272px; }
+        .head_right .badook    {width: 20px;height: 20px; background-image:url(img/bg_badook.gif); background-position:center; text-indent:-9999px; background-repeat:no-repeat; cursor:pointer; margin:-2px 5px 0 0 ;}
        
-        .top_menu     {text-align:center; padding-top:5px;}
-        .top_menu li  {display:inline-block;}
-        .main         {width: 72px;height: 24px; background-position:-1px -252px; }
-        .total        {width: 66px;height: 24px; background-position:-94px -278px;}
-        .broadcasting {width: 66px;height: 24px; background-position:-94px -304px;}
-        .it           {width: 30px;height: 24px; background-position:-94px -382px;} 
-        .eng          {width: 51px;height: 24px; background-position:-94px -330px;}
-        .sports       {width: 77px;height: 24px; background-position:-94px -408px;}
-        .magazine     {width: 87px;height: 24px; background-position:-94px -434px;}
-        .local        {width: 36px;height: 24px; background-position:-94px -460px;}
-        /*센터 공식. 전체가 차지하는 픽셀의 범위/2 /전체픽셀*100 - 50%             margin:5px 0 0 29.2735%*/
+        .top_menu               {text-align:center; position:relative; top:-1px;}
+        .top_menu li            {display:inline-block; margin: 0 -3px 0 -3px;}
+        .top_menu .main         {width: 72px;height: 24px; background-position:-1px -252px; }
+        .top_menu .total        {width: 66px;height: 24px; background-position:-94px -278px;}
+        .top_menu .broadcasting {width: 66px;height: 24px; background-position:-94px -304px;}
+        .top_menu .it           {width: 30px;height: 24px; background-position:-94px -382px;} 
+        .top_menu .eng          {width: 51px;height: 24px; background-position:-94px -330px;}
+        .top_menu .sports       {width: 77px;height: 24px; background-position:-94px -408px;}
+        .top_menu .magazine     {width: 87px;height: 24px; background-position:-94px -434px;}
+        .top_menu .local        {width: 36px;height: 24px; background-position:-94px -460px;}
+        /*가로센터 공식. 전체가 차지하는 픽셀/전체픽셀/ 2 *100 - 50%  */
+        /*세로 센터 공식2. 지정한 전체 픽셀/100=1% - 차지하는 픽셀  / 100  540/608*100 -밑폭길이 */
         
       
         
-        .news_wrap{border:1px red solid; position:relative; width: 900px; height: 540px; background-image:url(img/bg_panel.png); background-position:center; margin:0 auto ; padding:15px 30px; 
-            
-        }
+        .news_wrap{position:absolute; left:50%; top:39%; width: 1004px; height: 560px; 
+                   background-image:url(img/bg_panel.png) ; background-repeat:no-repeat; background-position:center; margin:-247px -502px 0;}
+        .news{width: 900px; height: 540px; margin:0 auto; position:relative;}        
         
-        .header{border-bottom:3px gray solid; width: 840px;height: 91px; margin:0 30px; padding-top: 20px;}
-        .header h2{border:1px red solid; width: 260px; height: 55px; background-image:url(img/sbslogo.gif);  float:left;}
-        .header .right_ad{border:1px red solid; width: 468px; height: 60px; background-image:url(); text-indent:-9999px; float:right; margin-top: 26px;}
+        .news .header{border-bottom:3px gray solid; width: 840px; height: 90px; margin:0 30px; padding-top: 22px; }
+        .news .header h2{width: 260px; height: 55px; background-image:url(img/sbslogo.gif);  float:left;}
+        .news .header .right_ad{width: 468px; height: 60px; background-image:url(http://adcreative.naver.com/ad3/1004/1004874/468_60_11446516899395.jpg);
+                                text-indent:-9999px; float:right; margin-top: 22px;}
         
-        .header_menu{border:1px red solid; float: left; margin-top:5px;}
-        .header_menu li{float: left; vertical-align:middle; }
-        .favorite{width: 66px; height: 22px; background-position:-187px -199px; margin-right: 2px;}
-        .smash{border:1px gray solid; border-radius:2px; width: 73px; height: 19px; background-position:-294px -175px; margin-right: 5px;}
-        .sns{width: 28px; height: 22px; background-position:-500px -270px;margin-right: 8px;}
-        .date{height: 22px; line-height:22px; font-size:11px; color:gray; }
+        .news .header_menu{float: left; margin-top:10px; }
+        .news .header_menu li{float: left; vertical-align:middle; }
+        .news .favorite{width: 66px; height: 22px; background-position:-187px -199px; margin-right: 2px;}
+        .news .smash{border:1px gray solid; border-radius:2px; width: 73px; height: 19px; background-position:-294px -175px; margin-right: 5px;}
+        .news .sns{width: 28px; height: 22px; background-position:-500px -270px;margin-right: 8px;}
+        .news .date{height: 22px; line-height:22px; font-size:11px; color:gray; }
+        
+        /*마진이 포함된박스에 포지션:앱솔루트가 걸려있다면 x축에서 마진만큼 빼줘야 정확한 위치에 맞을 수 있다. ex>mid_area 앱솔left값*/
+        .content             {border:1px red solid; width: 840px;height: 380px; margin:15px 30px 0; position:relative; }
+        
+        .content .left_area         {width: 90px; height: 380px; position:absolute; left:0px; top:0px; }
+        .left_area_top              {width: 90px; height: 60px;  position:absolute; left:0px; top:0px; }
+        .left_area_bot              {border:1px gray solid; width: 88px; height: 320px; position:absolute; left:0px; top:58px; }
+        .left_area_top .eight_news  {width: 90px; height: 29px; background-image:url(http://static.naver.net/newsstand/2016/0603/sbs/221359/001.gif);
+                                     text-indent:-9999px; margin-bottom: 5px; }
+        .left_area_top .weather     {width: 70px; height: 15px; background-color:skyblue; padding:5px 10px;}
+        .weather .sunny             {display:block; float:left; width: 20px; height: 19px; margin:-2px 0 0px 3px; background-image: url(http://static.naver.net/newsstand/2016/0603/sbs/221359/002.png);}
+        .weather .temperature       {margin:-1px 3px 0 0px; float: right;    }
+        
+        
+        .left_area_bot .vivid_a h2  {width: 39px; height: 11px; background-image: url(http://static.naver.net/newsstand/2016/0603/sbs/221359/003.gif);
+                                     text-indent:-9999px; margin:10px 0 0 5px; display:block;}
+        .left_area_bot .vivid_b h2  {width: 39px; height: 11px; background-image: url(http://static.naver.net/newsstand/2016/0604/sbs/032602/005.gif);
+                                     text-indent:-9999px; margin:5px 0 0 5px; display:block;}
+        .left_area_bot .vivid       {width: 78px; height: 140px; margin:0 6px; display:block;}
+        .left_area_bot .vivid_a img {width: 78px; height: 87px; margin:10px 5px 0 0;}
+        .left_area_bot .vivid_a span{width: 78px; height: 35px; display:block; overflow:hidden; text-overflow:ellipsis;}  
+  
+        .left_area_bot .vivid_b img {width: 78px; height: 87px; margin:10px 5px 0 0;}
+        .left_area_bot .vivid_b span{width: 78px; height: 35px; display:block; overflow:hidden; text-overflow:ellipsis;}
+        
+        
+        
+        
+        
+        
+        
+        .content .mid_area   {outline: 1px red solid; width: 530px; height: 380px; position:absolute; left:91px; top:0px; margin:0 10px;}
+        .content .mid_top{}
+        .content .mid_bot{}
+        
+        .content .right_area   {outline: 1px red solid; width: 200px; height: 380px; position:absolute; left:641px; top:0px;}
+        .content .right_top{}
+        .content .right_bot{}
         
         
             
@@ -76,7 +127,7 @@
                 <p class="btn head2">뉴스스탠드 기사는 각 언론사에서 직접 편집합니다.</p>
             </div>
             <div class="head_right">
-                <span class="btn login"><a href="">로그인</a></span>
+                <span class="login"><a href="">로그인</a></span>
                 <span class="badook"><a href="">바둑판</a></span>
                 <span class="btn lll"></span>
                 <span class="btn refresh"><a href="">새로고침</a></span>
@@ -108,164 +159,172 @@
                 </ul>
             </div>
             <div class="news_wrap">
-                <div class="header">
-                    <h2 class="btn sbs_logo"><a href="">sbs 뉴스</a></h2>
-                    <div class="btn right_ad"><a href="">ad</a></div>
-                    <div class="header_menu">
-                        <ul>
-                            <li class="btn favorite"><a href="">구독하기</a></li>
-                            <li class="btn smash"><a href="">이용자한마디</a></li>
-                            <li class="btn sns"><a href="">sns</a></li>
-                            <li class="date">06-03 11:30 편집</li>
-                        </ul>
+                <div class="news">
+                    <div class="header">
+                        <h2 class="btn sbs_logo"><a href="">sbs 뉴스</a></h2>
+                        <div class="btn right_ad"><a href="">ad</a></div>
+                        <div class="header_menu">
+                            <ul>
+                                <li class="btn favorite"><a href="">구독하기</a></li>
+                                <li class="btn smash"><a href="">이용자한마디</a></li>
+                                <li class="btn sns"><a href="">sns</a></li>
+                                <li class="date">06-03 11:30 편집</li>
+                            </ul>
+                        </div>
                     </div>
-                    
+                    <div class="content">
+                        <div class="left_area">
+                            <ul class="left_area_top">
+                                <li>
+                                    <a href=""><h2 class="eight_news">sbs8시뉴스</h2></a>
+                                </li>
+                                <li class="weather">
+                                    <a class="sunny" href=""></a>
+                                    <a href=""><span class="temperature white">21.6&deg;</span></a>
+                                </li>
+                            </ul>
+                            <ul class="left_area_bot">
+                                <li class="vivid_a">
+                                    <h2>생생영상</h2>
+                                    <a class="vivid" href="">
+                                        <img src="http://static.naver.net/newsstand/2016/0603/sportsworld/235305/005.jpg" alt="" />
+                                        <span>[라이브 다시 보기] 2016 부산</span>
+                                    </a>
+                                </li>
+                                <li class="vivid_b">
+                                    <h2>취재파일</h2>
+                                    <a class="vivid" href="">
+                                        <img src="http://static.naver.net/newsstand/2016/0603/sportsworld/235305/005.jpg" alt="">
+                                        <span>[단독] 루지 '독일 귀화 선수'로</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="mid_area">
+                            <div class="mid_top">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <img src="" />
+                                            <strong>"압도적 판매 1위" 자동차 보니..씁쓸한 이변</strong>
+                                            <span>친절한 경제입니다. 우리나라에서 가장 많이 팔리는 자동차...</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src=""></img>
+                                            <span>발사 성공률 0%인데 강행... 北 '무수단 미스터리'</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src=""></img>
+                                            <span>부모욕해서 살인했다더니..새롭게 드러난 진실</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="mid_bot">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <img src="" alt="">
+                                            <span></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <img src="" alt="">
+                                            <span></span>
+                                        </a>
+                                    </li>
+                                    <li><a href=""><strong>[속보]전국위서 김희옥 혁신비대위원회의</strong></a></li>
+                                    <li><a href=""><span>"사고 전날 가스통 보관소로 안 옮겼다"</span></a></li>
+                                    <li><a href=""><strong>'역대 최대' 부산 모터쇼 제네시스 G80 최대</strong></a></li>
+                                    <li><a href=""><span>"月 300만 원 준다는데.." 반대하는 스위스 국민</span></a></li>
+                                    <li><a href=""><strong>대작 논란 조영남 내일 피의자 신분 소환</strong></a></li>
+                                    <li><a href=""><span>[영상] 스페인에 6대 1 '대참사' 뻥 뚫린 골문</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right_area">
+                            <div class="right_top">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <span class="skyblue">[사회]</span>
+                                            <span>23,381,000명이 동시에 들어갈 수 있는 장소?</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="skyblue">[정치]</span>
+                                            <span>신무기 동영상 공개 무수단 실패 만회용?</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="skyblue">[사회]</span>
+                                            <span>23,381,000명이 동시에 들어갈 수 있는 장소?</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span class="skyblue">[정치]</span>
+                                            <span>신무기 동영상 공개 무수단 실패 만회용?</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="" >
+                                            <span class="skyblue">[사회]</span>
+                                            <span>23,381,000명이 동시에 들어갈 수 있는 장소?</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="right_bot">
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            <img src="" alt="">
+                                            <span>조부도 숙부도 장관. 서지영 '화려한 집안' 화제</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            <span>샵이 화제인 가운데, 아쉽게 육아일기</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="content">
-                    <div class="left_area">
-                        <div>
-                            <a href="">sbs8시뉴스</a>
-                        </div>
-                        <div>
-                            <h2>생생영상</h2>
-                            <a href="">
-                                <img src="" alt="">
-                                <span>[라이브 다시 보기] 2016 부산</span>
-                            </a>
-                        </div>
-                        <div>
-                            <h2>취재파일</h2>
-                            <a href="">
-                                <img src="" alt="">
-                                <span>[단독] 루지 '독일 귀화 선수'로</span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="mid_area">
-                        <div class="mid_top">
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <img src=""></img>
-                                        <strong>"압도적 판매 1위" 자동차 보니..씁쓸한 이변<strong>
-                                        <span>친절한 경제입니다. 우리나라에서 가장 많이 팔리는 자동차...</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img src=""></img>
-                                        <span>발사 성공률 0%인데 강행... 北 '무수단 미스터리'</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img src=""></img>
-                                        <span>부모욕해서 살인했다더니..새롭게 드러난 진실</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="mid_bot">
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <img src="" alt="">
-                                        <span></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <img src="" alt="">
-                                        <span></span>
-                                    </a>
-                                </li>
-                                <li><a href=""><strong>[속보]전국위서 김희옥 혁신비대위원회의</strong></a></li>
-                                <li><a href=""><span>"사고 전날 가스통 보관소로 안 옮겼다"</span></a></li>
-                                <li><a href=""><strong>'역대 최대' 부산 모터쇼 제네시스 G80 최대</strong></a></li>
-                                <li><a href=""><span>"月 300만 원 준다는데.." 반대하는 스위스 국민</span></a></li>
-                                <li><a href=""><strong>대작 논란 조영남 내일 피의자 신분 소환</strong></a></li>
-                                <li><a href=""><span>[영상] 스페인에 6대 1 '대참사' 뻥 뚫린 골문</span></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="right_area">
-                        <div class="right_top">
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <em>[사회]</em>
-                                        <span>23,381,000명이 동시에 들어갈 수 있는 장소?</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <em>[정치]</em>
-                                        <span>신무기 동영상 공개 무수단 실패 만회용?</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <em>[사회]</em>
-                                        <span>23,381,000명이 동시에 들어갈 수 있는 장소?</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <em>[정치]</em>
-                                        <span>신무기 동영상 공개 무수단 실패 만회용?</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <em>[사회]</em>
-                                        <span>23,381,000명이 동시에 들어갈 수 있는 장소?</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="right_bot">
-                            <ul>
-                                <li>
-                                    <a href="">
-                                        <img src="" alt="">
-                                        <span>조부도 숙부도 장관. 서지영 '화려한 집안' 화제</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span>샵이 화제인 가운데, 아쉽게 육아일기</span>
-                                    </a>
-                                </li>
-                            </ul>
-
-                        </div>
-
-                    </div>
+                <span>사이트 바로 가기</span>
+                <div class="auto_off">
+                    <span class="btn ">자동넘김</span>
+                    <span class="btn ">끄기</span>
                 </div>
-            <span>사이트 바로 가기</span>
+                <div class="">
+                    <span class="btn ">24/49</span>
+                    <span class="btn "><</span>
+                    <span class="btn ">></span>
+                </div>
+                <div class="bot_news_list">
+                        <a href=""><img src="" alt=""></a>
+                        <a href=""><img src="" alt=""></a>
+                        <a href=""><img src="" alt=""></a>
+                        <a href=""><img src="" alt=""></a>
+                        <a href=""><img src="" alt=""></a>
+                        <a href=""><img src="" alt=""></a>
+                        <a href=""><img src="" alt=""></a>
+                        <a href=""><img src="" alt=""></a>
+                        <a href=""><img src="" alt=""></a>
+                </div>
+                </div>
+                <div class="footer"></div>
             </div>
-            <div class="auto_off">
-                <span class="btn ">자동넘김</span>
-                <span class="btn ">끄기</span>
-            </div>
-            <div class="">
-                <span class="btn ">24/49</span>
-                <span class="btn "><</span>
-                <span class="btn ">></span>
-            </div>
-            <div class="bot_news_list">
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-            </div>
-            <div class="footer"></div>
-        </div>
+                
     </div>
 
 
