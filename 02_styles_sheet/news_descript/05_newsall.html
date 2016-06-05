@@ -15,28 +15,36 @@
         html{height: 100%; min-width:1152px; min-height: 826px}
         body{height: 100%; background-image:url(img/bg_background.png);}
         
-        .warp     {width:100%; height: 100%;  position:relative; }
+        .warp     {width:100%; height: 100%;  position:relative;}
         /*위드값이 100%이지만 1170까지만 줄어들게한다. %, px 같이 먹음.*/
-        .head {width: 100%; height: 50px; background-image:url(img/bg_head.png); position:relative;}
+        .head {height: 50px; background-image:url(img/bg_head.png);}
         
-        .footer{outline:1px red solid; width: 100%; height: 71px; position:absolute; bottom:0; left:0; 
+        .footer{width: 100%; height: 71px; position:absolute; bottom:0; left:0; 
                 background-image:url(img/bg_footer.png); text-align:center; margin-top:10px; padding-top:10px;}
         .footer strong{color:#ddc196; }
         .footer a{color:#e4e2e0; margin: 0 5px;}
         .footer p{color:#aca69f; margin-top: 10px; padding-bottom: 5px; }
         .footer span{color:#aca69f; }
         
-        .bot_news_list{outline:1px red solid; width: 100%; height: 95px; background-image:url(img/bg_bottom.png);
-                position:absolute; bottom:75px;
-        }
-        .bot_news_list
+        .bot_news_list{ width: 100%; overflow:hidden; height: 79px; background-image:url(img/bg_bottom.png);
+            position:absolute; bottom:80px; padding:9px 0 4px 0; }
+        .bot_news_list .btn{width: 89px; height: 79px; margin-bottom: 5px;background-position:-182px -489px; float: left; margin-left:2px;}
+        .bot_news_list li:first-child{margin-left:35px;}
+        .bot_news_list .btn img{width: 81px; height: 73px; margin:4px; 3px; display:inline-block; }
         
         
         
         
         
-        .head_left         {outline: 1px red solid;  width: 400px; height: 15px; display:block; position:absolute; top:12px; left:16px; float: left; }
-        .head_left .head1  {width: 112px; height: 14px; background-position:0 -89px; display:inline-block; }
+        
+       
+        
+        
+        
+        
+        
+        .head_left         {position:absolute; top:12px; left:16px; float:left; }
+        .head_left .head1  {width: 112px; height: 14px; background-position:0 -89px; display:inline-block; float:left; }
         .head_left .head2  {width: 256px; height: 12px; background-position:-120px -91px; display:inline-block; margin:2px 0 0 8px; cursor:none;}
         
 
@@ -72,7 +80,7 @@
         
       
         
-        .news_wrap{position:absolute; left:50%; top:39%; width: 1004px; height: 560px; 
+        .news_wrap{position:absolute; left:50%; top:39%; width: 1004px; height: 560px;  
                    background-image:url(img/bg_panel.png) ; background-repeat:no-repeat; background-position:center; margin:-247px -502px 0;}
         .news{width: 900px; height: 540px; margin:0 auto; position:relative;}        
         
@@ -89,7 +97,7 @@
         .news .date{height: 22px; line-height:22px; font-size:11px; color:#d6d6d6; }
         
         /*마진이 포함된박스에 포지션:앱솔루트가 걸려있다면 x축에서 마진만큼 빼줘야 정확한 위치에 맞을 수 있다. ex>mid_area 앱솔left값*/
-        .content             {width: 840px;height: 380px; margin:15px 30px 0; position:relative; }
+        .content             {width: 840px;height: 380px; margin:15px 30px 0; position:relative; overflow:hidden; }
         
         .content .left_area         {width: 90px; height: 380px; position:absolute; left:0px; top:0px; }
         .left_area_top              {width: 90px; height: 60px;  position:absolute; left:0px; top:0px; }
@@ -147,20 +155,20 @@
         .mid_bot .right li{list-style:disc; margin:0px 0 5px 10px; }
     
         .content .right_area   {width: 200px; height: 380px; position:absolute; left:641px; top:0px;}
-        .content .right_top{border:1px #d6d6d6 solid; width: 180px; height: 198px; padding: 0 10px; margin-bottom: 10px;}
+        .content .right_top{border:1px #d6d6d6 solid; width: 177px; height: 198px; padding: 0 10px; margin-bottom: 10px;}
         .content .right_top li{border-top:1px #d6d6d6 solid; padding:5px 0 4px 0; }
         .content .right_top li:first-child{border-top:0;}
         
         
-        .right_area .right_bot {border:1px #d6d6d6 solid; width:199px; height:168px;}
-        .right_bot .top img{border-bottom:1px #d6d6d6 solid; width: 199px; height: 98px; overflow:hidden; }
+        .right_area .right_bot {border:1px #d6d6d6 solid; width:196px; height:168px;}
+        .right_bot .top img{border-bottom:1px #d6d6d6 solid; width: 196px; height: 98px; overflow:hidden; }
         .right_bot .top strong{width: 183px; height: 33px; letter-spacing:-0.5px; padding:0 8px 5px ; display:inline-block; text-align:justify;}
         .right_bot .bot span{width: 183px; height: 32px;padding:0 8px 5px ; display:inline-block;}
         
         .quicksbs{width: 105px; height: 16px;  position:absolute;  left:765px; margin-top:4px;}
         .quicksbs strong{padding-right:5px ;}
         
-        .auto_off {width: 500px; height: 23px; position:absolute; left:55px; margin-top: 5px;}
+        .auto_off {width: 500px; height: 24px; position:absolute; left:55px; margin-top: 5px;}
         .auto_off .auto {width: 43px; height: 23px; background-position:-525px -296px; display:inline-block;}
         .auto_off .auto_select{width: 90px; height: 23px; background-position:-435px -455px; display:inline-block;}
         
@@ -364,7 +372,6 @@
                     </div>
                     <div class="quicksbs"><a href=""><strong class="skyblue">SBS</strong>사이트 바로 가기</a></div>
                 </div>
-                
                 <div class="auto_off">
                     <span class="btn auto">자동넘김</span>
                     <span class="btn auto_select">끄기</span>
@@ -376,28 +383,90 @@
                 </div>
             </div>
         </div>
-        
-        
-        
-        
-        <div class="footer_wrap">    
-            <div class="bot_news_list">
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-            </div>
-            <div class="footer">
-                <strong>공지사항</strong> <span><a href="">언론사별 주요기사 메인 노출 안내</a></span>
-                <p>본 콘텐츠의 저작권은 제공처 또는 네이버에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다.</p>
-                <span>Copyright <a href=""><b>ⓒ NAVER Corp.</b></a>All Right Reserved</span>
-            </div>
+        <div class="bot_news_list">
+            <ul>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2016/0311/nsd10128574.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2015/0303/nsd152544150.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/002.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/028.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/040.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/109.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/032.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/047.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/092.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/241.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/005.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2016/0412/nsd1893370.png" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/117.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/076.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/366.gif" alt="" />
+                    </a>
+                </li>
+            </ul>    
         </div>
+        <div class="footer">
+            <strong>공지사항</strong> <span><a href="">언론사별 주요기사 메인 노출 안내</a></span>
+            <p>본 콘텐츠의 저작권은 제공처 또는 네이버에 있으며, 이를 무단 이용하는 경우 저작권법 등에 따라 법적책임을 질 수 있습니다.</p>
+            <span>Copyright <a href=""><b>ⓒ NAVER Corp.</b></a>All Right Reserved</span>
+        </div>        
     </div>
 
 
