@@ -52,8 +52,10 @@
         h1{font-size:4em;}
         p{font-size:2.3em;}
         .pre{font-size:2.3em;}
-        .page1 video{position:fixed; left:50%; margin-left:-840px;}
-        .page2 {height: 100%; background-color:rgba(225,225,225,0.2); position:relative; z-index:1;}
+        .page1 video{position:fixed; left:50%; margin-left:-825px; z-index:-1;}
+        .page1 img{position:fixed; z-index:22; margin-left:-200px;margin-top: -70px; z-index:1;}
+        .img{position:fixed; z-index:22; margin-left:-200px; position:absolute; left:50%; top:0; background-attachment:fixed; }
+        .page2 {height: 100%; background-color:rgba(225,225,225,0.2); position:relative; z-index:2;}
         .page3 {height: 100%;
         background-image:url(head1.jpg);
         background-position:center;
@@ -61,6 +63,7 @@
         background-attachment:fixed; z-index:1;
         background-repeat:no-repeat;
         position:relative; 
+        z-index:2;
         }
         .page4{height: 100%; 
         background-image:url(head2.jpg);
@@ -68,7 +71,20 @@
         background-size:cover;
         background-attachment:fixed;
         background-repeat:no-repeat;
-        position:relative; }
+        position:relative; 
+        z-index:2;
+        }
+        .page5{height: 100%; 
+        background-image:url(head0.png);
+        background-position:center;
+        background-size:cover;
+        background-attachment:fixed;
+        background-repeat:no-repeat;
+        position:relative; 
+        z-index:2;
+        background-attachment: local;
+        }
+        
     </style>    
     
 </head>
@@ -80,7 +96,7 @@
         
         <div class="dptable">
             <div class="dptable-cell">
-                <img src="ai/ai_logo.png"></img>
+                <img class="img" src="ai/ai_logo.png">
                 <h1></h1>
                 <p></p>
             </div>
@@ -88,11 +104,11 @@
     </div>
     
    <div class="page2 dptable">
-        <p class="dptable-cell pre">
-        </p>
+        <p class="dptable-cell pre">        </p>
+        
     </div>
     
-    <div class="page3">    </div>
+    <div class="page3"><img src="ai/ai_logo.png">    </div>
     <div class="page4">    </div>
     <div class="page5">    </div>
     
