@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>news5</title>
+    
+    <style type="text/css">
+        *{padding: 0;margin: 0;}
+        .wrap{outline:1px red solid; width: 900px; height: 540px; margin:0 auto;}
+        
+        .header{border-bottom:2px black solid; width: 840px; height: 109px; margin:0 30px 0;}
+        
+        .content{outline: 1px red solid; width: 840px; height: 380px; margin:15px 30px 0;}
+        .content .lc{outline:1px green solid; width: 575px; height: 380px; float:left;}
+        .content .rc{outline:1px green solid; width: 250px; height: 380px; margin-left:590px;}
+        
+        .content .lc [class^="lc"]{float:left;}
+        .content .lc .lc1{outline: 1px blue solid; width: 380px; height: 380px;}
+        .content .lc .lc2{outline: 1px blue solid; width: 180px; height: 180px; margin-left:15px;}
+        .content .lc .lc3{outline: 1px blue solid; width: 180px; height: 180px; margin:20px 0 0 15px}
+        
+        .content .rc [class^="n"]{float:left;}
+        .content .rc .n1{outline:1px green solid; width: 120px; height: 120px; }
+        .content .rc .n2{outline:1px green solid; width: 120px; height: 120px; margin-left:10px;}
+        .content .rc .n3{outline:1px green solid; width: 120px; height: 120px; margin-top:10px;}
+        .content .rc .n4{outline:1px green solid; width: 120px; height: 120px; margin:10px 0 0 10px;}
+        .content .rc .n5{outline:1px green solid; width: 120px; height: 120px; margin-top:10px;}
+        .content .rc .n6{outline:1px green solid; width: 120px; height: 120px; margin:10px 0 0 10px;}
+        
+    </style>
+    
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">header</div>
+        <div class="content">
+            <div class="lc">
+                <div class="lc1">lc1</div>
+                <div class="lc2">lc2</div>
+                <div class="lc3">lc3</div>
+                
+            </div>
+            <div class="rc">
+                <div class="n1">n1</div>
+                <div class="n2">n2</div>
+                <div class="n3">n3</div>
+                <div class="n4">n4</div>
+                <div class="n5">n5</div>
+                <div class="n6">n6</div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

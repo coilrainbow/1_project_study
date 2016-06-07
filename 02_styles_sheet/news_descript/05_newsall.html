@@ -9,7 +9,7 @@
         .skyblue{color:skyblue; !important}
         .black{color:black; !important} 
         .white{color:white; font-weight:900; !important}
-        .btn {cursor:pointer; background-image:url(img/icon.png); text-indent:-9999px }
+        .btn {cursor:pointer; background-image:url(img/icon.png); text-indent:-9999px; }
         a{text-decoration:none; color:black;}
         
         html{height: 100%; min-width:1152px; min-height: 826px}
@@ -26,13 +26,22 @@
         .footer p{color:#aca69f; margin-top: 10px; padding-bottom: 5px; }
         .footer span{color:#aca69f; }
         
-        .bot_news_list{ width: 100%;  height: 79px; background-image:url(img/bg_bottom.png);
-            position:absolute; bottom:80px; padding:9px 0 4px 0; }
-        .bot_news_list_center{}
-        .bot_news_list .btn{width: 89px; height: 79px; margin-bottom: 5px; background-position:-182px -489px; float: left; margin-left:2px; }
+        .bot_news_list{ width: 100%; height: 79px; background-image:url(img/bg_bottom.png);
+            position:absolute; bottom:80px; padding:9px 0 4px 0; overflow:hidden;}
+        
+        .bot_news_list .btn{width: 89px; height: 79px;  background-position:-182px -489px; float: left; margin:0 0 5px 2px;}
         .bot_news_list li:first-child{margin-left:35px;}
         .bot_news_list .btn img{width: 81px; height: 73px; margin:3px 4px; }
         
+        /*.bot_left_right{outline: 1px red solid; width:95%; position:absolute; bottom:30px; }*/
+        /*전체헤이트값/2-버튼의 절반크기*/
+        /*.bot_left_right .left{outline:1px red solid; width:14px; height:22px; background-position:-260px -267px;  float:left; }*/
+        /*.bot_left_right .right{outline:1px red solid; width:14px; height:22px; background-position:-280px -267px; float:right;}*/
+        
+        .bot_left_right{ width:100%; position:absolute; }
+        /*전체헤이트값/2-버튼의 절반크기*/
+        .bot_left_right .left{width:14px; height:22px; background-position:-260px -267px;   position:absolute; left:10px; top:30px;}
+        .bot_left_right .right{width:14px; height:22px; background-position:-280px -267px;  position:absolute; right:10px; top:30px;}
         
         
         
@@ -45,7 +54,7 @@
         
         
         .head_left         {position:absolute; top:12px; left:16px; float:left; }
-        .head_left .head1  {width: 112px; height: 14px; background-position:0 -89px; display:inline-block; float:left; }
+        .head_left .head1  {width: 112px; height: 14px; background-position:0 -89px; display:inline-block; }
         .head_left .head2  {width: 256px; height: 12px; background-position:-120px -91px; display:inline-block; margin:2px 0 0 8px; cursor:none;}
         
 
@@ -98,11 +107,17 @@
         .news .date{height: 22px; line-height:22px; font-size:11px; color:#d6d6d6; }
         
         /*마진이 포함된박스에 포지션:앱솔루트가 걸려있다면 x축에서 마진만큼 빼줘야 정확한 위치에 맞을 수 있다. ex>mid_area 앱솔left값*/
-        .content             {width: 840px;height: 380px; margin:15px 30px 0; position:relative; overflow:hidden; }
+        .content           {width: 840px;height: 380px; margin:15px 30px 0; position:relative; overflow:hidden; }
+        
+        .left_right        {width:100%; position:absolute; top:45%;  }
+        .left_right .left  {width: 24px; height: 45px; background-position:-18px -19px; display:inline-block; float:left;}
+        .left_right .right {width: 24px; height: 45px; background-position:-81px -19px; display:inline-block; float:right;}
+        
+        
         
         .content .left_area         {width: 90px; height: 380px; position:absolute; left:0px; top:0px; }
         .left_area_top              {width: 90px; height: 60px;  position:absolute; left:0px; top:0px; }
-        .left_area_bot              {border:1px #d6d6d6 solid; border-top:none; width: 88px; height: 320px; position:absolute; left:0px; top:58px; }
+        .left_area_bot              {border:1px #d6d6d6 solid; border-top:none; width: 88px; height: 320px; position:absolute; left:0px; top:58px;  }
         .left_area_top .eight_news  {width: 90px; height: 29px; background-image:url(http://static.naver.net/newsstand/2016/0603/sbs/221359/001.gif);
                                      text-indent:-9999px; margin-bottom: 5px; }
         .left_area_top .weather     {width: 70px; height: 15px; background-color:skyblue; padding:5px 10px;}
@@ -110,16 +125,16 @@
         .weather .temperature       {margin:-1px 3px 0 0px; float: right;    }
         
         
-        .left_area_bot .vivid_a h2  {width: 39px; height: 11px; background-image: url(http://static.naver.net/newsstand/2016/0603/sbs/221359/003.gif);
+        .left_area_bot .vivid_a h2  {width: 38px; height: 11px; background-image: url(http://static.naver.net/newsstand/2016/0603/sbs/221359/003.gif);
                                      text-indent:-9999px; margin:10px 0 0 5px; display:block;}
-        .left_area_bot .vivid_b h2  {width: 39px; height: 11px; background-image: url(http://static.naver.net/newsstand/2016/0604/sbs/032602/005.gif);
+        .left_area_bot .vivid_b h2  {width: 38px; height: 11px; background-image: url(http://static.naver.net/newsstand/2016/0604/sbs/032602/005.gif);
                                      text-indent:-9999px; margin:5px 0 0 5px; display:block;}
         .left_area_bot .vivid       {width: 78px; height: 140px; margin:0 6px; display:block;}
-        .left_area_bot .vivid_a img {width: 78px; height: 87px; margin:10px 5px 0 0;}
-        .left_area_bot .vivid_a span{width: 78px; height: 35px; display:block; font-size: 11px; overflow:hidden; text-overflow:ellipsis;}  
+        .left_area_bot .vivid_a img {width: 78px; height: 87px; margin:10px 5px 5px  0;}
+        .left_area_bot .vivid_a span{width: 78px; height: 35px; display:block; font-size: 10px;}  
   
-        .left_area_bot .vivid_b img {width: 78px; height: 87px; margin:10px 5px 0 0;}
-        .left_area_bot .vivid_b span{width: 78px; height: 35px; display:block; font-size: 11px; overflow:hidden; text-overflow:ellipsis;}
+        .left_area_bot .vivid_b img {width: 78px; height: 87px; margin:10px 5px 5px 0;}
+        .left_area_bot .vivid_b span{width: 78px; height: 35px; display:block; font-size: 10px;}
         
         
         
@@ -163,11 +178,11 @@
         
         .right_area .right_bot {border:1px #d6d6d6 solid; width:196px; height:167px;  overflow:hidden; text-overflow:ellipsis;}
         .right_bot .top img{border-bottom:1px #d6d6d6 solid; width: 196px; height: 98px; overflow:hidden; }
-        .right_bot .top strong{outline:1px red solid; width: 183px; height: 33px; letter-spacing:-0.5px; padding:0 8px 5px ; display:inline-block; text-align:justify; }
+        .right_bot .top strong{width: 183px; height: 33px; letter-spacing:-0.5px; padding:0 8px 5px ; display:inline-block; text-align:justify; }
         .right_bot .bot span{width: 183px; height: 10px;padding:0 8px 5px ; display:block;  overflow:hidden; 
         text-overflow:ellipsis;}
         
-        .quicksbs{width: 120px; height: 16px;  position:absolute;  left:765px; margin-top:4px;}
+        .quicksbs{width: 140px; height: 16px;  float:right; margin-top:4px;}
         .quicksbs strong{padding-right:5px ;}
         
         .auto_off {width: 500px; height: 24px; position:absolute; left:55px; margin-top: 5px;}
@@ -225,6 +240,10 @@
                 </ul>
             </div>
             <div class="news_wrap">
+                <div class="left_right">
+                    <a href="" class="left btn">&lt</a>
+                    <a href="" class="right btn">&gt</a>
+                </div>
                 <div class="news">
                     <div class="header">
                         <h2 class="btn sbs_logo"><a href="">sbs 뉴스</a></h2>
@@ -386,6 +405,10 @@
             </div>
         </div>
         <div class="bot_news_list">
+            <div class="bot_left_right">
+                <a class="btn left" href="">%lt</a>
+                <a class="btn right" href="">&gt</a>    
+            </div>
             <ul class="bot_news_list_center">
                 <li class="btn">
                     <a href="">

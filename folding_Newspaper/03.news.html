@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style type="text/css">
+        *{padding: 0;margin:0;}
+        .wrap{outline: 1px red solid; width:900px; height:540px; margin:0 auto 0;}
+        .header{border-bottom:3px black solid; height:108px; margin:0 30px;}
+        
+        .content {outline:1px red solid; margin:15px 30px; height: 380px;}
+        .content .lc{outline:1px green solid; height:380px; width:358px; float:left;}
+        .content .rc{outline:1px green solid; height:100%; margin-left:380px; }
+        
+        .content .lc .lctop{outline: 1px red solid; width: 358px; height: 199px;}
+        .content .lc .lcbottom{outline: 1px red solid; width: 358px; height: 181px;}
+        
+        .content .rc .rctop{outline:1px red solid; height: 145px;}
+        .content .rc .rcbottom{outline:1px red solid; height: 235px;}
+        .content .rc .l1{outline:1px red solid; width: 292px; height:135px; float:left;}
+        .content .rc .r2{outline:1px red solid; width: 129px; height: 129px; margin-left:331px;}
+        
+        .content .rc .lb1{outline: 1px red solid; width:292px; height: 235px; float:left;}
+        .content .rc .rb2{outline:1px red solid; width: 129px; height: 235px; margin-left:331px;  }
+        
+    </style>
+    
+    
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">header</div>
+        <div class="content">
+            <div class="lc">
+                <div class="lctop">lctop</div>
+                <div class="lcbottom">lcbottom</div>
+            </div>
+            <div class="rc">
+                <div class="rctop">
+                    <div class="l1">l1</div>
+                    <div class="r2">r2</div>    
+                </div>
+                <div class="rcbottom">
+                    <div class="lb1">lb1</div>
+                    <div class="rb2">rb2</div>
+                </div>    
+            </div>
+        </div>
+    </div>
+    
+    
+    
+</body>
+</html>
