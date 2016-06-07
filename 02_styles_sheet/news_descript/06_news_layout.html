@@ -1,0 +1,117 @@
+버튼은 인라인 블락.
+
+플룻으로 만든 상단 바의 박스는  확장성이 좋다.
+
+
+
+<!--1-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{margin:0; padding:0;}
+    ul{list-style:none}
+    .left,.right,.center{border:1px #F00 solid; height:80px;}
+    .left{width:100px; float:left;}
+    .right{float:right;}
+    .right ul{font-size:0;}
+    .right li{display:inline-block;line-height:80px; padding:0 10px; outline:1px #F00 solid ; font-size:12px;}
+    .center{text-align:center; line-height:80px;}
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="right">
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu4</li>
+        </ul>
+    </div>
+    <div class="center">
+        <button>버튼</button><button>버튼</button>
+    </div>
+    
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!--2-1-->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    *{margin:0; padding:0;}
+    ul{list-style:none}
+    .left,.right,.center{border:1px #F00 solid; height:80px;}
+    .left{width:100px; float:left;}
+    .right{float:right;}
+    .right ul{font-size:0;}
+    .right li{display:inline-block;line-height:80px; padding:0 10px; outline:1px #F00 solid ; font-size:12px;}
+    .center{text-align:center; line-height:80px;}
+    .wrapper{width:900px; height:540px; border:1px #F00 solid; margin:0 auto; position:relative;}
+    .wrapper button{position:absolute; width:100px; height: 200px; background:#F00;  top:50%; margin-top:-100px;}
+    .wrapper button.next{right:-150px;}
+    .wrapper button.prev{left:-150px;}
+    </style>
+</head>
+<body>
+    <div class="left"></div>
+    <div class="right">
+        <ul>
+            <li>menu1</li>
+            <li>menu2</li>
+            <li>menu3</li>
+            <li>menu4</li>
+            <li>menu4</li>
+        </ul>
+    </div>
+    <div class="center">
+        <button>버튼</button><button>버튼</button>
+    </div>
+    
+    
+    <div class="wrapper">
+        <button class="next">다음</button>
+        <button class="prev">이전</button>
+    
+        
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+relative
+현재위치를 유지하면서 상대적으로 위치를 잡겠다
+
+
+
+마진의 활용.
+주어진 div 안에서 움직이는 간격은 왠만해선 허용된다.
+주어진 div 안에서 마진의 숫자 크기는 크던 작던 음수던 상관없다.
+
+
+레이아웃의 위드 헤이트값은 거의 주어진다. 
+
+text-indent 
+block인 속성에 걸어줘야 inline이 날아감

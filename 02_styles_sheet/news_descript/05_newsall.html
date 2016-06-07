@@ -5,7 +5,7 @@
     <title>sbs_news</title>
 
     <style type="text/css">
-        *{margin: 0;padding: 0; list-style:none; font-size:12px;}
+        *{margin: 0;padding: 0; list-style:none; font-size:12px; font-family:'돋움';}
         .skyblue{color:skyblue; !important}
         .black{color:black; !important} 
         .white{color:white; font-weight:900; !important}
@@ -26,11 +26,12 @@
         .footer p{color:#aca69f; margin-top: 10px; padding-bottom: 5px; }
         .footer span{color:#aca69f; }
         
-        .bot_news_list{ width: 100%; overflow:hidden; height: 79px; background-image:url(img/bg_bottom.png);
+        .bot_news_list{ width: 100%;  height: 79px; background-image:url(img/bg_bottom.png);
             position:absolute; bottom:80px; padding:9px 0 4px 0; }
-        .bot_news_list .btn{width: 89px; height: 79px; margin-bottom: 5px;background-position:-182px -489px; float: left; margin-left:2px;}
+        .bot_news_list_center{}
+        .bot_news_list .btn{width: 89px; height: 79px; margin-bottom: 5px; background-position:-182px -489px; float: left; margin-left:2px; }
         .bot_news_list li:first-child{margin-left:35px;}
-        .bot_news_list .btn img{width: 81px; height: 73px; margin:4px; 3px; display:inline-block; }
+        .bot_news_list .btn img{width: 81px; height: 73px; margin:3px 4px; }
         
         
         
@@ -115,10 +116,10 @@
                                      text-indent:-9999px; margin:5px 0 0 5px; display:block;}
         .left_area_bot .vivid       {width: 78px; height: 140px; margin:0 6px; display:block;}
         .left_area_bot .vivid_a img {width: 78px; height: 87px; margin:10px 5px 0 0;}
-        .left_area_bot .vivid_a span{width: 78px; height: 35px; display:block; overflow:hidden; text-overflow:ellipsis;}  
+        .left_area_bot .vivid_a span{width: 78px; height: 35px; display:block; font-size: 11px; overflow:hidden; text-overflow:ellipsis;}  
   
         .left_area_bot .vivid_b img {width: 78px; height: 87px; margin:10px 5px 0 0;}
-        .left_area_bot .vivid_b span{width: 78px; height: 35px; display:block; overflow:hidden; text-overflow:ellipsis;}
+        .left_area_bot .vivid_b span{width: 78px; height: 35px; display:block; font-size: 11px; overflow:hidden; text-overflow:ellipsis;}
         
         
         
@@ -129,7 +130,7 @@
         .content .mid_area   {width: 530px; height: 380px; position:absolute; left:91px; top:0px; margin:0 10px;}
         .mid_area .mid_top {width: 530px; height: 199px; position:relative; margin-bottom: 10px;}
         .mid_top .main img{width: 353px; height: 199px; position:relative; top:0; left:0;}
-        .mid_top .main strong{color:black; font-size:20px; font-weight:900; position:absolute; top:150px; left:10px; }
+        .mid_top .main strong{width: 350px;color:black; font-size:20px; font-weight:900; position:absolute; top:130px; left:10px; }
         .mid_top .main span{color:black; font-size:12px; position:absolute; top:180px; left:10px;}
         
         .mid_top .main2 {width: 172px; height: 97px; margin-bottom:10px; position:absolute; top :0;left:358px;}
@@ -155,17 +156,18 @@
         .mid_bot .right li{list-style:disc; margin:0px 0 5px 10px; }
     
         .content .right_area   {width: 200px; height: 380px; position:absolute; left:641px; top:0px;}
-        .content .right_top{border:1px #d6d6d6 solid; width: 177px; height: 198px; padding: 0 10px; margin-bottom: 10px;}
+        .content .right_top{border:1px #d6d6d6 solid; width: 176px; height: 198px; padding: 0 10px; margin-bottom: 10px;}
         .content .right_top li{border-top:1px #d6d6d6 solid; padding:5px 0 4px 0; }
         .content .right_top li:first-child{border-top:0;}
         
         
-        .right_area .right_bot {border:1px #d6d6d6 solid; width:196px; height:168px;}
+        .right_area .right_bot {border:1px #d6d6d6 solid; width:196px; height:167px;  overflow:hidden; text-overflow:ellipsis;}
         .right_bot .top img{border-bottom:1px #d6d6d6 solid; width: 196px; height: 98px; overflow:hidden; }
-        .right_bot .top strong{width: 183px; height: 33px; letter-spacing:-0.5px; padding:0 8px 5px ; display:inline-block; text-align:justify;}
-        .right_bot .bot span{width: 183px; height: 32px;padding:0 8px 5px ; display:inline-block;}
+        .right_bot .top strong{outline:1px red solid; width: 183px; height: 33px; letter-spacing:-0.5px; padding:0 8px 5px ; display:inline-block; text-align:justify; }
+        .right_bot .bot span{width: 183px; height: 10px;padding:0 8px 5px ; display:block;  overflow:hidden; 
+        text-overflow:ellipsis;}
         
-        .quicksbs{width: 105px; height: 16px;  position:absolute;  left:765px; margin-top:4px;}
+        .quicksbs{width: 120px; height: 16px;  position:absolute;  left:765px; margin-top:4px;}
         .quicksbs strong{padding-right:5px ;}
         
         .auto_off {width: 500px; height: 24px; position:absolute; left:55px; margin-top: 5px;}
@@ -384,7 +386,7 @@
             </div>
         </div>
         <div class="bot_news_list">
-            <ul>
+            <ul class="bot_news_list_center">
                 <li class="btn">
                     <a href="">
                         <img class="btn" src="http://static.naver.net/newsstand/up/2016/0311/nsd10128574.gif" alt="" />
@@ -458,6 +460,81 @@
                 <li class="btn">
                     <a href="">
                         <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/366.gif" alt="" />
+                    </a>
+                </li>
+                 <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2016/0311/nsd10128574.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2015/0303/nsd152544150.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/002.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/028.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/040.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/109.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/032.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/047.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/092.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/241.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/241.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/241.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/241.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/241.gif" alt="" />
+                    </a>
+                </li>
+                <li class="btn">
+                    <a href="">
+                        <img class="btn" src="http://static.naver.net/newsstand/up/2014/0715/241.gif" alt="" />
                     </a>
                 </li>
             </ul>    
