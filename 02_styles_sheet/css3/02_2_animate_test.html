@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style type="text/css">
+        .wrap{
+            border:1px red solid;
+            box-sizing:border-box;
+            width:500px; height:610px;
+            background-color:black;
+            padding:15px;    
+            position:relative;
+        }
+        
+        .box1{
+            border:1px red solid;
+            box-sizing:border-box;
+            width:100px; height:100px;
+            background-color: white;
+            position:absolute; top:15px; left:15px;
+            
+        }
+        .wrap:hover .box1{animation:move1; animation-duration:5000ms;}
+        .wrap:hover .box2{animation:move2; animation-duration:5000ms; }
+        .wrap:hover .box3{animation:move3; animation-duration:6000ms; }
+        
+        
+        
+        .box2{
+            border:1px red solid;
+            box-sizing:border-box;
+            width:100px;
+            height:305px;
+            background-color: white;
+            position:absolute; top:135px;
+        }
+        .box3{
+            border:1px red solid;
+            box-sizing:border-box;
+            width:355px;
+            height:425px;
+            background-color: red;
+            float: right;
+            
+        }
+        
+        .box4{
+            border:1px red solid;
+            box-sizing:border-box;
+            width:100px;
+            height:140px;
+            background-color:blue ;
+            position:absolute; bottom:15px;
+        }
+        
+        .box5{
+            border:1px red solid;
+            box-sizing:border-box;
+            width: 60px;
+            height:45px;
+            background-color:white ;
+            position:absolute; bottom:110px ;right:15px;
+        }
+        .box6{
+            border:1px red solid;
+            box-sizing:border-box;
+            width:60px;
+            height:80px;
+            background-color:yellow ;
+            position:absolute; bottom:15px; right:15px; 
+        }
+        
+        .box7{
+            border:1px red solid;
+            box-sizing:border-box;
+            width:280px;
+            height:140px;
+            background-color:white ;
+            position:absolute; bottom:15px; left:130px;
+        }
+        
+
+       
+        
+        @keyframes move1 {
+            0%  { position:absolute; top:15px; left:15px;   }
+            50% { position:absolute; top:340px; left:15px; transform:rotate(-720deg);}
+           100%  { position:absolute; top:340px; left:385px; transform:rotate(-720deg)}
+           
+        }   
+        
+        @keyframes move2 {
+            0%  { position:absolute; }
+            50% { position:absolute; top:15px; left:15px; transform:rotate(-720deg);}
+            100% { position:absolute; top:15px; left:385px; transform:rotate(-720deg)}
+           
+            
+        }
+        @keyframes move3 {
+            0% { position:absolute; top:15px; right:15px; }
+            75% { position:absolute; top:15px; left:15px; }
+            
+        }
+       
+
+        
+            
+
+        
+        
+    </style>
+    
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+        <div class="box7"></div>
+    </div>
+    
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--wrapper:hover .box1{}-->
+    <!--wrapper:hover .box2{}-->
+    <!--wrapper:hover .box3{}-->
+    <!--wrapper:hover .box4{}-->
+    <!--wrapper:hover .box5{}-->
+    <!--wrapper div:hover {}-->
+    <!--.box1{ani}-->
+    <!--.box2{ani}-->
+    <!--.box3{ani}-->
+    <!--<div class="wrapper">-->
+    <!--    <div class="box1"></div>-->
+    <!--    <div class="box2"></div>-->
+    <!--    <div class="box3"></div>-->
+    <!--    <div class="box4"></div>-->
+    <!--</div>-->
+    
+    
+    

@@ -1,0 +1,36 @@
+<!--2d CSS3 2D Transforms-->
+<!--http://www.w3schools.com/css/css3_2dtransforms.asp-->
+
+<!--transform:origin 0점을 지점하여 회전축을 바꿈.-->
+<!--transform:origin:50% 100%;-->
+
+<!--transform:rotateX,Y 축을 기준으로 돈다. -->
+
+<!--메트릭스 행렬좌표, 삼각함수좌표, 위치좌표-->
+<!--scale(1.1,1.1)=(110%, 110%)-->
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+        .box{
+        width:200px; height:200px;
+        background-image: url(../images/img1.jpg); -webkit-background-size: cover;
+        background-size: cover;
+        transition:1s;    
+        }
+        .box:hover{
+            transform:rotate(-720deg);
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
