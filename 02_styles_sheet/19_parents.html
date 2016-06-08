@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <title>Document</title>
     <style>
-        .wrapper{border:1px #F00 solid; width:600px; height:600px; position:relative;}
-        .wrap{width: 500px; height: 500px; border:1px #F00 solid; position:relative;}
-        .box{width: 200px; height: 220px; border:1px #F00 solid; position:absolute;}
+        .wrapper {border:1px red solid;  width:600px; height:600px; position:relative;}
+        .wrap    {border:1px green solid; width: 500px; height: 500px; margin-left:50px;}
+        .box     {border:1px blue solid; width: 200px; height: 220px;  position:absolute; left:0; }
     </style>
 </head>
 <body>
@@ -20,8 +20,8 @@
 </html>
 
 
-<!--overflow:hidden; 은 부모요소에 적용된다.-->
-<!--엡솔루트가 설정되면 마진 0 오토는 안먹음-->
+<!--overflow:hidden; 은 부모 엘리먼트에 적용된다.-->
+<!--position:absolute; 가 설정되면 margin:0 auto;는 안먹음-->
 
 
 상위의 엘리먼트가 포지션으로 선언되어있으면 부모 하위 엘리먼트의 부모가 된다.
@@ -31,20 +31,21 @@
 마크업 구조상 가장 가까운(혹은 상위의) (포지션을 가지고 있는)엘리먼트와 연결된다.
 
 가장 가까운 경우
-    .wrapper{border:1px #F00 solid; width:600px; height:600px; position:relative;}
-    .wrap{width: 500px; height: 500px; border:1px #F00 solid; }
-    .box{width: 200px; height: 220px; border:1px #F00 solid; position:absolute;}
-.box의 부모는 wrapper
+    .wrapper {border:1px #F00 solid; width:600px; height:600px; }
+    .wrap    {border:1px #F00 solid; width: 500px; height: 500px; position:relative;}
+    .box     {border:1px #F00 solid; width: 200px; height: 220px; position:absolute;}
+.box의 부모는 .wrap
+
 
 혹은 상위의 경우
-    .wrapper{border:1px #F00 solid; width:600px; height:600px; }
-    .wrap{width: 500px; height: 500px; border:1px #F00 solid; position:relative;}
-    .box{width: 200px; height: 220px; border:1px #F00 solid; position:absolute;}
-.box의 부모는 wrap
+    .wrapper {border:1px #F00 solid; width:600px; height:600px; position:relative;}
+    .wrap    {border:1px #F00 solid; width: 500px; height: 500px;  }
+    .box     {border:1px #F00 solid; width: 200px; height: 220px; position:absolute;}
+.box의 부모는 .wrapper
+
 
 참고
-    .wrapper{border:1px #F00 solid; width:600px; height:600px; position:relative;}
-    .wrap{width: 500px; height: 500px; border:1px #F00 solid; position:relative;}
-    .box{width: 200px; height: 220px; border:1px #F00 solid; position:absolute;}
-
+    .wrapper {border:1px #F00 solid; width:600px; height:600px; position:relative;}
+    .wrap    {border:1px #F00 solid; width: 500px; height: 500px; position:relative;}
+    .box     {border:1px #F00 solid; width: 200px; height: 220px; position:absolute;}
 .box의 부모는 .wrap 이지 .wrapper가 아니다. 

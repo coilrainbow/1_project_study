@@ -1,28 +1,48 @@
-<!--display-->
-<!--    block-->
-<!--        div-->
-<!--    inline  위드헤이트 적용이 안됨 -->
-<!--        span-->
-<!--    inline-block 인라인이라 행이 안바뀌면서  블락의 위드헤이트가 적용됨-->
-<!--        img-->
-<!--        button-->
-<!--        input-->
-<!--    list-item-->
-<!--    table-->
-<!--    table-cell 테이블 안에 있는 칸-->
+     
+
+<!--display: block;     width 값은 부모요소만큼 ,height은 갖고 있는 컨텐츠 만큼 늘어난다.-->
+<!--                    width, height 값이 입력한 만큼 적용된다. -->
+<!--                    행이 바뀐다.-->
+<!--                    ex> div-->
+            
+<!--display: inline;    width,height 모두 주어진 컨텐츠만큼만 늘어나기 때문에 width,height를 선언 해도 적용이 안됨 .-->
+<!--                    행이 안바뀜.-->
+<!--                    ex> span-->
+            
+<!--display: inline-block;      위의 두 요소의 결합.-->
+<!--                            inline이라 행이 바뀌지 않으면서 block의 width, height 값이 입력한 만큼 적용됨.-->
+<!--                            ex> img-->
+<!--                                button-->
+<!--                                input-->
+            
+<!--            list-item-->
+            
+<!--            table-->
+<!--            table-cell 테이블 안에 있는 칸-->
     
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<!--1. ul에 font-size:0;을 입력. display:inline-block;에 의하여 바뀌어버린 형태로 인해 생긴,-->
+<!--띄어쓰기 공간을 없애고. li에 폰트사이즈를 주면 나타나는 효과.-->
 <!--<!doctype html>-->
 <!--<html lang="en">-->
 <!--<head>-->
 <!--    <meta charset="UTF-8">-->
 <!--    <title>Document</title>-->
 <!--    <style type="text/css">-->
-<!--    *{margin:0; padding:0;}-->
-<!--    ul{list-style:none;}-->
-<!--    .menu{border:1px #F00 solid; text-align:center;}-->
-<!--    li{width:100px; outline:1px #F00 solid; display:inline-block;font-size:12px;}-->
-<!--    ul{font-size:0;}-->
+<!--    *     {margin:0; padding:0;}-->
+<!--    ul    {list-style:none;}-->
+<!--    .menu {border:1px #F00 solid; text-align:center;}-->
+<!--    ul    {font-size:0;}-->
+<!--    li    {outline:1px #F00 solid; width:100px;  display:inline-block; font-size:19px;}-->
     
 <!--    </style>-->
 <!--</head>-->
@@ -40,7 +60,7 @@
 <!--    </div>-->
 <!--</body>-->
 <!--</html>-->
-<!--ul에 폰트0w줘서 공간을 없애고 li에 폰트사이즈를 준다.-->
+
 
 
 
@@ -52,7 +72,7 @@
 <!--inline-block 익스7에서 안먹음-->
 <!--그래서 핵을 쓴다.-->
 <!--*익스7 이하버전에서는 *이먹는다.-->
-<!--css핵 <!--http://blog.freezner.com/archives/518-->
+<!--css핵 http://blog.freezner.com/archives/518-->
 <!--<!doctype html>-->
 <!--<html lang="en">-->
 <!--<head>-->
@@ -96,59 +116,7 @@
 
 
 
-<!--list item-->
-<!--<!doctype html>-->
-<!--<html lang="en">-->
-<!--<head>-->
-<!--    <meta charset="UTF-8">-->
-<!--    <title>Document</title>-->
-<!--    <style type="text/css">-->
-<!--    *{margin:0; padding:0;}-->
-<!--    li,ul{list-style:none;}-->
-<!--    .menu {text-align:center;}-->
-<!--    .menu>ul>li{display:inline-block;}-->
-<!--    .menu>ul>li ul{display:none;}-->
-<!--    .menu>ul>li:hover ul{display:block;}-->
-<!--    .menu>ul>li ul li{list-style:disc;}-->
-    
-    
-    
-<!--    </style>-->
-<!--</head>-->
-<!--<body>-->
-    
-<!--    <div class="menu">-->
-<!--        <ul>-->
-<!--            <li><a href="">text</a>-->
-<!--                <ul>-->
-<!--                    <li>text</li>-->
-<!--                    <li>text</li>-->
-<!--                    <li>text</li>-->
-<!--                    <li>text</li>-->
-<!--                </ul>-->
-<!--            </li>-->
-<!--            <li><a href="">text</a></li>-->
-<!--            <li><a href="">text</a></li>-->
-<!--            <li><a href="">text</a></li>-->
-<!--            <li><a href="">text</a></li>-->
-<!--            <li><a href="">text</a></li>-->
-<!--        </ul>-->
-<!--    </div>-->
-    
-    
-<!--</body>-->
-<!--</html>-->
-<!--도트표시-->
-
-
-
-
-
-
-
-
-
-
+list item
 <!doctype html>
 <html lang="en">
 <head>
@@ -162,6 +130,8 @@
     .menu>ul>li ul{display:none;}
     .menu>ul>li:hover ul{display:block;}
     .menu>ul>li ul li{list-style:disc;}
+    
+    
     
     </style>
 </head>
@@ -188,6 +158,17 @@
     
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
