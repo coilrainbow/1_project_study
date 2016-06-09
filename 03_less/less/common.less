@@ -1,0 +1,46 @@
+@lg:100% - 20%;
+@xs:20%;
+@ms:50%;
+@df:30%;
+
+@menu_color:red;
+
+body{margin:0;}
+ul{list-style:none; margin: 0; padding: 0;}
+
+
+
+.menu{
+    border:1px red solid; width: 200px; border-radius:20px; overflow:hidden;
+    ul{
+        margin:20px;
+        li{
+            border-bottom:1px black solid;
+            a{
+                color:@menu_color; text-decoration: none;
+            }
+        }
+    }
+}
+
+.col-xs{width:@xs;}
+.col-ms{width:@ms;}
+.col-df{width:@df;}
+.col-lg{width:@lg;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// 믹시드 선택자. .menu 처럼 믹시드 라고 얘기함.  이 문법은  싸스와 동일하다.
