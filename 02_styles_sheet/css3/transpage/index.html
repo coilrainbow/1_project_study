@@ -7,8 +7,9 @@
     
     <style>
         *{margin:0; padding:0; }
-        html,body{height:100%;}
+        html,body{height:100%; }
         ul,ol{list-style:none;}
+        a{font-family:'Oswald','sans-serif'; letter-spacing:-1px; font-size:16px; text-decoration:none;}
         
         .wrapper{
             height:100%; 
@@ -16,10 +17,14 @@
             background-repeat:no-repeat;
             background-size:cover;
             background-position:center top;
+            transition:1000ms;
+            
         }
         .wrapper .logo{background-image:url(img/sunmi_logo.png);
         
-            border:1px red solids; width:197px; height: 85px;
+            border:1px red solids; 
+            width:197px; 
+            height: 85px;
             position:absolute; top:32%; left:43%;
             opacity:0.6;
             transform:scale(1.2,1.2);
@@ -50,41 +55,38 @@
     
         .wrapper .header .nav{
             float:right;
-            
         }
         
         
-        .wrapper .header .nav button{display:none;}
-        .wrapper .header .nav ul{font-size:0;}
+        .wrapper .header .nav a{display:none;}
+        .wrapper .header .nav ul{font-size:0; }
         
         .wrapper .header .nav li{
             display:inline-block; 
-            font-size:15px;
             vertical-align:top;
             line-height:100px;
-            
-            
         }
      
         .wrapper .header .nav li a{
-            
             display:block;
-            padding:0 20px;
+            padding:0 15px;
             transition:0.2s;
-            font-weight:700;
-            letter-spacing:-0.8px;
             opacity:0.8;
-            text-decoration:none;
-            color:white;
-
+            color:#aeaeae;
         }
+        .wrapper .header .nav > a{ line-height:40px; text-align:center;}
+        
         .wrapper .header .nav li a:hover{
             border-top:3px rgba(255,255,255,1) solid;
             box-sizing:border-box;
-            height:100px;
-            background-color: rgba(255,255,255,0.2);
+            line-height:100px;
+            background-color: rgba(255,255,255,0.3);
             opacity:1;
+            color:#fff;;
         }
+        
+       
+            
        
        
         .wrapper .header .mark a{display:block;
@@ -94,7 +96,7 @@
             background-image: url(img/header_logo.png);
             background-repeat: no-repeat;
             background-position:center;
-            transition:1s;
+            transition:1500ms;
             
         }
         
@@ -103,11 +105,17 @@
             transform:rotateY(180deg);
         }
 
+         /*@을 생성할 때 이전의 상태에서 변경해야하기 때문에. 변하기 전에 것을 먼저 복붙해 오는게 좋다.*/
         
-        @media screen and (max-width:602px){
+            
+        
+        @media screen and (max-width:600px){
             .wrapper{
                 background-image:url(img/sunmi1_2.png);
-                background-position:center center;}
+                background-position:center center;
+                
+                transition:1000ms;
+            }
             .wrapper .logo{
                 position:absolute; top:32%; left:35%;
                 width: 180px; height: 75px;
@@ -117,6 +125,7 @@
             .wrapper .header{
                 height: 40px;
                 padding: 0;
+                
             }
             .wrapper .header .mark a{
                 padding: 0;
@@ -125,48 +134,53 @@
                 background-size: cover;
                 margin:3px 0 0 10px;
             }
-            .wrapper .header .nav button{
+            
+            .wrapper .header .nav>a{
                 display:block;
-                width:200px;
-                height: 40px; 
-                border:0 none;
-                padding:0 10px;
-                fontsize:1.5em;
-                background-color:rgba(000,000,000,0.2);
-                font-weight:bold;
+                width:134px;
+                /*height: 40px; */
+                background-color:rgba(0,0,0,0.2);
                 color:white;
                 cursor:pointer;
+                font-size:14px;
                 
             }
             
             /*임시*/
-            .wrapper .header .nav button:hover + ul {
+            .wrapper .header .nav a:hover + ul {
                 display:block;
             }
             
             .wrapper .header .nav ul{
                 display:none;
-                position:absolute;
-                background-color: rgba(255,255,255,0.2);
-                width:200px;
+                background-color: rgba(255,255,255,0.3);
+                width:134px;
             }
+            .wrapper .header .nav ul:hover {display:block; }
+            
             .wrapper .header .nav ul li{
-                line-height: 40px;
                 display:block;
+                line-height: 16px;
+                width: 150px;
+                border:1px red solid;
+            }
+            .wrapper .header .nav ul li a{
+                padding:10px 0 10px 10px;
+                border:1px red solid;
+                font-size:16px;
                 
             }
-            .wrapper .header .nav ul:hover {display:block;}
-            
-            .wrapper .header .nav ul li:hover {
-                line-height:40px;
-                height: 40px;
-            }
-            
+
             .wrapper .header .nav li a:hover{
-            border-top:0;
-            border-left:4px rgba(0,0,0,0.6) solid;
-            height:40px;
-            background-color: rgba(255,255,255,0.2);
+                
+                display:block;
+                width: 150px;
+                line-height: 30px;
+                padding:10px 0 10px 20px;
+                border-top:0 none;
+                border-left:4px rgba(0,0,0,0.8) solid;
+                background-color: rgba(255,255,255,0.6);
+            
             }
             
             
@@ -187,8 +201,8 @@
                 <a href=""></a>
             </div>
             <div class="nav">
-                <button>Main Menu</button>
-                <ul>
+                <a href="">Main Menu</a>
+                <ul >
                     <li><a href="">PROFILE</a></li>
                     <li><a href="">DISCOGRAPHY</a></li>
                     <li><a href="">GALLERY</a></li>

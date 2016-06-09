@@ -8,16 +8,31 @@ height auto 와 연관이 되어있으니 이해 잘 하고 넘어가기
         <meta charset="utf-8">
         <title>float로 인한 사이트 깨짐 현상의 예</title>
         <style>
-            .section1{border:1px red solid; overflow:hidden; } /*overflow:hidden; 남용하면 접근성 구현 못함*/
-            .box1{border:1px red solid;
+            .section1{
+                border:1px red solid;
+                overflow:hidden;
+            } /*overflow:hidden; 남용하면 접근성 구현 못함*/
+            
+            .box1{
+                border:1px green solid;
                 width:49%;
                 height:300px;
-                float:left}
-            .box2{border:1px red solid;
-                  width:49%;
-                  height:300px;
-                  float:right}
-            .section2{border:3px green solid; margin-top:350px;}
+                float:left
+            }
+            
+            .box2{
+                border:1px blue solid;
+                width:49%;
+                height:300px;
+                float:right
+                
+            }
+            
+            
+            .section2{
+                border:3px green solid;
+                margin-top:350px;
+            }
 
         </style>
     </head>
@@ -31,8 +46,8 @@ height auto 와 연관이 되어있으니 이해 잘 하고 넘어가기
             </div>
 
         </div>
-        <div class="section2">가가가가가가가가
-
+        <div class="section2">
+            가가가가가가가가
         </div>
     </body>
 </html>
