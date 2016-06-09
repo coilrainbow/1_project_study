@@ -40,18 +40,62 @@
             /*픽스드는 옛날 버전에선 left top 값이 있어야 돌아감.*/
             width: 100%;
             height: 100px;
-            background-color:rgba(225,225,225,0.1);
+            background-color:rgba(255,255,255,0.1);
             transition:1s;
             /*box-shadow:0 2px 5px #000; 쉐도우 줄*/
         }
+        .wrapper .header .mark{
+            float:left;
+        }
+    
+        .wrapper .header .nav{
+            float:right;
+            
+        }
+        
+        
+        .wrapper .header .nav button{display:none;}
+        .wrapper .header .nav ul{font-size:0;}
+        
+        .wrapper .header .nav li{
+            display:inline-block; 
+            font-size:15px;
+            vertical-align:top;
+            line-height:100px;
+            
+            
+        }
+     
+        .wrapper .header .nav li a{
+            
+            display:block;
+            padding:0 20px;
+            transition:0.2s;
+            font-weight:700;
+            letter-spacing:-0.8px;
+            opacity:0.8;
+            text-decoration:none;
+            color:white;
+
+        }
+        .wrapper .header .nav li a:hover{
+            border-top:3px rgba(255,255,255,1) solid;
+            box-sizing:border-box;
+            height:100px;
+            background-color: rgba(255,255,255,0.2);
+            opacity:1;
+        }
+       
+       
         .wrapper .header .mark a{display:block;
-        margin-top: 4px;
+            margin-top: 4px;
             width: 104px; height: 45px;
             padding:25px;
             background-image: url(img/header_logo.png);
             background-repeat: no-repeat;
             background-position:center;
             transition:1s;
+            
         }
         
         
@@ -80,7 +124,53 @@
                 width: 70px; height: 30px;
                 background-size: cover;
                 margin:3px 0 0 10px;
+            }
+            .wrapper .header .nav button{
+                display:block;
+                width:200px;
+                height: 40px; 
+                border:0 none;
+                padding:0 10px;
+                fontsize:1.5em;
+                background-color:rgba(000,000,000,0.2);
+                font-weight:bold;
+                color:white;
+                cursor:pointer;
                 
+            }
+            
+            /*임시*/
+            .wrapper .header .nav button:hover + ul {
+                display:block;
+            }
+            
+            .wrapper .header .nav ul{
+                display:none;
+                position:absolute;
+                background-color: rgba(255,255,255,0.2);
+                width:200px;
+            }
+            .wrapper .header .nav ul li{
+                line-height: 40px;
+                display:block;
+                
+            }
+            .wrapper .header .nav ul:hover {display:block;}
+            
+            .wrapper .header .nav ul li:hover {
+                line-height:40px;
+                height: 40px;
+            }
+            
+            .wrapper .header .nav li a:hover{
+            border-top:0;
+            border-left:4px rgba(0,0,0,0.6) solid;
+            height:40px;
+            background-color: rgba(255,255,255,0.2);
+            }
+            
+            
+        }   
     </style>
     
     
@@ -95,6 +185,17 @@
          <div class="header">
             <div class="mark">
                 <a href=""></a>
+            </div>
+            <div class="nav">
+                <button>Main Menu</button>
+                <ul>
+                    <li><a href="">PROFILE</a></li>
+                    <li><a href="">DISCOGRAPHY</a></li>
+                    <li><a href="">GALLERY</a></li>
+                    <li><a href="">VIDEO</a></li>
+                    <li><a href="">NOTICE</a></li>
+                    <li><a href="">SCHEDULE</a></li>
+                </ul>
             </div>
         </div>
         
