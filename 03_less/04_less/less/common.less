@@ -1,133 +1,227 @@
-body{font-family: "돋움",sans-serif;}
+// body{font-family: "돋움",sans-serif;}
 
-@small:5px;
-@large:10px;
-@bg-defualt:#78c4ff;
-@bg-first:#9cea96;
+// @small:5px;
+// @large:10px;
+// @bg-defualt:#78c4ff;
+// @bg-first:#9cea96;
 
 
 
-.radius(@size:10px){
-    -webkit-border-radius: @size;
-    -moz-border-radius: @size;
-    border-radius: @size;
-}
+// .radius(@size:10px){
+//     -webkit-border-radius: @size;
+//     -moz-border-radius: @size;
+//     border-radius: @size;
+// }
 
-.inlin-block(){
-    display:inline-block;
-    *zoom:1;
-    *display:inline;
-}
+// .inlin-block(){
+//     display:inline-block;
+//     *zoom:1;
+//     *display:inline;
+// }
 
-.btn-style(@line_width:1px, @height:30px, @fontsize:1em, @bgcolor:#CCC){
-    border:@line_width #CCC solid;
-    .inlin-block();
-    .radius(@large);
-    vertical-align: middle;
-    line-height:@height;
-    height:@height;
-    text-decoration: none;
-    font-size:@fontsize;
-    padding:0 20px;
-    cursor: pointer;
-    font-weight:normal;
-    background-color:@bgcolor;
+// .btn-style(@line_width:1px, @height:30px, @fontsize:1em, @bgcolor:#CCC){
+//     border:@line_width #CCC solid;
+//     .inlin-block();
+//     .radius(@large);
+//     vertical-align: middle;
+//     line-height:@height;
+//     height:@height;
+//     text-decoration: none;
+//     font-size:@fontsize;
+//     padding:0 20px;
+//     cursor: pointer;
+//     font-weight:normal;
+//     background-color:@bgcolor;
     
-}
+// }
 
-.btn{
-    .btn-style()
-}
+// .btn{
+//     .btn-style()
+// }
 
-.btn-point{
-    .btn-style(1px,40px,1em,@bg-defualt);
-}
+// .btn-point{
+//     .btn-style(1px,40px,1em,@bg-defualt);
+// }
 
-.btn-point2{
-    .btn-style(2px,30px);
-}
+// .btn-point2{
+//     .btn-style(2px,30px);
+// }
 
-a.btn{
+// a.btn{
   
+// }
+
+
+// @color:#333;
+// .btn-def{
+//     background-color:@color;
+//     &:hover{
+//         background:@color *3;
+//     }
+// }
+
+
+// .background-image(){
+//     background-image:url(../../../images/img1.jpg);
+// }
+
+
+
+
+// div.box1{
+//     width:percentage(240/950);
+//     height:100px;
+//     background-color:@bg-defualt;
+// }
+
+// div.box2{
+//     width:percentage(240/950);
+//     height:100px;
+//     background-color:lighten(@bg-defualt,20%);
+// }
+
+
+// div.box3{
+//     width:percentage(240/950);
+//     height:100px;
+//     background-color:darken(@bg-defualt,20%);
+// }
+
+
+
+// div.box4{
+//     width:percentage(240/950);
+//     height:100px;
+//     background-color:saturate(@bg-defualt,50%);
+// }
+
+
+
+
+// div.box5{
+//     width:percentage(240/950);
+//     height:100px;
+//     background-color:desaturate(@bg-defualt,50%);
+// }
+
+
+
+
+// div.box6{
+//     width:percentage(240/950);
+//     height:100px;
+//     background-color:fadein(@bg-defualt,50%);
+// }
+
+// div.box7{
+//     width:percentage(240/950);
+//     height:100px;
+//     background-color:fadeout(@bg-defualt,50%);
+// }
+
+
+
+
+// div.box8{
+//     width:percentage(240/950);
+//     height:100px;
+//     background-color:hue(@bg-defualt);
+// }
+
+
+
+// div.box9{
+//     width:percentage(240/950);
+//     height:100px;
+//     background-color:saturation(@bg-defualt);
+// }
+
+
+
+
+
+// 변수의 유효 범위
+
+// 글로벌변수. 전체적으로 공통적으로 쓸 수 있다. 
+
+// @maxwidth:1000px; 
+
+// .asideMenu(){
+//     width:@maxwidth;
+// }
+
+
+// 지역변수
+// {}안에서만 설정해 줄 수 있고. 해당 지역에서밖에 못쓴다.
+// .asideMenu(){
+//     @maxwidth:1000px;
+//     width:@maxwidth;
+// }
+
+
+
+
+// .asideMenu(){
+//     @maxwidth:95%; 
+//     width:@maxwidth;
+//   .topmenu(@maxwidth);
+// }
+
+// .topmenu(@a){
+//     height:percentage(@a/1000);
+// }
+
+
+
+
+
+// div{
+//     .asideMenu(10px)
+// }
+
+// span{
+//     .topmenu(20px)
+// }
+
+
+
+
+// p{
+//     .asideMenu(50px)
+// }
+
+
+
+// .asideMenu(@혜정){
+   
+//     width:@혜정;
+//     .topmenu(@혜정);
+// }
+
+// .topmenu(@미래){
+//     height:@미래+1000
+// }
+
+
+
+
+
+
+
+
+
+div{
+    border:1px red solid;
+    .asideMenu(50px)
 }
 
 
-@color:#333;
-.btn-def{
-    background-color:@color;
-    &:hover{
-        background:@color *3;
-    }
+.asideMenu(@x){
+    width:@x;
+    .topmenu(@x)
 }
-
-
-
-div.box{
-    width:percentage(240/950);
-    height:100px;
-    background-color:@bg-defualt;
-}
-
-div.box{
-    width:percentage(240/950);
-    height:100px;
-    background-color:lighten(@bg-defualt,20%);
-}
-
-
-div.box{
-    width:percentage(240/950);
-    height:100px;
-    background-color:darken(@bg-defualt,20%);
-}
-
-
-
-div.box{
-    width:percentage(240/950);
-    height:100px;
-    background-color:saturate(@bg-defualt,50%);
-}
-
-
-
-
-div.box{
-    width:percentage(240/950);
-    height:100px;
-    background-color:desaturate(@bg-defualt,50%);
-}
-
-
-
-
-div.box{
-    width:percentage(240/950);
-    height:100px;
-    background-color:fadein(@bg-defualt,50%);
-}
-
-div.box{
-    width:percentage(240/950);
-    height:100px;
-    background-color:fadeout(@bg-defualt,50%);
-}
-
-
-
-
-div.box{
-    width:percentage(240/950);
-    height:100px;
-    background-color:hue(@bg-defualt);
-}
-
-
-
-div.box{
-    width:percentage(240/950);
-    height:100px;
-    background-color:saturation(@bg-defualt);
+.topmenu(@y){
+    height:@y+100px
 }
 
 
@@ -140,12 +234,23 @@ div.box{
 
 
 
+.asidemenu(@maxwidth) {
+    width:@maxwidth;
+    .topmenu(@maxwidth);
+}
 
+.topmenu(@a){
+    height:(@a+200px)
+}
 
+.box1 {
+    width:100%;
+    .topmenu(20px);
+    background-color:#f00;
+}
 
-
-
-
-
-
-
+.box2 {
+    .asidemenu(100px);
+    background-color:#000;
+    color:#fff;
+}
