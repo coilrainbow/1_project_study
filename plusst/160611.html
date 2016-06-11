@@ -1,0 +1,69 @@
+index는 메인페이지가 아니다.
+index의 용도로 사용하기(초기에 만드는 작업할 때 프리뷰이다. )
+
+.ini = 개발자들이 시스템정보같은 것들을 담아 놓은 파일.
+
+보통front 단에서 폴더 두개 생성하여 작업한다.
+libs 라이브러리. 사이트 생성에 필요한 것을 담아둔다.
+아무거나(html or front 최근에는 app이라 씀)
+
+
+http://node.i-make.kr/angular/#/app/dashboard-v1
+이렇게 다 미리 만들어 놓고 시작한다.
+
+
+/=루트
+<li><a href="html/front/front.html">메인</a></li> 상대경로에는 맨 앞에 /가 안붙는다.
+
+<link rel="styleshe=et" href="/libs/css/common.css" type="text/css" /> 절대경로 
+
+
+
+
+
+
+
+
+
+
+에니메이션 =
+트렌지션 = 과정
+
+
+youtube.com
+css animation tutorial
+
+
+
+w3school
+@media query property
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/libs/css/common.css" type="text/css" />
+    <link rel="stylesheet" href="/libs/css/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/libs/css/mediaquery.css" type="text/css"/>
+    <link rel="stylesheet" href="/libs/css/animateFn.css" type="text/css" />
+    
+</head>
+<body>
+    <h1><a href=""><img src="/libs/images/googlelogo.png" /></a></h1>
+    
+    디스플레이 속성들을 잘 파악하라.
+    <ul>
+        <li>block : 레이아웃  상속이됨:블럭에 폰트컬러를 주면 먹히는 이유. </li>
+        <li>inline : 텍스트요소 컨텐츠 먹음(컬러 라인헤이트. 
+                    마진은 좌우만 먹는다(스페이스 한칸밖에 안되기 때문에 위치를 조절하기위해.))
+                    페딩은 제자리에서 먹는다  박스모델이 안먹음(위드,헤이트,)</li>
+        <li>inline-block : 레이아웃  컨텐츠처럼 배치해야하는상황 </li>
+        <li>table :테이블 셀의 WRAPPER역할을 한다. 셀의 헤이트은 테이블의 헤이트 값을 따라간다. </li>
+        <li>table-cell : 칸을 모두 같은 크기로 유지하려는 속성. 헤이트 절대값(%)은 안먹음= 테이블의 크기를 따라감.</li>
+    </ul>
+    
+    
+</body>
+</html>
