@@ -6,8 +6,15 @@
     
     <style type="text/css">
         
-        html,body{margin:0; padding:0;}
+        html,body{
+            margin:0; padding:0; font-size:13px;
+            font-family: '나눔고딕','Nanum Gothic','맑은 고딕','Malgun Gothic', '돋움', 'Dotum', 'Helvetica', 'Arial';
+            
+        }
+        ul{margin:0; padding:0;}
+        h1,h2,h3{margin:0;}
         li{list-style:none;}
+        a{text-decoration:none; color:black; }
         
         
         .section{
@@ -17,36 +24,48 @@
         
         .header{
             outline:1px red solid; border-bottom:3px gray solid; width:840px; height:108px; margin:0 auto; 
+            padding-top:20px; box-sizing:border-box;
             
         }
         .header h1{
             outline:1px red solid; width: 260px; height: 55px; background-image:url(http://static.naver.net/newsstand/up/2013/0813/nsd114914440.gif);
-            background-repeat:no-repeat; text-indent:-9999px; floast:left;
+            background-repeat:no-repeat; text-indent:-9999px; flost:left; 
         }
-        .button{
-            outline:1px red solid; display:inline-block; clear:both; float:left; 
+        .header .button{
+            outline:1px red solid; display:inline-block; clear:both; float:left; margin-top:5px;
         }
         .ad{
-            outline:1px red solid; float:right; margin-top:-35px;
+            outline:1px red solid; float:right; 
+            margin-top:-35px;
         }
         
+        .content{
+            border:1px red solid; width:840px; height:390px; margin:10px 30px; position:relative;
+            }
+        .content .content_left{outline:1px red solid; width:570px; height:390px; float:left; }
+        .content .content_right{outline:1px red solid; width:260px; height:390px; margin-left:580px; }
         
+        .content h2{display:none;}
+        .content h3{margin:5px 0 15px; font-size:23px;}
+        .content_left .top_area{position:relative; margin-bottom:5px;}
+        .content_left .top_area img{width:270px; height:190px; }
+        .content_left .top_area span{outline:1px red solid;}
         
+        .content_left .list_news{position:absolute; right:0; top:40px; }
+        .content_left .list_news li{margin-bottom:10px;}
         
+        .content_left .bot_area {padding-top:10px;}
+        .content_left .bot_area li{outline:1px red solid; width:180px; height:122px; float:left; margin-left:15px;}
+        .content_left .bot_area li:first-child{margin-left:0px;}
+        .content_left .bot_area img{ outline:1px red solid; width:180px; height:135px; }
+        .content_left .bot_area span{display:block; width:170px; margin-top:-35px; color:white; font-weight:bold; background-color:gray;}
+        
+        .content_right img{width: 126px; height:85px;}
+        .content_right li{width: 126px; height:130px; float:left; margin-right:4px;}    
+        .content_right span{display:block; margin-left:2px;} 
+    
         
     </style>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     
@@ -81,45 +100,47 @@
                     <ul>
                         <li>
                             <a href="">
+                                <h3>동물의 왕 사자, 버펄로 사냥 포착 영상 화제</h3>
                                 <img src="http://static.naver.net/newsstand/2016/0607/koreatimes/180501/001.jpg" />
-                                <span>동물의 왕 사자, 버펄로 사냥 포착 영상 화제</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="">
-                                <span>섬마을 여교사 성폭행…"짐승보다 못한"</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span>미국판 '꽃보다할배' 방영 예정</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span>독일 머크, “한국에 바이오 트레이닝 센터 설립”</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span>피살된 조선족목사의 사라진 휴대폰</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span>'조교출신' 유승호의 사격클래스 남다르네</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span>폴바셋 신메뉴가 맥주라고?</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="">
-                                <span>유로비전 스타 임다미 '의지가 중요…노래로 변화</span>
-                            </a>
-                        </li>
+                        <ul class="list_news">
+                            <li>
+                                <a href="">
+                                    <span>섬마을 여교사 성폭행…"짐승보다 못한"</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>미국판 '꽃보다할배' 방영 예정</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>독일 머크, “한국에 바이오 트레이닝 센터 설립”</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>피살된 조선족목사의 사라진 휴대폰</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>'조교출신' 유승호의 사격클래스 남다르네</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>폴바셋 신메뉴가 맥주라고?</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span>유로비전 스타 임다미 '의지가 중요…노래로 변화</span>
+                                </a>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
                 <div class="bot_area">
