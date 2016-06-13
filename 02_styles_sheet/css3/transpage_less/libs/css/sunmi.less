@@ -4,7 +4,7 @@ html, body{
     height:100%;
 }
 
-ul{font-size:0}
+ul{font-size:0; margin:0;}
 li{list-style-type: none; margin:0;}
 a{
     font-family: 'Oswald', sans-serif;
@@ -29,10 +29,18 @@ a{
     font-size:18px;
     color:white;
     letter-spacing: -0.8px;
+.font_mobile(){
+    font-size:14px;
+    line-height:14px;
+    color:white;
+    letter-spacing:-0.8px;
+}    
+
 }
 .font_mobile(){
     font-size:16px;
     color:white;
+    line-height:16px;
     letter-spacing: -0.8px;    
 }
 
@@ -71,31 +79,41 @@ a{
             float:left;
             &:hover{
                 transform: rotateY(180deg);
-                transition:0.8s;
+                transition:1s;
             }
         }
-        .main_menu{ 
+        .nav>a{display:none;}
+        .nav{ 
             float:right;
+            
             li{
+                float:right;
                 // outline:1px red solid;
-                display:inline-block;
+                // display:inline-block;
+                // height:100px;
+                // vertical-align: top;
+                // transition:0.3s;
+                // &:hover{
+                //     border-top:4px white solid;
+                //     background-color:rgba(225,225,225,0.2);
+                
+                a{  
+                    display:inline-block;
                 height:100px;
                 vertical-align: top;
-                transition:0.1s;
-                &:hover{
-                    border-top:4px white solid;
-                    background-color:rgba(225,225,225,0.2);
-                }
-                a{  
+                transition:0.3s;
                     .font_pc();
                     line-height: 100px;
                     padding:0 20px;
+                    &:hover{
+                    border-top:4px white solid;
+                    background-color:rgba(225,225,225,0.2);
                 
                 }    
             }
         }
-        
-    }
+    }    
+}
     .footer{
             outline:1px red solid;
             height:57px;
@@ -136,7 +154,7 @@ a{
 
 
 
-@media screen and(max-width:600px){
+@media screen and(max-width:400px){
     .wrapper{
     background-image:url(../img/sunmi1_2.png);
     .bgsize();
@@ -145,50 +163,80 @@ a{
     transition:500ms;
     
     .header{
-        // outline:1px red solid;
-        width:100%;
         height:40px;
-        background-color:rgba(225,225,225,0.2);
         padding:0 0 0 7px;
-        box-sizing:border-box;
-        overflow:hidden;
+        overflow:visible;
         .logo{
-            background-image:url(../img/header_logo.png);
-            .bgsize();
             background-size:cover;
             width: 65px; height: 30px;
             margin:3px 0 0 3px;
-            box-sizing:border-box;
-            float:left;
-            
             &:hover{
                 transform: rotateY(180deg);
-                transition:0.8s;
+                transition:1s;
             }
+            
         }
-        .main_menu{ 
-            float:right;
-            li{
-                // outline:1px red solid;
-                display:inline-block;
-                height:100px;
-                vertical-align: top;
-                padding:0 20px;
-                transition:0.1s;
-                &:hover{
-                    border-top:4px white solid;
-                    background-color:rgba(225,225,225,0.2);
+       
+        .nav{
+            >a{
+            display:block;
+            outline:1px red solid;
+            .font_mobile();
+            width: 130px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            background-color: rgba(0,0,0,0.3);
+            &:hover + ul {display:block}    
                 }
-                a{  
-                    .font_pc();
-                    line-height: 100px;
+            
+                ul{
+                    display:none;
+                    background-color: rgba(255,255,255,0.3);
+                    width:130px;
+                    line-height: 30px;
+                    padding:0;
+                    &:hover{display:block;}
+                    transition:1s;    
+                }
+
+            li{
+                display:block;
+                width:130px;
+                height:30px;
+                line-height:30px;
                 
-                }    
+                a{  
+                    .font_mobile();
+                    display:block;
+                    width:130px;
+                    height:30px;
+                    line-height: 16px;
+                    padding:10px 10px 10px 10px;
+                    background-color:rgba(225,225,225,0.2);
+                    
+                    &:hover{
+                        border-top:0px none;
+                        border-left:4px gray solid;
+                        
+                        line-height:30px;
+                        padding:10px 0 10px 20px;
+                        
+                        background-color:rgba(225,225,225,0.8);
+                        
+                        
+                    
+                    }
+                    
+                    
+                }  
             }
         }
-        
     }
+}   
+            
     .footer{
+        
             outline:1px red solid;
             height:57px;
             width:100%;
@@ -222,10 +270,7 @@ a{
             .flaticon-youtube-logo:before{
                     .symbol();
                 }
-    }
-}
-
-
+            }
+        }
     
-}
-    
+

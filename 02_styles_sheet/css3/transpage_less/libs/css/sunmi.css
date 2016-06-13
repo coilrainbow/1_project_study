@@ -6,6 +6,7 @@ body {
 }
 ul {
   font-size: 0;
+  margin: 0;
 }
 li {
   list-style-type: none;
@@ -42,27 +43,31 @@ a {
 }
 .wrapper .header .logo:hover {
   transform: rotateY(180deg);
-  transition: 0.8s;
+  transition: 1s;
 }
-.wrapper .header .main_menu {
+.wrapper .header .nav > a {
+  display: none;
+}
+.wrapper .header .nav {
   float: right;
 }
-.wrapper .header .main_menu li {
+.wrapper .header .nav li {
+  float: right;
+}
+.wrapper .header .nav li a {
   display: inline-block;
   height: 100px;
   vertical-align: top;
-  transition: 0.1s;
-}
-.wrapper .header .main_menu li:hover {
-  border-top: 4px white solid;
-  background-color: rgba(225, 225, 225, 0.2);
-}
-.wrapper .header .main_menu li a {
+  transition: 0.3s;
   font-size: 18px;
   color: white;
   letter-spacing: -0.8px;
   line-height: 100px;
   padding: 0 20px;
+}
+.wrapper .header .nav li a:hover {
+  border-top: 4px white solid;
+  background-color: rgba(225, 225, 225, 0.2);
 }
 .wrapper .footer {
   outline: 1px red solid;
@@ -120,7 +125,7 @@ a {
   text-align: center;
   background-color: white;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 400px) {
   .wrapper {
     background-image: url(../img/sunmi1_2.png);
     background-position: center top;
@@ -130,49 +135,73 @@ a {
     transition: 500ms;
   }
   .wrapper .header {
-    width: 100%;
     height: 40px;
-    background-color: rgba(225, 225, 225, 0.2);
     padding: 0 0 0 7px;
-    box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible;
   }
   .wrapper .header .logo {
-    background-image: url(../img/header_logo.png);
-    background-position: center top;
-    background-repeat: no-repeat;
     background-size: cover;
     width: 65px;
     height: 30px;
     margin: 3px 0 0 3px;
-    box-sizing: border-box;
-    float: left;
   }
   .wrapper .header .logo:hover {
     transform: rotateY(180deg);
-    transition: 0.8s;
+    transition: 1s;
   }
-  .wrapper .header .main_menu {
-    float: right;
+  .wrapper .header .nav > a {
+    display: block;
+    outline: 1px red solid;
+    font-size: 16px;
+    color: white;
+    line-height: 16px;
+    letter-spacing: -0.8px;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.3);
   }
-  .wrapper .header .main_menu li {
-    display: inline-block;
-    height: 100px;
-    vertical-align: top;
-    padding: 0 20px;
-    transition: 0.1s;
+  .wrapper .header .nav > a:hover + ul {
+    display: block;
   }
-  .wrapper .header .main_menu li:hover {
-    border-top: 4px white solid;
-    background-color: rgba(225, 225, 225, 0.2);
+  .wrapper .header .nav ul {
+    display: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    width: 130px;
+    line-height: 30px;
+    padding: 0;
+    transition: 1s;
   }
-  .wrapper .header .main_menu li a {
-    font-size: 18px;
+  .wrapper .header .nav ul:hover {
+    display: block;
+  }
+  .wrapper .header .nav li {
+    display: block;
+    width: 130px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .wrapper .header .nav li a {
+    font-size: 16px;
     color: white;
     letter-spacing: -0.8px;
-    line-height: 100px;
+    display: block;
+    width: 130px;
+    height: 30px;
+    line-height: 16px;
+    padding: 10px 10px 10px 10px;
+    background-color: rgba(225, 225, 225, 0.2);
   }
-  .wrapper .footer {
+  .wrapper .header .nav li a:hover {
+    display: block;
+    border-top: 0px none;
+    border-left: 4px gray solid;
+    line-height: 30px;
+    padding: 10px 0 10px 20px;
+    background-color: rgba(225, 225, 225, 0.8);
+  }
+  .footer {
     outline: 1px red solid;
     height: 57px;
     width: 100%;
@@ -182,20 +211,20 @@ a {
     position: fixed;
     bottom: 0;
   }
-  .wrapper .footer .jyplogo {
+  .footer .jyplogo {
     background-image: url(../img/jyplogo.png);
     float: left;
     width: 115px;
     height: 45px;
     margin-top: 5px;
   }
-  .wrapper .footer .sns li {
+  .footer .sns li {
     color: white;
     display: inline-block;
     float: right;
     margin: 13px 10px 0 0;
   }
-  .wrapper .footer .flaticon-twitter:before {
+  .footer .flaticon-twitter:before {
     width: 30px;
     height: 30px;
     line-height: 30px;
@@ -206,7 +235,7 @@ a {
     text-align: center;
     background-color: white;
   }
-  .wrapper .footer .flaticon-facebook-app-symbol:before {
+  .footer .flaticon-facebook-app-symbol:before {
     width: 30px;
     height: 30px;
     line-height: 30px;
@@ -217,7 +246,7 @@ a {
     text-align: center;
     background-color: white;
   }
-  .wrapper .footer .flaticon-youtube-logo:before {
+  .footer .flaticon-youtube-logo:before {
     width: 30px;
     height: 30px;
     line-height: 30px;
