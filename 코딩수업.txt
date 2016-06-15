@@ -531,3 +531,183 @@ cvs
 
 
 
+
+160613
+
+
+jpg= 사진->
+quailty
+	12 Maximurm : 인쇄용
+	8~10 high : 웹용 
+	Medium 부터는 noise가 생긴다.
+
+gif = 
+	움직이는 사진
+	256color 밖에 지원안함.
+	만화나 아이콘정도로만 쓰기에 적당함.
+
+	에니메이션. 단색의 이미지. 작은 용량. 
+	투명이 가능 (익스6에선 투명이 표현이 안됨)
+	
+png =   
+	두가지 장점이 다 있다.
+	사진인데 투명을 필요할 경우 압축비를 이용해 크기를 줄여야한다.
+
+svg = 
+	벡터단위로 하여 확대해도 깨지지 않는다. 
+	일러스트에서 확장자 생성 가능.
+	html 상에서 소스로 집어 넣을 수 있음.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+160515
+grunt
+		common.css = 공통요소 *margin:0
+		layout.css = 레이아웃
+		master.css <- import.css 보통마스터로 각 페이지의 css를 임포트 한다.ex>www.taegugas.co.kr 로드문제가 있다. 느려서 link가 낫다.
+		모든 파일마다 css가 붙는 경우가 있지만 그럴바엔 거기다 인터널형식으로 하는게 낫다.
+		
+	index.html
+
+
+
+
+node.js 설치
+
+cmd 에서 npm을 치면 node.js 명령어를 볼 수 있다.
+
+
+
+
+gruntjs.com에서 getting started 에서 인스톨하기.
+작업할 폴더 생성.
+npm install -g grunt-cli 안먹음?
+
+
+cmd 창에서 작업할 폴더까지 들어간 후
+npm init
+프로젝트 이름 입력
+version 설정   버전에대한 해석.(1.0.0)(버전 개편.버젼 업(ex>추가기능).버그수정)
+entry point: Gruntfile.js 
+저장:yes
+언제나 package.json에서 수정가능하다.
+
+http://www.codebelt.com/javascript/install-grunt-js-on-windows/에
+package.json 내용을 복붙하고
+
+cmd에 npm install 하면 설치됨. (grunt-contrib-concat 그런트를 컨트롤한다.)
+
+libs/Gruntfile.js를 생성 
+
+
+npm install -S grunt 현재 실습에선 작동안됨 
+
+
+
+
+
+간단한 테스트.
+
+그런트 플러그인에 concat 설치. watch 설치.
+
+module.exports = function(grunt){
+    grunt.initConfig({
+      concat: {
+        dist: {
+          src: ['css/common.css'], 여기서 경로지정만 하면 합쳐짐. dest에 스타일에 합쳐짐
+          dest: 'dist/style.css',
+        },
+      },
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-concat');
+}
+
+
+
+
+
+
+
+
+
+
+
+그런트 순서.
+npm install -g grunt-cli(전역)  그런트 설치
+npm init : 정보입력
+npm install or npm install -S grunt 그런트 작업 설치
+
+나머지는 플러그인 설치.
+concat , watch
+
+
+
+
+
+less 적용하기.
+plug-in에서 less 설치.
+
+gruntfile.js에 경로지정.
+ 
+http://lesscss.org/가서 내용 복붙
+
+*** 리눅스에서 경로지정을 정확하게 해야한다. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+front-end developer 는 node.js 를 잘 다뤄야한다. 
+
+
+
+
+
+
+
+
+
+
+
