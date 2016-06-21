@@ -1,8 +1,8 @@
 <!--2d CSS3 2D Transforms-->
 <!--http://www.w3schools.com/css/css3_2dtransforms.asp-->
 
-<!--transform:origin 0점을 지점하여 회전축을 바꿈.-->
-<!--transform:origin:50% 100%;-->
+<!--transform-origin 0점을 지점하여 회전축을 바꿈.-->
+<!--transform-origin:50% 100%;-->
 
 <!--transform:rotateX,Y 축을 기준으로 돈다. -->
 
@@ -19,12 +19,16 @@
     <style type="text/css">
         .box{
         width:200px; height:200px;
-        background-image: url(../images/img1.jpg); -webkit-background-size: cover;
-        background-size: cover;
-        transition:1s;    
+        /*background-image: url(../images/img1.jpg);*/
+        /*-webkit-background-size: cover;*/
+        /*background-size: cover;*/
+        background-color:blue;
+        transition:3s;    
+        transform-origin:120px 100px;
         }
         .box:hover{
             transform:rotate(-720deg);
+            
         }
         
         
