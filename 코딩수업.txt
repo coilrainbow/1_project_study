@@ -462,7 +462,7 @@ review
 
 
 접근성의 ir 기법
-실제로는 있지만 눈에 안보이게 하기. 
+실제로는 있지만 눈에 안보이게 하기.
 .hide{width:0; height:0; overflow:hidden; position:absolute; left:-9999px; top:-9999px}
 display:none;은 아예없애버리는것
 
@@ -493,11 +493,11 @@ css활용하여 컬러 지정한다. 복붙활용
 span 인라인 태그 대표.텍스트요소 꾸밀때 사용
 div 블럭태그 대표. 레이아웃 요소 구성할 때 사용
 
-p = div 
+p = div
 h1 = div
 strong = span
 같은 기능이지만 p,h1, strong 처럼이름을 붙이는게 더 효율적이기 때문에.
-div로 가능은 하지만 구성 하려면 번거롭고 복잡해진다. 
+div로 가능은 하지만 구성 하려면 번거롭고 복잡해진다.
 
 
 
@@ -538,23 +538,23 @@ cvs
 jpg= 사진->
 quailty
 	12 Maximurm : 인쇄용
-	8~10 high : 웹용 
+	8~10 high : 웹용
 	Medium 부터는 noise가 생긴다.
 
-gif = 
+gif =
 	움직이는 사진
 	256color 밖에 지원안함.
 	만화나 아이콘정도로만 쓰기에 적당함.
 
-	에니메이션. 단색의 이미지. 작은 용량. 
+	에니메이션. 단색의 이미지. 작은 용량.
 	투명이 가능 (익스6에선 투명이 표현이 안됨)
-	
-png =   
+
+png =
 	두가지 장점이 다 있다.
 	사진인데 투명을 필요할 경우 압축비를 이용해 크기를 줄여야한다.
 
-svg = 
-	벡터단위로 하여 확대해도 깨지지 않는다. 
+svg =
+	벡터단위로 하여 확대해도 깨지지 않는다.
 	일러스트에서 확장자 생성 가능.
 	html 상에서 소스로 집어 넣을 수 있음.
 
@@ -585,8 +585,12 @@ grunt
 		layout.css = 레이아웃
 		master.css <- import.css 보통마스터로 각 페이지의 css를 임포트 한다.ex>www.taegugas.co.kr 로드문제가 있다. 느려서 link가 낫다.
 		모든 파일마다 css가 붙는 경우가 있지만 그럴바엔 거기다 인터널형식으로 하는게 낫다.
-		
+
 	index.html
+
+
+
+
 
 
 
@@ -607,7 +611,7 @@ cmd 창에서 작업할 폴더까지 들어간 후
 npm init
 프로젝트 이름 입력
 version 설정   버전에대한 해석.(1.0.0)(버전 개편.버젼 업(ex>추가기능).버그수정)
-entry point: Gruntfile.js 
+entry point: Gruntfile.js
 저장:yes
 언제나 package.json에서 수정가능하다.
 
@@ -616,10 +620,10 @@ package.json 내용을 복붙하고
 
 cmd에 npm install 하면 설치됨. (grunt-contrib-concat 그런트를 컨트롤한다.)
 
-libs/Gruntfile.js를 생성 
+libs/Gruntfile.js를 생성
 
 
-npm install -S grunt 현재 실습에선 작동안됨 
+npm install -S grunt 현재 실습에선 작동안됨
 
 
 
@@ -653,12 +657,17 @@ module.exports = function(grunt){
 
 
 그런트 순서.
-npm install -g grunt-cli(전역)  그런트 설치
+npm install -g grunt-cli (전역)  그런트 설치
 npm init : 정보입력
 npm install or npm install -S grunt 그런트 작업 설치
 
 나머지는 플러그인 설치.
-concat , watch
+concat , watch, less
+
+
+
+
+
 
 
 
@@ -668,10 +677,18 @@ less 적용하기.
 plug-in에서 less 설치.
 
 gruntfile.js에 경로지정.
- 
+
 http://lesscss.org/가서 내용 복붙
 
-*** 리눅스에서 경로지정을 정확하게 해야한다. 
+*** 리눅스에서 경로지정을 정확하게 해야한다.
+
+
+
+
+
+
+
+front-end developer 는 node.js 를 잘 다뤄야한다.
 
 
 
@@ -687,6 +704,35 @@ http://lesscss.org/가서 내용 복붙
 
 
 
+마크업 짜고, less 따로 생성하고, 꾸미고.
+
+저장 순서 잘 체크.
+
+
+
+
+
+
+include하기
+
+	asp
+	php
+	jsp
+
+
+http://sergeswin.com/115
+
+
+
+
+
+
+
+
+부트스트랩 무료 테마
+https://www.cmsfactory.net/node/10674
+
+http://startbootstrap.com/template-categories/all/
 
 
 
@@ -696,18 +742,62 @@ http://lesscss.org/가서 내용 복붙
 
 
 
+061621
+
+
+개발환경
+
+리눅스  os window
+
+
+		APM
+	php	-apache2
+		-php
+		-mysql
 
 
 
-front-end developer 는 node.js 를 잘 다뤄야한다. 
+윈도우	asp asp.net C# php jsp
+IIS
+asp
+mssql
+
+
+osX	-윈도우/리눅스 설치가능
+
+
+리눅스
+-우분투
+-레드헷	-페도라
+	-centOS 7
+
+
+70% 우분투
+30% 센트os (보안용이면 거의 90%가 사용되어짐)
 
 
 
 
+리눅스
+APM
+apache
+php
+mysql (db)
 
 
 
+php환경에서 xampp 설치
+개발환경 설치 ( XAMPP Control Panel setup)
+https://www.apachefriends.org/index.html
+
+
+config > httpd.conf >
+document root를 본인이 지정한 폴더의 경로로 수정.(index.html가 포함된)
+
+apache
+
+localhost 본인 컴퓨터의 ip에 접속함. or cmd > ipconfig 에서 IPv4 주소 입력.
 
 
 
-
+MVC model (model view controler) 각자하자.
