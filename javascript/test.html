@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+        
+        
+        // // 선생님 c9 history 참고
+        
+        
+        // // 문자를 쓸때 = "가나다"(상수:변하지않는 수)
+        // // 숫자를 쓸때 = 1(상수)
+        // document.write("문자는 연산하지 않는다"+"가나다");
+        // document.write(10+"가나다");
+        // document.write(10+1);
+        
+        
+        // var a = 1;
+        // // (var(변수 선언)은 항상 넣어준다. (고급언어일 수록 문법법칙이 엄격하다.;같은게 빠지면 안돌아감. 자바제외)
+        
+        // var a = 11;
+        // a= 10;
+        
+        
+        var name =prompt("신님 누구를 만드시겠습니까?")
+        
+        var text1 = ["일단","어디한번","음.."];
+        var text2 = ["드립력","공손함","병맛","못생김"];
+        var text3 = ["한방울","두방울","헉.. 쏟았다","음.. 걍 관두자"];
+        
+        var ran1 = Math.floor(Math.random() * text1.length);
+        var ran2 = Math.floor(Math.random() * text2.length);
+        var ran3 = Math.floor(Math.random() * text3.length);
+        
+        document.write(name+" 을 만들어 볼까? "+text1[ran1]+" "+text2[ran2]+" "+text3[ran3]);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
