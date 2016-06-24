@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>up&down</title>
+    
+    <script type="text/javascript">
+    
+        var coin=5
+        var x = Math.floor(Math.random()*100);
+        
+        for(i=0; i < coin; i++){
+            var values = prompt("맞춰봐")
+            
+            if (values > x){
+                alert('그것보다 작아')
+            }else if(values < x){
+                alert('그것보다 커')
+            }else if(values == x){
+                alert('굿');
+                break;
+            }else{
+                alert('game over');
+            }
+            if (i == coin-1){
+                alert('game over')
+            }
+            
+            
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+

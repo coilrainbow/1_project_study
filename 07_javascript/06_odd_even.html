@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <script type="text/javascript">
+    
+    // 사용자가 값을 입력해야함
+    // 사용자가 입력한 값이 홀,짝인 비교
+    // 홀,짝인 alert 출력
+    
+
+
+
+    // var user=prompt('홀수나 짝수 둘중 하나를 입력하라')
+    
+    // if(user%2 == 0){
+    //     alert('짝수')
+    // }else{
+    //     alert('홀수')
+    // }
+
+    
+    // var user=prompt('홀수나 짝수 둘중 하나를 입력하라')
+    // if(user%2 == 0){
+    //     alert('짝수')
+    // }else if(user%2 ==1){
+    //     alert('홀수')
+    // }else{
+    //     alert('숫자만 입력하시오')
+    // }
+    
+
+
+    
+
+
+
+    // 랜덤 정수를 만든다
+    
+    // 랜덤수가 홀수인지 짝수인지 비교하여 num 이라는 변수에
+    // '홀'또는 '짝' 문자열을 담는다.
+    
+    // 사용자 입력란이 나온다.
+    
+    // 입력란에 '홀','짝'을 입력하여 num 변수와 일치하면
+    // '정답입니다.좋겠네요..'
+    // 오답일 시  '꺼져'
+    // 올바른 값을 입력하지 않았을 시 '알아 들을 수 없으니 꺼져'
+    // 라고 메세지를 띄운 후 게임이 종료됩니다.
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var random=Math.floor(Math.random()*100)
+    var num= null;
+    
+    if(random%2 == 0){
+        num='짝'
+    }else if(random%2 == 1){
+        num='홀'
+    } 
+    console.log(random)
+    console.log(num)
+    
+    
+    
+    var user=prompt('홀짝인지 맞춰봐 ')
+    if(num== user){
+        alert('정답입니다.좋겠네요..')
+    }else if(user=='홀' || user=='짝' ){
+        alert('꺼져')
+    }else {
+        alert( '알아 들을 수 없으니 꺼져');
+        
+    }
+    
+
+
+
+
+
+
+//       //베타범
+//          if(value == num )
+//             {
+//                 alert('정답이네요~! 좋겠다');
+                
+//             }else if(value == "홀" || value == "짝"){
+                
+//                 alert('아닌디?');
+                
+//             }else{
+                
+//                 alert('올바른 값을 입력하지 않아서 알아들을 수 없으니 꺼져요...');
+                
+//             }
+        
+//         //선경
+//         if(a == num){
+
+//             alert("정답입니다.");
+
+//         }else if(a !== num && a=="홀"){
+
+//             alert("틀렸어!");
+
+//         }else if(a !== num && a=="짝"){
+
+//             alert("틀렸어!");
+
+//         }
+//         else{
+//             alert("알아들을수없어,꺼져");
+//         }
+
+        
+        
+
+
+
+
+
+
+
+
+// 태준
+//   var random=Math.floor(Math.random()*100)
+//     var num=[];
+    
+//     if(random%2 == 0){
+//         num.push('짝')
+//     }else if(random%2 == 1){
+//         num.push('홀')
+//     } 
+//     console.log(random)
+//     console.log(num)
+    
+    
+//     var user=prompt('홀짝인지 맞춰봐 ')
+//     if(num =='짝'){
+//         if(user=='짝'){
+//             alert('정답입니다.좋겠네요..')
+//         }else if(user=='홀'){
+//         alert('꺼져')}
+//         else {alert( '알아 들을 수 없으니 꺼져');}
+//     }
+//     else if(num =='홀'){
+//         if(user=='홀'){
+//             alert('정답입니다.좋겠네요..')
+//         }else if(user=='짝'){
+//         alert('꺼져')}
+//         else {alert( '알아 들을 수 없으니 꺼져');}
+//     }
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>
