@@ -40,15 +40,280 @@
         
         
         
+        // 인터프리터 해석방식. 컴퓨터가 위에서 부터 아래로 읽는다. 
+        
+        // var a = 1;
+        // alert(a)
+        
+        // var a = 2;
+        // alert(a)
+        
+        // var a = 3;
+        // alert(a)
+        
+        // var a = 4;
+        // alert(a)
+        
+        // var a = 5;
+        // alert(a)
+        
+        // var aa =['서진석','장혜정','박태준'];
+        // for(i = 0; i < aa.length; i ++){
+        //     console.log(aa)
+        // }
         
         
+
+    
+    // var aa =null;
+    // alert(aa)
+    
+    //     var aa =['서진석','장혜정','박태준'];
+    //     alert(aa)
+    
+    //     for(var i = 0 in aa ){
+    //     console.log(aa[i])
+    //     }
         
+
+
+
+
+
+
+    
+    
+    
+    // 함수    
+    // 1.필요할 때 불러온다.
+    // 2.재사용이 가능하다.
+    // +.뒤에 ()가 붙고 default 기능이 이미 있다.
+    
+    // sum()
+    // 위와같이 사용 라인에 위치에 관계없이 바로 불러온다. 
+    
+    // void 함수 (반환값 없음. 단순히 실행 할 뿐.)
+    // function sum(){
+    //     alert('나 불렀어???????????')
+    // } 
+    // 라인에 관계 없이 언제든지 불러올 수 있다.
+
+
+    // // ex>
+    // var a = 10;
+    // var b = 20;
+    // var z = null;
+    
+    // function sum(){
+    //     z =a+b
+    // }
+    // // sum() 
+    // // 함수 호출 전까지 z 값은 null이다
+    // console.log(z)
+    
+    
+    
+    // ex> 보이드와 반환의 차이점.
+    
+    // //void 함수 
+    // function sumv(x,y){
+    //     alert(x+y)
+    // }
+    
+    // //alert 받아서 보여주기만 하고 
+    // //return과 같이 계산 해서 보내주지 않는다.
+    
+    
+    // // 반환 함수
+    // function sumr(x,y){
+    //     return x+y
+    // }
+    
+    // sumv(10,10)
+    // sumr(20,20)
+
+
+
+    // // ex>
+    // function sumr(x,y){
+    //     return x+y
+    // }
+    // var a,b,c,d,e,f;
+    
+    // a = sumr(1,1)
+    // b = sumr(10,30)
+    // c = sumr(20,30)
+    // d = a+b+c
+    // e = d + sumr(10,30)
+    // f = sumr(a,30)
+    
+    // console.log(f)
+
+
+    // // ex>
+    // function sumr(x,y){
+    //     return x+y
+    // }
+    
+    
+    // aa = sumr(sumr(20,20),sumr(30,30))
+    
+    // bb = 100 + aa + sumr(10,sumr(10,sumr(sumr(10,10),10)))
+    
+    
+    
+    
+    // // ex>
+    
+    // var member =[];
+    // function addUser(){
+    //     member.push(Number(prompt('사용자점수를 입력하세요')))
+    //     console.log(member)
+    // }
+     
+    
+     
+    // var x=[];
+    // function avr(){
+    //     x.push(member/member.length);
+    //     console.log(x)
+        
+    // }
+     
+    //  alert(x)
+
+
+
+
+
+
+
+
+    // var member = [];
+    
+    // function addUser(){
+        
+    //     var user = prompt("사용자인원을 입력하라")
+        
+    //     var i =0;
+    //     while(i < user){
+    //         var userscore = prompt("사용자점수입력!")
+            
+    //         member.push(Number(userscore))
+            
+    //         i++
+    //     }
+    //     console.log(member)
+    // }
+    
+    
+    
+  var member = [];
+    var tt;
+    function addUser(){
+        
+        var user = prompt("사용자수를 입력하세요")
+        
+        var i=0;
+        while(i < user){
+             var userscore =  prompt("사용자 점수를 입력하세요")
+        
+             member.push(Number(userscore))    
+            i++
+        }
+        console.log(member)
+        tt =  avg(member)
+     }
+     
+     function avg(x){
+         
+         var total = 0;
+         
+        for(var i=0 in x){
+            total += x[i]    
+        }
+        
+      return total / x.length
+        
+     }
+     
+     
+     
+
+
+    
+
+
+
+
+
+
+
+     
+     
+     
+    // 익명함수 
+    
+    // 이름이 없는 함수. 변수에다 값을 대입시킴
+
+    // var aa =function(){
+        
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+    // // 클로져
+    // // 리턴 뒤에 함수가 나오는 상황
+    
+    // sum()()
+    // function sum(x){
+    //     x=0
+    //     return function(y){
+            
+    //     }
+    // }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // 콜백
+
+
+
+
+
+
+
         
     </script>
     
     
 </head>
 <body>
-    
+    <!--<button onclick="sum();">눌러</button>-->
+    <button onclick="addUser();">사용자 점수입력</button>
+    <button onclick="alert(tt);">평균출력</button>
+    <button onclick=";">점수계산</button>
 </body>
 </html>

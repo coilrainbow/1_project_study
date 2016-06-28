@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>99_test.html</title>
     
-    앞부분을 만든 후 그 근거를 토대로 뒷부분은 쉽게 풀린다
+    <!--앞부분을 만든 후 그 근거를 토대로 뒷부분은 쉽게 풀린다-->
     
     
     <script type="text/javascript" >
@@ -12,6 +12,7 @@
     // 사용자가 값을 입력해야함
     // 사용자가 입력한 값이 홀,짝인 비교
     // 홀,짝인 alert 출력
+
 
 
 
@@ -27,6 +28,9 @@
     // 오답일 시  '꺼져'
     // 올바른 값을 입력하지 않았을 시 '알아 들을 수 없으니 꺼져'
     // 라고 메세지를 띄운 후 게임이 종료됩니다.
+    
+    
+    
     
     
     
@@ -51,31 +55,211 @@
         
         // 4. 사용자가 숫자를 입력할 수 있는 총 횟수는 5회이다.
         // 사용자가 5번 안에 성공하지 못하면 꺼져 라는 
-        // 메세지를 보내고 게임이 종료된���.
+        // 메세지를 보내고 게임이 종료된다.
+        
+  
+  
+        
+
+  
+    
+    
+    // 1.카드를 담을 변수를 만들라.
+    // 2.하트, 다이아, 클로버, 스페이스라는 string을 card라는 이름의
+    // 변수에 배열하여 담아라.
+    
+    // 3.모든 카드를 1.번에서 생성한 변수에 담아라.
+    //      카드의 종류는 총 4가지 부류이며,
+    //      각 4 종류의 카드는 13장의 카드를 갖고있다.
+    //      1카드는 ace, 11카드는 J, 12카드는 Q, 13카드는 K이다.
+    
+    
+    
+
+    // 4.사용자가 받을 카드를 담을 user 변수를 만들어라.
+    // 5.숫자가 카드의 종류와 갯수만큼 랜덤으로 발생한다.
+    // 6.user 변수에 랜덤숫자를 담아라.
+    // 7.받을 카드 한장을 제외한 나머지 카드를 모두 지워라.
+    
+   
+   
+   
+   
+   
+   
+   
+    
+    // 1.변수 member를 만드시오.
+    // 2.addUser라는 함수를 만드시오
+    //     사용자가 입력한 점수를 숫자 type으로 
+    //     member 변수에 계속해서 담을 수 있게
+    //     설정하라.
+    //     button을 누르면 addUser함수가 사용될수 있게만들라.
+
+
+
+    // 3.변수 x를 만드시오
+    // 4.avr라는 함수를 만드시오
+    //     변수 x 에 담아놓은 점수들의 평균 점수를 출력하라
+    //     button을 누르면 avr함수가 사용될 수 있게 만들라.
+    
+    
+    
+    
+    
+    
+   //카드모양 배열
+    //카드담을 공간 배열
+    //카드담을공간에 카드를 종류별로 담기
+    
+    
+    //카드 나눠주기기능 
+//     var user = [];
+//         function addcard(){
+            
+//     //랜덤으로 수를 발생킨다.(carbox 갯수 범위)
+//     //carbox에서 랜덤 수의 카드를 user 배열에 추가한다
+//     //carbox에서 랜덤수의 카드를 제거한다
+// }
+    
+    
+    
+    
+    
+     
+    var pan=[];
+    var card =['♡','◇','♧','♤'];
+   function reset(){
+        pan=[];
+        for(i=0; i <4; i++){
+            // console.log(i)
+            for(j=1; j < 13+1; j++)
+            // console.log(j)
+            
+            if(j==1){
+                pan.push(card[i]+'ACE')
+            }else if(j == 11){
+                pan.push(card[i]+'J')
+            }else if(j == 12){
+                pan.push(card[i]+'Q')
+            }else if(j == 13){
+                pan.push(card[i]+'K')
+            }else{
+                pan.push(card[i]+j)
+            }
+        }
+        console.log(pan)
+   }
+    
+    // var user =[];
+    // var random=Math.floor(Math.random()*pan.length)
+    
+    // users.push(pan[random])
+    // pan.splice(random,1)
+    
+    
+    function start(){
+        for(i=0;i <3; i++){
+            addCard()
+        }
+        console.log(user)
+    }
+    
+    
+    function call(){
+        addCard();
+        console.log(user)
+    }
+    
+    
+    
+    var user =[];
+    function addCard(){
+        var random=Math.floor(Math.random()*pan.length)
+        user.push(pan[random])
+        user.splice(random,1)
+    }
+   
+   
+    
+    
         
     
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+//   var card=["♥","◇","♣","♠"];
+//   var pan =[];
+   
+//   function reset(){
+//       pan =[];
+//       for(i= 0; i < 4; i++){
+           
+//           for(j=1; j < 13+1; j++ ){
+           
+//                 if(j == 1){
+//                     pan.push(card[i]+"A")
+//               }else if(j==11){
+//                   pan.push(card[i]+"J")
+//               }else if(j==12){
+//                   pan.push(card[i]+"Q")
+//               }else if(j==13){
+//                   pan.push(card[i]+"K")
+//               }else{
+//                   pan.push(card[i]+j)
+//               }
+//           }
+//       }
+//       console.log(pan)
+//     }
    
    
-    
-    
-    
-   var random = Math.floor(Math.random()*100);
-   console.log(random);
-    
-   for(i=0; i < 5; i++){
-       var user = prompt('아무거나 적어');
-       console.log(user);
+//   var user = [];
+//   function addcard(){
        
-       if(random > user){
-           alert('랜덤의 수가 더 크다')
-       }else if(random < user){
-           alert('랜덤의 수가 더 작다')
-       }else if(random == user){
-           alert('정답')
-       } 
-   }
-
+//         var random = Math.floor(Math.random() * pan.length);
+//         user.push(pan[random]);
+//         pan.splice(random,1);
+//   }
    
+   
+   
+//   function start(){
+//       for(i = 0; i < 3; i ++){
+//           addcard();
+//       }
+//       console.log(user)
+//   }
+   
+   
+   
+//   function call(){
+//         for(i=0; i <2; i++)    
+           
+//           if(i == 1){
+//           addcard();            
+//           }else if (i ==2){
+//               break;
+//           }
+//         console.log(user)
+//   }
+    
+
+
+
     
     
     
@@ -88,7 +272,9 @@
     
 </head>
 <body>
-    
-        
+    <button onclick="reset()">카드정리</button>
+    <button onclick="start()">게임시작</button>
+    <button onclick="call()">콜</button>
+    <button onclick="die()">다이</button>
 </body>
 </html>

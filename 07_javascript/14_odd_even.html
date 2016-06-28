@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>홀짝게임</title>
+    
+    1.홀짝게임.
+    2.0~100까지의 랜덤숫자를 random이라는 변수에 담는다.
+    3.사용자 입력란을 추가한다.
+        홀, 짝 이라는 문자열만 인식할 수 있으며 그 외의 것들은
+        '다시 입력하세요' 라고 반응한다. 
+    
+    범영 https://ide.c9.io/bykim/project_study
+    고은 https://ide.c9.io/aimablegon/study_pub
+    선경 https://ide.c9.io/celine1001/publishing_study
+    태준 https://ide.c9.io/yirer/web_project_study
+    진석 https://ide.c9.io/coilrainbow/project_study
+
+    
+    
+    <script type="text/javascript" >
+     
+     
+        
+        // var game = {
+        //     num:100,
+        //     question:'홀 짝을 맞춰봐',
+            
+        //     cal:function(){
+        //         if(random%2 == 0){
+        //             num='짝'
+        //         }else if(random%2 == 1){
+        //             num='홀'
+        //         }
+        //     },
+        
+        //     user:function(){
+        //         prompt(game.question)
+        //     },
+            
+        //     reply:function(){
+                
+        //         if(num == user){
+        //             alert('맞았어!')
+        //         }else if(user == '홀' || user =='짝'){
+        //             alert('아니')
+        //         }else{
+        //             alert('홀,짝 만 입력해')
+        //         }
+        //     },
+         
+        // }
+        
+        
+        
+        // random = Math.floor(Math.random()*(game.num))
+        // console.log(random)
+        
+        // var num;
+
+        // (game.cal())
+        
+        // user=prompt(game.question);   
+        
+        // (game.reply())
+        
+ 
+
+        // var game = {
+        //     num:Math.floor(Math.random()*10),
+        //     // num:function(){
+        //     //   return Math.floor(Math.random()*100)  
+        //     // },
+        //     cal:function(){
+        //         if(this.num%2 == 0){
+        //             return '짝'
+        //         }else if(this.num%2 == 1){
+        //             return '홀'
+        //         }
+        //     },
+        //     user:prompt('홀 짝을 맞춰봐'),            
+        //     reply:function(){
+        //         if(this.user == this.cal()){
+        //             return '맞았어!'
+        //         }else if(this.user == '홀' || this.user  =='짝'){
+        //             return '아니'
+        //         }else{
+        //             return '홀,짝 만 입력해'
+        //         }
+        //     },
+        //  }
+        // console.log(game.num)            
+        // console.log(game.cal()+' :연산값')
+        // console.log(game.user+' :유저의 입력 값')
+
+        // console.log(game.reply())
+        
+        
+        
+        
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+   
+        
+        
+        
+        // // base
+        
+        // var random = Math.floor(Math.random()*10)
+        // console.log(random +' : 랜덤 수의 값')
+
+        // var user =prompt('홀 짝을 맞춰봐')        
+        // console.log(user+' : 유저입력값')
+        
+        
+        // var cal=null;
+        // if(random%2 == 0){
+        //     cal ='짝'
+        // }else if(random%2 ==1){
+        //     cal ='홀' 
+        // }
+        // console.log(cal +' : 연산 후 반환 값')
+        
+        // if(cal == user){
+        //     console.log('0')
+        // }else if(user == '짝' || user == '홀'){
+        //     console.log('1')
+        // }else{
+        //     console.log('홀, 짝 만 입력하라')
+        // }
+        
+        
+        
+        
+        
+         // // case 00
+        // var game = {
+        //     random : Math.floor(Math.random()*100),    
+            
+            
+        //     cal:function(){
+        //         if(this.random%2 == 0){
+        //             return '짝'
+        //         }else if(this.random%2 ==1){
+        //             return '홀' 
+        //         }
+        //     },
+            
+        //     user : prompt('홀짝을 입력하라'),
+        //     result:function(){        
+        //         if(this.user == this.cal()){
+        //             console.log('참');
+        //         }else if(this.user == '짝' || this.user == '홀'){
+        //             console.log('거짓');
+        //         }else{
+        //             console.log('다시 써')
+        //         }
+        //     },
+        // }
+        
+        // console.log(game.random +' : 랜덤수의 값')
+        // console.log(game.cal() +' : 연산 후 반환값')
+        // console.log(game.user +' : 유저 입력값')
+        // console.log(game.result() + ' : 최종결과값')
+        // // 최종결과에서 undefined가 뜨는 이유가 뭔가요?
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        // // case 01
+        // var command ={
+        //     circle_number:100,
+        //     command:'홀짝을 맞춰봐',
+        //     result:{
+        //         true:'참',
+        //         false:'거짓',
+        //         other:'홀, 짝 둘 중 하나만 입력하라.'
+        //     },
+        // }
+
+
+        // var game = {
+        //     random : Math.floor(Math.random()*command.circle_number),    
+            
+            
+        //     cal:function(){
+        //         if(this.random%2 == 0){
+        //             return '짝'
+        //         }else if(this.random%2 ==1){
+        //             return '홀' 
+        //         }
+        //     },
+            
+        //     user : prompt(command.command),
+        //     result:function(){        
+        //         if(this.user == this.cal()){
+        //             console.log(command.result.true);
+        //         }else if(this.user == '짝' || this.user == '홀'){
+        //             console.log(command.result.false);
+        //         }else{
+        //             console.log(command.result.ohter)
+        //         }
+        //     },
+        // }
+        
+        // console.log(game.random +' : 랜덤수의 값')
+        // console.log(game.cal() +' : 연산 후 반환값')
+        // console.log(game.user +' : 유저 입력값')
+        // console.log(game.result() + ' : 최종결과값')
+        // // 최종결과에서 undefined가 뜨는 이유가 뭔가요?
+        
+        
+        
+        // case 02  
+        var command ={
+            
+            
+            number_cycle:{
+                cycle:100,     
+                random : Math.floor(Math.random() * command.number_cycle.cycle),
+                
+                // random에서 this를 써줄때 위와같이 세번을 타고 들어갈 수 없나요?
+                // Math.random()*100 하면 처리 되긴 하는데. 궁금함.
+                
+                
+                // cycle을 command 안에 넣으면 불러 올 수 없음.
+                
+                // this.cycle을 쓰지 않고 command.cycle 을 쓰게 되면. 불러 올 수 없음.
+                // 다른 객체에 있는 걸로 인지해서 불러오지 못하는 건가요?
+                
+                // 아니면 명령어 자체가 틀렸기 때문에
+                // 속해있는 객체 안의 변수들을 불러 올 때는 무조건 this라고 입력해주는건가요?
+            },
+            
+            commandd:'홀짝을 맞춰봐',
+            
+            result:{
+                
+                true:'참',
+                false:'거짓',
+                other:'홀, 짝 둘 중 하나만 입력하라.'
+                
+            },
+            
+        }
+        console.log(command.number_cycle.random)
+
+        var game = {
+            random : (command.number_cycle.random),
+            
+            
+            cal:function(){
+                if(this.random%2 == 0){
+                    return '짝'
+                }else if(this.random%2 ==1){
+                    return '홀' 
+                }
+            },
+            
+            user : prompt(command.command),
+            result:function(){        
+                if(this.user == this.cal()){
+                    console.log(command.result.true);
+                }else if(this.user == '짝' || this.user == '홀'){
+                    console.log(command.result.false);
+                }else{
+                    console.log(command.result.other);
+                }
+            },
+        }
+        console.log(command.number_cycle.random)
+        console.log(game.random +' : 랜덤수의 값')
+        console.log(game.cal() +' : 연산 후 반환값')
+        console.log(game.user +' : 유저 입력값')
+        console.log(game.result() + ' : 최종결과')
+        
+        
+        
+       
+        
+        
+        
+        
+    </script>
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <script type="text/javascript" >
+        
+        
+    //카드모양 배열
+    //카드담을 공간 배열
+    //카드담을공간에 카드를 종류별로 담기
+    
+    
+    //카드 나눠주기기능 
+//     var user = [];
+//         function addcard(){
+            
+//     //랜덤으로 수를 발생킨다.(carbox 갯수 범위)
+//     //carbox에서 랜덤 수의 카드를 user 배열에 추가한다
+//     //carbox에서 랜덤수의 카드를 제거한다
+// }
+    
+    
+    var card=["♥","◇","♣","♠"];
+    var space =[]; 
+    
+    function reset(){
+        
+        
+        space =[]; 
+        for(i=0; i < 4; i ++){
+        
+            for(j=1; j < 13+1; j++){
+                if(j == 1){
+                    space.push(card[i]+"A")   
+                }else if(j ==11){
+                    space.push(card[i]+"J")
+                }else if(j ==12){
+                    space.push(card[i]+"Q")
+                }else if(j ==13){
+                    space.push(card[i]+"K")
+                }else{
+                    space.push(card[i]+j)   
+                }
+            }
+    
+        }
+        console.log(space)    
+    }
+    
+    
+    
+  
+    
+    
+    
+    var user = [];
+    function addcard(){
+        //랜덤으로 수를 발생킨다.(carbox 갯수 범위)
+        var random=Math.floor(Math.random() * space.length);
+        //carbox에서 랜덤 수의 카드를 user 배열에 추가한다
+        //carbox에서 랜덤수의 카드를 제거한다
+
+        user.push(space[random])
+        space.splice(random,1)
+        
+    
+    // console.log(random)    
+    
+    
+    }
+    
+     
+    
+    function start(){
+        for(i=0; i < 3; i++){
+        addcard();
+        }
+    console.log(user)    
+    }   
+    
+     function one(){
+            addcard();
+            console.log(user)    
+        }
+    function die(){
+        reset()
+        user = []
+    }
+        
+        
+        
+        
+    </script>
+    
+    
+    
+    
+    
+</head>
+<body>
+    <button onclick="reset()">카드정리</button>
+    <button onclick="start()">게임시작</button>
+    <button onclick="one()">한장씩주기</button>
+    <button onclick="die()">die</button>
+</body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript" >
+        
+        
+        
+        
+        // function 이름(){
+        //     // void
+        // }
+        
+        // 이름() 
+        
+        
+        // // 변수 = 이름()의결과값
+        // function 이름(){
+        //     // return function
+        //     return
+        // }
+        
+        
+        
+        // // 인자함수
+        // arg=인자
+        // function 계산 (arg1,grg2){
+            
+        // }
+        
+        
+        
+        
+        
+        // // 클로져 함수: 채팅과같은 통신 처럼 양방향으로 써야할때.
+        // // 사용빈도 적음
+        
+        // test ()()
+        
+        // test('javascript')();
+        // function test(name){
+        //     var output = "hello" + name + "world";
+        //     return function(){
+        //         alert(output);
+        //     }
+        // }
+        
+        
+        
+
+
+
+        // // 익명함수
+
+        // // function(){
+        // // }
+        // // 즉시 실행함수
+        // // 변수에 대입한다.
+        
+        
+        // var 이름 = function(){
+        //     alert('hi~')    
+        // }
+        
+        // 이름()
+        // // ****생성되고 난 후 호출을 해야한다.
+        // // function 이름(){} 은 어디서 호출하던 호출된다.
+        
+        
+        
+        
+        
+        // 변수 유효범위
+        
+        
+        // ex>1
+        기능1(10)
+        
+        function 기능1(x){
+            
+            alert(기능2(x,20))
+            
+        }
+        
+        function 기능2(x,y){
+            
+            return x+y
+
+        }
+        
+        
+        
+        
+        
+        // // ex>2 포커게임.
+        // 기능1(10)
+        // var x
+        // function 기능1(x){
+        //     x= 0
+        //     alert(기능2(x,20))
+            
+        // }
+        
+        // function 기능2(x,y){
+            
+        //     return x+y
+
+        // }
+        
+        
+        
+        
+        
+        
+        // 변수가 램 영역을 차지
+        // 지역변수는 한번 돌고 사라짐
+        // 글로별변수는 사라지지 않고 램을 차지
+        // 성능상을 생각하면 지역변수가 많은게 좋지만
+        // 코딩스타일이 어려워짐
+        
+        
+        tv = 0;
+        
+        function texts(tv){
+           
+            alert(tv)  
+            
+            function sub(){
+                tv
+            }
+            
+        }
+        
+        
+        
+    </script>
+    
+    
+    
+</head>
+<body>
+    
+</body>
+</html>

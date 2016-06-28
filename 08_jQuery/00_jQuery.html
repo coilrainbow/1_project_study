@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <!--불러오기.-->
+    <!--구글cdn에서 불러온다. -->
+    <!--https://developers.google.com/speed/libraries/-->
+    <!--사이트에서 다운받아 연결한다.-->
+    <!--1.12.4 이전과 이후로 판단한다.-->
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script type="text/javascript" >
+    $(document).ready(function(){
+    // document.getElementByClass('btn').innerHtml('확인');
+    // document.getElementByclass('btn').getattribute('style').style()
+
+
+    // 선택자 를 잘하라.
+    // div 바로 밑단에 실행해도 된지만 헤드에서 한꺼번에 하라.
+    
+    // jquery가 헤드에서도 맨 위에 선언되어야한다. 
+    // 로드기능이 있으면 어디든 상관없음.
+    
+
+
+    $('.btn').html('확인');
+    $('.box').css({
+        'border':'1px #F00 solid',
+        'width':'100px',
+        'height':'100px'
+    });
+    
+    
+    
+    
+    })
+    </script>
+</head>
+<body>
+    <button class="btn">눌러</button>
+    <div class="box"></div>
+</body>
+</html>
