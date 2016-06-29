@@ -6,6 +6,37 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 		<title>함수를이용하여_홀수짝수_알아내기</title>
 		<script type="text/javascript">
+			// 홀수 짝수
+			
+			// 랜덤숫자 만들기
+			// 짝수 홀수 계산식
+			// 유저입력값.
+			// 유저값과 계산식으로 나온 값 비교
+			
+			
+			var random = Math.floor(Math.random()*100)
+			console.log(random + ' 랜덤수 의 값')
+			var oe=[];
+			if(random%2 == 0){
+				oe.push('짝')
+			}else if(random%2 == 1){
+				oe.push('홀')
+			}
+			console.log(oe + ' 홀짝 연산값')
+			
+			var user = prompt(' 홀짝을 맞춰좌')
+			console.log(user +' 유저입력값')
+			
+			if(user == oe){
+				console.log('맞아')	
+			}else if(user == '홀' || user =='짝'){
+				console.log('틀려')
+			}else{
+				console.log('홀, 짝 만 입력해')
+			}
+			
+			
+			
 			
 		</script>
 	</head>

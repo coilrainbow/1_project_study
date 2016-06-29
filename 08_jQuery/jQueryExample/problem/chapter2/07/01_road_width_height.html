@@ -14,12 +14,12 @@
 		</style>
 		<script>
 			$(document).ready(function(){
-				
+				var box = $('#wrapper')
 				$(window).resize(function(){
-					
-				});
+					$('#width').text(box.width())
+				})
 				
-				$(window).trigger('resize');
+				$(window).trigger('resize')
 			});
 		</script>
 	</head>

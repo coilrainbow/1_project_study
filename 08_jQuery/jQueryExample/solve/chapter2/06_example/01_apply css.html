@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>01_CSS스타일_적용해_보기</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			li { margin:5px; list-style: none; border: 1px solid green; }
+			#wrapper {	margin:20px;	}
+			#el { margin-top:0px; background-color: #efefef; padding:15px; color:blue;	font-size:24px; }
+			#controller { margin:0; }
+			#input { height:30px; }
+			#input select { float: left; margin-right:5px; }
+			#input input { float:left; margin-right:5px; }
+		</style>
+		<script>
+			$(document).ready(function(){
+				
+				// // 지문예제
+				// var input = $('#input');
+				// var select = input.children('.css_prop');
+				// var inputText = input.children('.css_prop_value');
+				// var button = input.children('.button');
+				// var contents = $('#el');
+				
+				// select.change(function(){
+				// 	var cssTypeName = $(this).val();
+				// 	if(cssTypeName != ''){
+				// 		inputText.val(contents.css(cssTypeName));
+				// 	}
+				// });
+				
+				// button.click(function(){
+				// 	var cssTypeName = select.val();
+				// 	contents.css(cssTypeName, inputText.val());
+				// });
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				// 선생님예제
+				// 셀렉트박스에서 옵션을 선택한다.
+				// 아래 엘리먼트에 해당 옵션의 값이 입력창에 보인다.
+				// 입력창에 표시된 기본 값을 임의로 변경한다. 
+				// 적용을 누르면 아래에 있는 엘리먼트에 반영된다.
+				
+				// $('.css_prop').change(function(){
+				// 	var value = $(this).val();
+					
+					
+				// 	var cssValue = $('el').css(value);
+				// 	$('css_prop_value').val(cssValue)
+				// })
+				
+				
+				// var valueReq = function(){
+				// 	//누른놈의 벨류값을 가저온다
+				// 	var value = $(this).val();
+				// 	//가저온 벨류값에 해당하는 css를 #el 엘리먼튼의 값을 가져온다
+				// 	var real = $('#el').css(value);
+				// 	//가저온 값을 표시한다 .
+				// 	$('.css_prop_value').val(real)
+				// } 
+				
+				// $('.css_prop').change(valueReq);
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				// var value;
+				
+				
+				// var valueReq =function(){
+				// 	value = $(this).val();
+				// 	// console.log(value);
+				// 	var real = $('#el').css(value)
+				// 	$('.css_prop_value').val(real)
+					
+				// }
+				
+				// var valueApply =function(){
+				// 		// console.log('적용')
+				// 		var val = $('.css_prop_value').val()
+				// 		$('#el').css(value,val)
+				// }
+				
+				
+				
+				// $('.css_prop').change(valueReq);
+				// $('.button').click(valueApply)
+				
+				
+				
+				
+				
+				
+				// // 변수화
+				// var value;
+				// var prop = $('.css_prop_value');
+				// var el = $('#el');
+				
+				// $('.css_prop').change(function(){
+				// 	value = $(this).val();
+				// 	// console.log(value);
+				// 	var real = el.css(value)
+				// 	prop.val(real)
+					
+				// });
+				// $('.button').click(function(){
+				// 	var val = prop.val()
+				// 	el.css(value,val)
+				// });
+				
+				
+				
+				$('.css_prop').change(function(){
+					// console.log($(this).val())
+					var value = $(this).val()
+					
+				});
+				
+				
+				
+					
+			});
+		</script>
+	</head>
+	
+	<body>
+		<div id="wrapper">
+			<div id="controller">
+				<div id="input">
+					<select class="css_prop">
+						<option value="">CSS속성을 선택해 주세요.</option>
+						<option value="fontSize">font-size</option>
+						<option value="color">color</option>
+						<option value="backgroundColor">background-color</option>
+						<option value="margin">margin</option>
+						<option value="padding">padding</option>
+					</select>
+					<input class="css_prop_value" type="text" value="" />
+					<input class="button" type="button" value="적용"/>
+				</div>
+			</div>
+			<div id="el">
+				이곳에 CSS 스타일을 적용시켜 주세요.
+			</div>
+		</div>
+	</body>
+</html>

@@ -16,7 +16,13 @@
 			$(document).ready(function(){
 				// $('#wrapper > ul > li').each(function(i,e){console.log(this);console.log($(this));$(this).css('color', 'red');});
 				
-				$('#wrapper > ul > li').each(function(i,e){console.log(this); console.log($(this));$(this).css('color','red')});
+				$('#wrapper > ul > li').each(function(i,e){
+					// console.log(this);
+					// console.log($(this));
+					console.log(i)
+					console.log(e)
+					$(this).css('color','red');
+				});
 				
 				
 			});
@@ -24,7 +30,9 @@
 	</head>
 	
 	<body>
-		<span>each() 메소드를 사용하여 ul엘리먼트 자식엘리먼트를 순환하여 모두 색을 바꿔 주세요.</span>
+		<span>each() 메소드를 사용하여
+				ul엘리먼트 자식엘리먼트를 순환하여
+				모두 색을 바꿔 주세요.</span>
 		<div id="wrapper">
 			<ul>
 				<li>1</li>
@@ -33,6 +41,9 @@
 				<li>4</li>
 				<li>5</li>
 				<li>6</li>
+				<li>7</li>
+				<li>8</li>
+				<li>9</li>
 			</ul>
 		</div>
 	</body>

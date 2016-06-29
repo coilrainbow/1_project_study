@@ -13,19 +13,34 @@
 			#wrapper { border: 5px solid blue; padding:30px; margin:20px; font-size:20px;}
 		</style>
 		<script>
+			// $(document).ready(function(){
+			// 	var box = $('#wrapper');
+			// 	$(window).resize(function(){
+			// 		$('#width').text(box.width()); 
+			// 		$('#height').text(box.height());
+			// 		$('#innerWidth').text(box.innerWidth());		// 패딩  포함된 값
+			// 		$('#innerHeight').text(box.innerHeight());		// 패딩  포함된 값
+			// 		$('#outerWidth').text(box.outerWidth(true));	// 보더값까지  true 입력시 마진까지 포함
+			// 		$('#outerHeight').text(box.outerHeight(true));  // 보더값까지  true 입력시 마진까지 포함
+			// 	});
+				
+			// 	$(window).trigger('resize');
+				
+			// });
+			
 			$(document).ready(function(){
-				var box = $('#wrapper');
 				$(window).resize(function(){
-					$('#width').text(box.width());
-					$('#height').text(box.height());
-					$('#innerWidth').text(box.innerWidth());
-					$('#innerHeight').text(box.innerHeight());
-					$('#outerWidth').text(box.outerWidth(true));
-					$('#outerHeight').text(box.outerHeight(true));
+					var box = $('#wrapper')
+					$('#width').text(box.width())
+					
+					$('#innerWidth').text(box.innerWidth())
+					
+					$('#outerWidth').text(box.outerWidth(true))
 				});
 				
 				$(window).trigger('resize');
-			});
+			})
+			
 		</script>
 	</head>
 	
