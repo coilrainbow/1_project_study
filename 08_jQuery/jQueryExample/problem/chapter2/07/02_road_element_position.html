@@ -15,19 +15,24 @@
 		<script>
 		$(document).ready(function(){
 			var box = $('#box');
-			var positionInfo = $('#position_info');
-			
+			var info = $('#position_info');
 			box.draggable({
 				drag:function(){
-					
+					$('.ol').text(box.offset().left)
+					$('.ot').text(box.offset().top)
+					info.find('.pl').text(box.position().left)
+					info.find('.pt').text(box.position().top)
 				}
-			});
-		});
+			})
+		})
 		</script>
 	</head>
 	
 	<body>
 		<div id="position_info">
+			<br />
+			<br />
+			<br />
 			<span>offset().left = </span><span class="ol">0</span><br>
 			<span>offset().top = </span><span class="ot">0</span><br>
 			<span>position().left = </span><span class="pl">0</span><br>

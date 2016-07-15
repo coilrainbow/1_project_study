@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        
+        ul{list-style:none;}
+        .menu{
+            border:1px #F00 solid;
+            width:520px;
+            margin:0 auto;
+            text-align:center;
+            
+        }
+        .menu li{border:1px #F00 solid;}
+        .menu li div{display:none;}
+    </style>
+    
+    <script type="text/javascript" >
+        
+        $(function(){
+            
+            
+            
+            
+            
+            // $('.menu li').click(function(){
+                
+            //     // console.log('aaa')
+            //     // return false;
+            //     // 개발자가 아주 싫어하는 방법. 안의 모든 이벤트가 막혀버림
+                
+                
+            //     // $('.menu li div').hide(1000)
+            //     // $(this).children('div').show(1000)
+                
+            //     // $('.menu li div').slideUp(1000)
+            //     // $(this).children('div').slideDown(1000)
+                
+            //     $('.menu li div').fadeOut(1000)
+            //     $(this).children('div').fadeIn(1000)
+                
+            // })
+            
+            
+            
+            
+            
+            
+            
+            // var sidemenuover =function(){}
+            // var sidemenuout = function(){}
+            // $().hover(function(){},function(){})
+           
+           
+           
+            
+            // $('.menu li').hover(function(){
+            //     // 마우스 오버 시
+            //     $(this).children('div').stop().show(1000).parent('li').css({
+            //         'background-color':'#666'
+            //     })
+            // },function(){
+            //     // 마우스 아웃 시
+            //     $('.menu li div').stop().hide(1000).parent('li').css({
+            //         'background-color':'#FFF',
+            //         'animate-duration':'1000'
+            //     })
+            // })
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            // mouseover
+            // mouseenter
+            // 의 차이
+            // http://api.jquery.com/mouseenter/
+            
+            
+            
+            // $('.menu li').hover(function(){
+            //     // 마우스 오버 시
+            //     $(this).children('div').stop().show(1000).parent('li').css({
+            //         'background-color':'#666'
+            //     }).siblings().children('div').stop().hide(1000)
+                            
+            // })
+            
+            
+            
+            
+            // $('.menu li').mouseenter(function(){
+            //     // 마우스 엔터 시
+            //     $(this).children('div').stop().show(1000).parent('li').css({
+            //         'background-color':'#666'
+            //     }).siblings().children('div').stop().hide(1000)
+                            
+            // })
+            // $('.menu li').mouseleave(function(){
+                
+            // })
+            
+            
+             
+             
+            //  토글이 없는 경우
+            // var button =false;
+             
+             
+             
+            $('.menu li').click(function(){
+                
+                if(!$(this).is('.on')){
+                    $(this).addClass('on').children('div').show()
+                }else if($(this).is('.on')){
+                    $(this).removeClass('on').children('div').hide()
+                }
+                
+                // // 토글이 없을 경우
+                // if(button == false){
+                //     $(this).children('div').show()
+                //     button =true;
+                // }else if(button==true){
+                //     $(this).children('div').hide()
+                //     button = false;
+                // }
+                
+                
+                // toggle event
+                // $(this).children('div').toggle(1000)
+                // $(this).children('div').slideToggle(1000)
+                // $(this).children('div').fadeToggle(1000)
+            })
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        })
+        
+        
+        
+    </script>
+    
+    
+</head>
+<body>
+    
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="javascrit:void(0)">menu</a>
+                <div>
+                    <img src="img/blackboard.png" alt="" />
+                    
+                </div>
+            </li>
+            <li>
+                <a href="javascrit:void(0)">menu</a>
+                <div>
+                    <img src="img/books.png" alt="" />
+                    
+                </div>
+            </li>
+            <li>
+                <a href="javascrit:void(0)">menu</a>
+                <div>
+                    <img src="img/microscope.png" alt="" />
+                    
+                </div>
+            </li>
+            <li>
+                <a href="javascrit:void(0)">menu</a>
+                <div>
+                    <img src="img/open-book.png" alt="" />
+                    
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+</body>
+</html>

@@ -16,16 +16,16 @@ $(function(){ // $(document).ready(function(){ });
         }
     });
     
-    $('#wrap').on({
-        mouseover:function(){
-            clearInterval(setIntervalId);
-        },
-        mouseout:function(){
-            timer();
-        }
-    });
+    // $('#wrap').on({
+    //     mouseover:function(){
+    //         clearInterval(setIntervalId);
+    //     },
+    //     mouseout:function(){
+    //         timer();
+    //     }
+    // });
     
-    timer();
+    // timer();
     function timer(){
         setIntervalId = setInterval(function(){
             var n = current + 1;
@@ -38,14 +38,22 @@ $(function(){ // $(document).ready(function(){ });
     }
     
     function move(i){
-        if(current == i) return;
         
         var currentEl = visual.eq(current);
         var nextEl = visual.eq(i);
         
-        currentEl.css({left:0}).stop().animate({left:'-100%'});
-        nextEl.css({left:'100%'}).stop().animate({left:0});
+        
+        if(current < i){
+            
+            current = i;
+            
+            currentEl.css({left:0}).stop().animate({left:'-100%'});
+            nextEl.css({left:'100%'}).stop().animate({left:0});    
 
-        current = i;
+        }else if(current > i){
+            current = i;
+            currentEl.css({left:0}).stop().animate({left:'100%'});
+            nextEl.css({left:'-100%'}).stop().animate({left:0});    
+        }
     }
 });

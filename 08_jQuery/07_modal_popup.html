@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>modal_popup</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+    
+        .popup {
+            width:500px;
+            height:500px;
+            border:1px red solid;
+            background-color: #fff;
+            position:absolute;
+            top:0;
+            left:0;
+            z-index:1;
+            display:none;
+            
+        }
+        
+        .blind{
+            position:absolute;
+            background-color:#000;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0;
+            display:none;
+            
+            /*opacity:0 으로 할 경우 display가 제외되고 밑에 animate가 들어간다. 시간입력 필수!*/
+        }
+        .pop1{width:600px; height:600px; display:none;}
+        .pop2{width:500px; height:500px; display:none;}
+        .pop3{width:400px; height:400px; display:none;}
+        .pop4{width:300px; height:300px; display:none;}
+        
+        .popup.pop1 .wrap{color:#F00;}
+        .popup.pop2 .wrap{color:#FF0;}
+        .popup.pop3 .wrap{color:#F0F;}
+        .popup.pop4 .wrap{color:#0F0;}
+        
+    </style>
+    <script type="text/javascript" >
+        
+        $(function(){
+            
+            // 장막이벤트 내용
+            var openPopUp =function(){
+                var id = $(this).attr('id');
+                // console.log(id)
+                blindFn(); 
+                popMaker(id);
+                //팝업생성 스타일
+                $('.popup').show(1000);
+                
+            }
+            
+            function popMaker(id){
+                
+                // var contents = $('.'+id).html();
+                
+                var tag ="";
+                tag+= '<div class="popup '+id+'">';
+                tag+= '<button class="closebtn">닫기</button>';
+                tag+= '<div class="content">';
+                // tag+= contents;
+                tag+= '</div>';
+                tag+= '</div>';
+                
+                $('body').append(tag)
+                
+                // $('body').children('.popup').children('.content').load('08_load_text.html #'+id);
+                // 파괴선택자를 쓰지 않아야한다.
+                $('.content').load('08_load_text.html .'+id);
+                
+                centerPosition($('.'+id));
+                
+                
+            }
+            function blindFn(){
+                var bl_Tag = "";
+               
+               bl_Tag += '<div class="blind">';
+               bl_Tag += '</div>';
+               
+               $('body').append(bl_Tag);
+               
+               //장막생성 스타일
+              $('.blind').fadeTo(1000,0.5);
+                
+            }
+            function centerPosition(target){
+                target.css({
+                    // parseInt의 용법 https://msdn.microsoft.com/ko-kr/library/x53yedee(v=vs.94).aspx
+                    left:"50%",
+                    marginLeft:function(){
+                        // var aa =$(this).width()
+                            var aa = $(this).css('width') // css안의 width값을 알고 싶을 때
+                            console.log(aa)
+                        return -parseInt(aa)/2+'px'
+                    },
+                    top:"50%",
+                    marginTop:function(){
+                       var aa = $(this).height()
+                       
+                       return -parseInt(aa)/2+'px'
+                   }
+                })
+                
+            }
+            function centerPosition2(target){
+                target.css({
+                    top:'50%',
+                    marginTop:-target.height()/2+'px',
+                    left:'50%',
+                    marginLeft:-target.width()/2+'px',
+                })
+            }
+            function positionCenter3(target){
+                target.css({
+                    top:'50%',
+                    marginTop:-target.height()/2+'px',
+                    left:'50%',
+                    marginLeft:-parseInt(target.css('width'))/2+'px'
+                })
+                
+            }
+
+            var closeEvent =function(){
+                // 닫기
+                // $('.blind').remove();
+                $('.popup').hide(1000,function(){
+                    $(this).remove();
+                })
+                $('.blind').fadeOut(1000,function(){
+                    $(this).remove();
+                })
+            }
+            
+                
+                
+            // 클릭이벤트 장막
+            $('.open').click(openPopUp)
+            $('body').on('click','.closebtn',closeEvent);
+            // 1.4이전에는 bind를 
+            // 1.4 이후는 on을 쓴다.
+            // $('body'이란 경로에서).on('click'이벤트를 실행 하면,'.closebtn'을 찾고 ,closeEvent 를 실행하라);
+            
+        })
+        
+        
+    </script>
+    
+    
+    
+</head>
+<body>
+    
+    <button class="open" id="pop1">열어</button>
+    <button class="open" id="pop2">열어</button>
+    <button class="open" id="pop3">열어</button>
+    <button class="open" id="pop4">열어</button>
+    
+    
+    <div class="pop1">
+        <div class="wrap">
+            AAAAA
+            <button>확인</button>
+        </div>
+    </div>
+    <div class="pop2">
+        <div class="wrap">
+            BBBBB
+            <button>확인</button>
+        </div>
+    </div>
+    <div class="pop3">
+        <div class="wrap">
+            CCCCCC
+            <button>확인</button>
+        </div>
+    </div>
+    <div class="pop4">
+        <div class="wrap">
+            DDDDDD
+            <button>확인</button>
+        </div>
+    </div>
+
+    
+</body>
+</html>

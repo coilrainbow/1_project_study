@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>sunmi</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <link rel="stylesheet" href="font/flaticon.css" type="text/css" />
     
     <style>
@@ -198,7 +199,7 @@
         
         
         
-        @media screen and (max-width:900px){
+        @media screen and (max-width:814px){
             .wrapper .header{padding: 0;}
             .wrapper .header .nav>a{
                 display:block;
@@ -212,25 +213,25 @@
                 
             }
             
-            .wrapper .header .nav a:hover + ul {
-                display:block;
-            }
+            /*.wrapper .header .nav a:hover + ul {*/
+            /*    display:block;*/
+            /*}*/
             
             .wrapper .header .nav ul{
                 display:none;
                 background-color: rgba(255,255,255,0.3);
-                width:134px;
+                width:200;
             }
-            .wrapper .header .nav ul:hover {display:block; }
+            /*.wrapper .header .nav ul:hover {display:block; }*/
             
             .wrapper .header .nav ul li{
                 display:block;
-                line-height: 16px;
-                width: 150px;
+                width: 200px;
+                line-height: 45px;
                 /*border:1px red solid;*/
             }
             .wrapper .header .nav ul li a{
-                padding:10px 0 10px 10px;
+                /*padding:10px 0 10px 10px;*/
                 /*border:1px red solid;*/
                 font-size:16px;
                 
@@ -239,12 +240,14 @@
             .wrapper .header .nav li a:hover{
                 
                 display:block;
-                width: 150px;
-                line-height: 30px;
-                padding:10px 0 10px 20px;
+                width: 200px;
+                line-height: 45px;
+                color:#aeaeae;
+                font-weight:bold;
+                padding-left:20px;
                 border-top:0 none;
-                border-left:4px rgba(0,0,0,0.8) solid;
-                background-color: rgba(255,255,255,0.6);
+                border-left:5px rgba(0,0,0,0.8) solid;
+                background-color: rgba(255,255,255,1);
             
             }
             
@@ -330,7 +333,7 @@
             
     }
         
-        @media screen and (max-width:600px){
+        @media screen and (max-width:420px){
             .wrapper{
                 background-image:url(img/sunmi1_2.png);
                 background-position:center center;
@@ -358,7 +361,7 @@
             
             .wrapper .header .nav>a{
                 display:block;
-                width:134px;
+                width:150px;
                 height: 40px; 
                 line-height:40px;
                 background-color:rgba(0,0,0,0.2);
@@ -368,48 +371,69 @@
                 
             }
             
-            /*임시*/
-            .wrapper .header .nav a:hover + ul {
-                display:block;
-            }
+            /*.wrapper .header .nav ul li{display:none;}*/
             
-            .wrapper .header .nav ul{
-                display:none;
-                background-color: rgba(255,255,255,0.3);
-                width:134px;
-            }
-            .wrapper .header .nav ul:hover {display:block; }
+            /*임시*/
+            /*.wrapper .header .nav a:hover + ul {*/
+            /*    display:block;*/
+            /*}*/
+            
+            /*.wrapper .header .nav ul{*/
+            /*    display:none;*/
+            /*    background-color: rgba(255,255,255,0.3);*/
+            /*    width:134px;*/
+            /*}*/
+            /*.wrapper .header .nav ul:hover {display:block; }*/
             
             .wrapper .header .nav ul li{
                 display:block;
-                line-height: 16px;
+                /*line-height: 35px;*/
                 width: 150px;
                 /*border:1px red solid;*/
+            
             }
             .wrapper .header .nav ul li a{
-                padding:10px 0 10px 10px;
+                /*padding:10px 0 10px 10px;*/
                 /*border:1px red solid;*/
                 font-size:16px;
-                
+                line-height: 35px;
+             
             }
 
             .wrapper .header .nav li a:hover{
                 
                 display:block;
                 width: 150px;
-                line-height: 30px;
-                padding:10px 0 10px 20px;
+                line-height: 45px;
+                /*padding:10px 0 10px 20px;*/
                 border-top:0 none;
                 border-left:4px rgba(0,0,0,0.8) solid;
-                background-color: rgba(255,255,255,0.6);
+                background-color: rgba(255,255,255,1);
             
             }
             
             
         }   
+        
+            /*.wrapper .header .nav ul li{display:none;}*/
     </style>
     
-    
+    <script type="text/javascript">
+        
+        $(function(){
+            $('.nav a').click(function(){
+                // $('.nav > a').text('Close Menu')
+                $('.nav ul').slideToggle(500)
+                // .slideUp(500,function(){
+                //     $('.nav > a').text('Main Menu')    
+                // })
+            })
+            
+            
+            
+        })
+        
+    </script>
     
     
 </head>
@@ -423,7 +447,7 @@
                 <a href=""></a>
             </div>
             <div class="nav">
-                <a href="">Main Menu</a>
+                <a href="javascript:void(0)">Main Menu</a>
                 <ul >
                     <li><a href="">PROFILE</a></li>
                     <li><a href="">DISCOGRAPHY</a></li>

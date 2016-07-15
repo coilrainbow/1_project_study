@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>question</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <style>
+        .view img{position:absolute; width:500px; top:100px; left:0; display:none;}
+        /*.view img.on{display:block;}*/
+    </style>
+    
+    <script type="text/javascript" >
+        
+        $(function(){
+            
+            
+            // $('.controller a').click(function(){
+
+            //     $('.view img').hide().eq($(this).index()).show(500)
+                
+            // })
+
+            //  $('.controller a').click(function(){
+            //     var idx = $(this).index();
+            //     $('.view img').removeClass();
+            //     $('.view img:eq('+idx+')').addClass('on')
+                
+            // })
+        
+            //  $('.controller a').click(function(){
+            //     var idx = $(this).index();
+            //     //$('.view img').removeClass();
+            //     $('.view img:eq('+idx+')').addClass('on').siblings().removeClass('on')
+            
+            
+            
+            
+            
+            
+            // css display:block 끄고 할것           
+            // $('.view  .on').css('display','block');
+            // $('.controller a').click(function(){
+            //     var hisidx = $('.view  .on').index();
+            //     var idx = $(this).index();
+                
+            //     $('.view img').eq(hisidx)
+            //     .removeClass('on')
+            //     .fadeOut()
+            //     .end()
+            //     .eq(idx)
+            //     .addClass('on')
+            //     .fadeIn()
+                
+            // })
+            // parent,children 선택자 제외하고는 파괴선택자.
+            // .end로 정리하고 진행해야한다.
+            
+            
+            
+            
+            
+            $('.view  .on').css('display','block');
+            
+            $('.controller a').click(function(){
+                var idx = $(this).index();
+                var hisidx = $('.view  .on').index();
+                
+
+                $('.view img').eq(hisidx)
+                .removeClass('on')
+                .fadeOut(1000,function(){
+                    $('.view img:eq('+idx+')').addClass('on').fadeIn(1000)
+                })
+                // .end()
+                // .eq(idx)
+                // .addClass('on')
+                // .fadeIn()
+            })
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        })
+        
+        
+        
+        
+        
+    </script>
+    
+    
+    
+</head>
+<body>
+    
+    <!--번호를 클릭하면 번호에 해당하는 이미지가 보인다.-->
+    <!--번호에 해당하지 않는 이미지는 display:none이 된다. -->
+    
+    
+    <div class="view">
+        <img src="img/school.png" alt="" class ="on">
+        <img src="img/open-book.png" alt="">
+        <img src="img/physics.png" alt="">
+        <img src="img/test.png" alt="">
+    </div>
+    
+     <div class="controller">
+         <a href="javascript:void(0)">1</a>
+         <a href="javascript:void(0)">2</a>
+         <a href="javascript:void(0)">3</a>
+         <a href="javascript:void(0)">4</a>
+     </div>
+</body>
+</html>

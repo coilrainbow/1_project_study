@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <style type="text/css">
+        *{margin:0;padding: 0;}
+        ul{list-style:none;}
+        .slide{
+            
+            width:500px;
+            height:300px;
+            border:1px red solid;
+            position:relative;
+            margin:0 auto;
+            overflow:hidden;
+            /*background-position:center;*/
+        }
+        .slide button{
+            position:absolute;
+            top:50%;
+            z-index:1;
+        }
+        .slide button.next{right:0;}
+        .slide button.prev{left:0;}
+        
+        .slide ul{text-align:center;}
+        .slide li{display:inline-block;}
+        .slide li a{
+            display:block;
+            width:20px;
+            height:20px;
+            line-height:20px;
+            border-radius:50%;
+            position:relative;
+            z-index:1;
+            border:1px red solid;
+            color:white;
+            font-weight:bold;
+            top:270px;
+            text-align:center;
+            text-decoration:none;
+        }
+        .slide li img{
+            width:100%;
+            position:absolute;
+            left:0;
+            top:0;
+            display:none;
+        }
+        .slide li:first-child img{display:block;}
+        .slide li.on a {background-color:gray;}
+    </style>
+    
+<script type="text/javascript">
+    $(function(){                
+        
+      var idx = 0;
+      var slideWidth =$('.slide').width();
+    //   var slidelast = $('.slide li').last().index()
+       
+      
+      $('.next').click(function(){
+        
+        $('.slide li').eq(idx).removeClass('on').children('img').animate({
+            left:-slideWidth
+        }).parent().next().addClass('on').children('img').css({
+            'display':'block',
+            'left':slideWidth
+        }).animate({
+            left:'0'
+        })
+        
+        idx++
+       
+        if(idx == $('.slide li').length){
+       
+            idx =0
+            $('.slide li').eq(idx).children('img').css({
+                'left':slideWidth
+            }).animate({
+                'left':'0'
+            }).parent().addClass('on').siblings().removeClass('on')
+        }
+            
+      })
+      
+      $('.prev').click(function(){
+        
+        $('.slide li').eq(idx).removeClass('on').children('img').animate({
+            left:slideWidth
+        }).parent().prev().addClass('on').children('img').css({
+            'display':'block',
+            'left':-slideWidth
+        }).animate({
+            left:'0'
+        })
+        
+        idx--
+       
+        if(idx < 0){
+       
+            // idx = slidelast
+            idx=$('.slide li').length-1
+            console.log(idx)
+            $('.slide li').eq(idx).children('img').css({
+                'display':'block',
+                'left':-slideWidth
+            }).animate({
+                'left':'0'
+            }).parent().addClass('on').siblings().removeClass('on')
+        }
+            
+      })
+        
+        
+        
+        
+        // $('.slide div li a').click(function(){
+            
+        //     // console.log('aa')
+            
+        //     idx =$(this).parent().index()
+        //     var hisidx = $('.slide div li.on').index()
+
+        //     // console.log(idx,hisidx)
+        //     $('.slide img')
+        //     .css({display:'none'})
+        //     .parent()
+        //     .removeClass('on').fadeOut().stop()
+        //     .eq(idx).addClass('on').children('img').fadeIn().css({display:'block'})
+            
+            
+            
+            
+        //     return false
+            
+        // })
+        
+        
+        
+          $('.slide div li a').click(function(){
+       
+       idx = $(this).parent().index();
+       var hisidx = $('.slide div li.on').index()
+       
+        
+        // 둘다 귀속된 이벤트 안에서만 사용하여지고 버려지지만
+            // var his 같은 경우 시작경로를 초기화 하여  경로를 찾는다.
+            // var를 빼버리고 쓰게되면 $('.slide div li a')의 엘리먼트 a 안에 있는   $('.slide div li.on')를 찾는다.
+            // 위의 정리는 아닌듯
+            
+       
+       if(idx > hisidx){
+       
+        $('.slide div li').eq(idx).addClass('on').children('img').css({
+            'left':slideWidth,
+            'display':'block'
+        }).animate({
+            left:0
+        })
+        
+        $('.slide div li').eq(hisidx).removeClass('on').children('img').animate({
+            left:-slideWidth
+        })
+       }else if(idx < hisidx){
+           
+         $('.slide div li').eq(idx).addClass('on').children('img').css({
+            'left':-slideWidth,
+            'display':'block'
+        }).animate({
+            left:0
+        })
+        
+        $('.slide div li').eq(hisidx).removeClass('on').children('img').animate({
+            left:slideWidth
+        })  
+           
+       }
+       
+        // console.log(his+" :his 값")
+        // // 연산 
+        // console.log(idx +" :idx 값")
+       
+
+       
+        return false;
+    });
+        
+        
+    // 핸들러
+    var play = setInterval(function(){
+        $('.next').click();
+    },5000)
+    
+    $('.slide').mouseenter(function(){
+        clearInterval(play)
+    }).mouseleave(function(){
+        play = setInterval(function(){
+        $('.next').click();
+        },5000)
+    })
+        
+        
+        
+       
+    })
+    
+    
+    
+</script>
+
+    
+</head>
+<body>
+    
+    <div class="slide">
+
+        <button class="next">다음</button>
+        <button class="prev">이전</button>
+        
+
+        <div>
+            <ul>
+                <li class="on">
+                    <a href="">1</a>
+                    <img src="../images/img1.jpg">
+                </li>
+                <li>
+                    <a href="">2</a>
+                    <img src="../images/img2.jpg">
+                </li>
+                <li>
+                    <a href="">3</a>
+                    <img src="../images/img3.jpg">
+                </li>
+                <li>
+                    <a href="">4</a>
+                    <img src="../images/img4.jpg">
+                </li>
+                <li>
+                    <a href="">5</a>
+                    <img src="../images/img5.jpg">
+                </li>
+               
+            </ul>
+        </div>
+        
+    </div>
+    
+    
+</body>
+</html>

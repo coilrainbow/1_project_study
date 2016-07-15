@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" >
+        
+    //  $(function(){
+            
+    //         setInterval(function(){
+    //             var time = new Date();
+    //             var hours = time.getHours();
+    //             var minutes = time.getMinutes();
+    //             var seconds = time.getSeconds();
+                
+    //             // if(hours > 12){
+    //             //     hours = hours-12
+    //             // }
+                
+    //             var timePrint = hours%12 +":"+ minutes+":"+ seconds
+    //              $('.time').text(timePrint);
+    //         },1000)
+    //     })
+        
+        
+        $(function(){
+            
+            
+            var hoursArr = [];
+            var minutesArr = [];
+            var secondsArr = [];
+            
+            
+            
+            setInterval(function(){
+                
+                var time = new Date();
+                var hours = time.getHours();
+                var minutes = time.getMinutes();
+                var seconds =time.getSeconds();
+                
+            
+                if(hours >= 7 && hours <= 17){
+                    $('body').css({
+                        backgroundColor:'blue'
+                    })
+                }else{
+                     $('body').css({
+                        backgroundColor:'gray'
+                    })   
+                }
+                
+                
+                hours = arrPush(hours,hoursArr);
+                minutes = arrPush(minutes,minutesArr);
+                seconds = arrPush(seconds,secondsArr);
+                 
+                
+                 
+                // console.log(hours,minutes,seconds)
+                timeprint(hours,$('.hours'))
+                timeprint(minutes,$('.minutes'))
+                timeprint(seconds,$('.seconds'))
+                
+                // var timePrint = hours%12 +":"+ minutes+":"+ seconds
+                //  $('.time').text(timePrint);
+                
+        
+                
+            },1000)
+            
+            function timeprint(time,target){
+
+                target.children('span').each(function(i,e){
+                    // $(e).text(time[i])
+                    // $(e).css({
+                    //     'background-position':'0 '+ -Number(time[i])*100 +'px'
+                    // })
+
+                    var num = -Number(time[i])*100 +'px'
+                    $(e).animate({
+                        'background-position-Y':num 
+                    })
+                })
+            }
+
+            function arrPush(time,arr){
+                arr =[];
+                if(time <= 9){
+                    time = "0"+time;
+                }
+                time =String(time);
+                
+                for(i=0; i < time.length; i++){
+                    arr.push(time.substring(i,i+1))
+                }
+                return arr
+            }
+        })
+        
+        
+        
+        
+    </script>
+    
+    <style type="text/css">
+        body{background-color:#000;color:#FFF;}
+        body div div{display:inline-block;}
+        body span{
+            text-indent:-9999px;
+            display:inline-block;
+            /*border:1px #F00 solid;*/
+            width:42px; height:60px;
+            background-image:url(img/clockNumber.png);
+            background-repeat:no-repeat;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <div class="time" style="font-size:30px;">
+        <div class="hours">
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="minutes">
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="seconds">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</body>
+</html>

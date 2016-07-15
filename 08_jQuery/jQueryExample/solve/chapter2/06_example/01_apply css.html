@@ -55,25 +55,25 @@
 				// 입력창에 표시된 기본 값을 임의로 변경한다. 
 				// 적용을 누르면 아래에 있는 엘리먼트에 반영된다.
 				
-				// $('.css_prop').change(function(){
-				// 	var value = $(this).val();
+				$('.css_prop').change(function(){
+					var value = $(this).val();
 					
 					
-				// 	var cssValue = $('el').css(value);
-				// 	$('css_prop_value').val(cssValue)
-				// })
+					var cssValue = $('el').css(value);
+					$('css_prop_value').val(cssValue)
+				})
 				
 				
-				// var valueReq = function(){
-				// 	//누른놈의 벨류값을 가저온다
-				// 	var value = $(this).val();
-				// 	//가저온 벨류값에 해당하는 css를 #el 엘리먼튼의 값을 가져온다
-				// 	var real = $('#el').css(value);
-				// 	//가저온 값을 표시한다 .
-				// 	$('.css_prop_value').val(real)
-				// } 
+				var valueReq = function(){
+					//누른놈의 벨류값을 가저온다
+					var value = $(this).val();
+					//가저온 벨류값에 해당하는 css를 #el 엘리먼튼의 값을 가져온다
+					var real = $('#el').css(value);
+					//가저온 값을 표시한다 .
+					$('.css_prop_value').val(real)
+				} 
 				
-				// $('.css_prop').change(valueReq);
+				$('.css_prop').change(valueReq);
 				
 				
 				

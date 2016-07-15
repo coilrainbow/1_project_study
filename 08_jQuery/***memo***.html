@@ -1,0 +1,431 @@
+javascript DOM
+
+Document    문서 
+Object    객체 엘리먼트,css
+Model      모델
+
+문서객체모델 https://ko.wikipedia.org/wiki/%EB%AC%B8%EC%84%9C_%EA%B0%9D%EC%B2%B4_%EB%AA%A8%EB%8D%B8
+
+
+
+이벤트
+click()
+change() 변형
+resize() 창 크기가 변경되면 반응하여 이벤트를 실행한다.
+
+
+
+
+
+
+
+
+******************* jQurey 선택자******************
+
+****중요선택자***
+children()
+parent()
+위 둘을 제외한 선택자는 파괴선택자.
+.eq()
+*****************
+siblings()**
+
+
+find()
+filter()
+first()
+last()
+
+
+
+
+***event***
+click()
+hover()
+resize()
+scroll()
+
+
+******
+() 안넣으면 값을 가져옴 // 넣으면 값을 입력함.
+
+attr('속성','값')
+width()
+height()
+offset()
+position()
+css('속성','값')
+val()
+index()
+addClass()
+removeClass()
+************
+
+
+
+
+
+toggle()
+fadeIn()
+fadeOut()
+fadeTo()
+slideUp()
+slideDown()
+show()
+hide()
+****animate()****
+
+
+
+
+
+
+
+
+
+리턴함수 
+
+$(function(){
+    fucntion att(x,y){
+    return x * y + 'px'
+    }
+    
+  $('.box').css({
+      marginLeft:att(50,3),
+      marginTop:att(50,3)
+  })
+    
+})
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" >
+        
+        $(function(){
+            
+            function atty(x,y){
+                z= x+y
+                return z
+            }
+            
+            $('.tt').html(atty("효재","이해해"))
+            
+            function att(x,y){
+                return x*y +'px'
+            }
+            
+            $('body').append("<div class='tt'></div>")
+            
+            $('div').css({
+                marginLeft:att(50,3),
+                marginTop:att(50,3),
+                'border':'1px red solid',
+                width:100,
+                height:100,
+            })
+            
+        })
+        
+    </script>
+</head>
+<body>
+    <div class="box"></div>
+    
+</body>
+</html>
+
+
+
+
+switch
+
+for in . 배열에만 가능
+for (초기값;조건값;증가)
+
+
+
+
+for(초기값 in 배열){
+배열에 있는 값만큼만 반복한다.
+}
+
+
+var aa=[1,2,3,4,5]
+
+for(i=0; i < aa.length; i++){
+    aa[i]
+}
+
+for(var i =0 in aa){
+    console.log('aa:'+i)
+    console.log(aa[i])
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+getAttribute('src') 요청
+setAttribute('src','/images/img.jpg')
+
+attr('')겟
+attr('','')셋
+
+
+
+
+
+
+
+
+
+
+
+
+스크립트 언어
+javascript
+    javascript
+        jQurey
+        라이브러리. 쓰기 쉽게 미리 만들어놓음 
+                    .html
+                    .text
+                    .append
+                    API
+        홈페이지 가면 다양한 API설명서 있음.
+                    angular 1.4
+        typescript     https://www.typescriptlang.org/
+                    angular 2.0
+
+
+
+
+================jQurey========================
+
+************중요선택자*************
+이 두가지 부터 확장해서 사용할 것
+***********************************
+children()
+parent()
+***********************************
+
+
+
+아이디선택
+$('#아이디명')
+
+클래스선택
+$('.클래스명')
+
+자식요소 선택
+$('p a')    = $('p').find('a > span')
+$('p > a')  = $('p').children('a')
+
+속성 선택
+$('[type=text]')
+
+속성선택 및 변경
+$('img').attr('src') // 알아오고 싶을때 
+$('img').attr('src','http://www.naver.com')
+
+처음, 마지막 선택자
+$('ul li:first') = $('ul li).first()
+$('ul li:last')  = $('ul li).last()
+
+논리 선택자
+$('ul li:eq(0)') = $('ul li').eq(0)
+
+
+gt lt not has
+
+gt =    .next()
+        .nextAll()
+
+lt =    .prev()
+        .prevAll()
+not=    .siblings() this의 형제 자매들
+
+has =   .is()
+로 대체 가능하다
+
+
+
+jquery qookbook 검은색
+1.4 이전과 이후 
+
+javascript 코뿔소
+
+
+
+
+
+============console.log찍기.==============================
+
+
+반환이 되는 것들은 콘솔로 보임
+
+attr = 속성
+css = 스타일
+width
+innerWidth()
+outerWidth(true) 마진 포함 없으면 보더까지
+height()
+innerHeight()
+OuterHeight(true) 마진 포함 없으면 보더까지
+html()
+text()
+offset() 전체위치기반
+offset().top
+offset().left
+position() 부모위치기반
+position().top 
+position().left
+index()
+val()
+
+
+
+========추가, 삭제===============
+addClass()
+removeClass()
+
+append()
+prepend()
+before()
+after()
+remove() 앞에 입력한 선택자의 모든 엘리먼트를 지운다. ()안에 입력시 입력을 지움
+
+
+
+
+
+
+
+================이벤트================
+
+.click()
+.hover()
+.mouseenter()
+.mouseleave()
+.focusIn()
+.focusOut()
+.change()
+.scroll()
+.resize()
+.trigger() 이벤트를 그냥 한번 실행해주는 것. 이벤트는 아님
+
+
+
+
+
+=========================
+1.4 이후
+.on()  =이벤트 넣을때
+.off() =이벤트 잠시동안 제거할 때 
+
+.bind()
+
+div.a .b
+
+$('.a').on('click','.b',function()){} 
+문법을 수정하여 한번에 이벤트를 전부 넣을수 있는 장점.
+
+$('.a').on({
+    'click':function(){
+    
+    },
+    'mouseenter':function(){
+    
+    },
+    'mouseleave':function(){
+    
+    }
+},'.b')
+
+
+
+
+
+
+//네이티브 이벤트
+    제이쿼리 순수 이벤트
+
+//렙핑이벤트
+    제이쿼리로 한번 감싼 이벤트
+    ex>휠
+
+    네이티브이벤트에 없으므로 렙핑이벤트를 네이티브이벤트로 바꿔 줘야한다. 
+
+
+
+===========효과===========
+
+fadeTo("slow", 0.33)
+fadeIn()
+fadeOut()
+slideUp()
+slideDown()
+show()
+hide()
+toggle()
+fadeToggle()
+slideToggle()
+animate({})
+
+
+=============입력에서 두가지 유형의 타입=========
+
+하나
+attr('type','text') 
+
+하나 이상
+attr({
+    'type','text'
+    'type','text'
+})
+
+animate({}) 는 무조건적임.
+
+
+
+
+
+
+
+
+
+
+==============javascript===========================
+
+setInterval() 함수 반복실행
+setTimeout() 일정 시간 후 함수 반복 실행
+set 이 있으면 get 이 따라옴
+
+.push()
+.splice()
+.split()
+.substring()
+
+
+
+
+
+
+
+
+

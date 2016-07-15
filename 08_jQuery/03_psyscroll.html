@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <style type="text/css">
+    html,body{height:100%;}
+    
+        *{margin:0; padding: 0;}
+        ul{list-style:none;}
+        .nav{height:40px;background-color: #000; text-align:center; width:100%; position:fixed;}
+        .nav li{display:inline-block;}
+        .nav li.on a{color:#F00;}
+        .nav a{color:#FFF; text-decoration:none; line-height:40px; font-size:20px; padding:0 20px;}
+        
+        .section,.section>div{height:100%;}
+        .section>div:nth-child(1){background-image: url('../images/img1.jpg'); background-size:cover;}
+        .section>div:nth-child(2){background-image: url('../images/img2.jpg'); background-size:cover;}
+        .section>div:nth-child(3){background-image: url('../images/img3.jpg'); background-size:cover;}
+        .section>div:nth-child(4){background-image: url('../images/img4.jpg'); background-size:cover;}
+        .section>div:nth-child(5){background-image: url('../images/img5.jpg'); background-size:cover;}
+        
+    </style>
+    
+    
+    
+    <script type="text/javascript" >
+        
+        // // ex>1
+        // $(function(){
+            
+        //     var spot = [];
+            
+        //     $('.section>div').each(function(){
+                
+        //         spot.push($(this).offset().top)
+                
+        //     })
+        //     // console.log(spot)
+            
+            
+            
+            
+            
+            
+        //     $('.nav li a').click(function(){
+        //         // console.log('aa')
+                
+        //         var idx=$(this).parent().index();
+        //         console.log(idx)
+                
+        //         $('body,html').animate({
+        //             scrollTop:spot[idx]
+        //         })
+                
+        //     })
+            
+        // })
+        
+        
+        
+        
+        // $(function(){
+            
+            
+        //     var spot=[];
+            
+        //     $('.section  div').each(function(){
+        //       spot.push($(this).offset().top)
+        //     })
+        //     console.log(spot)
+            
+            
+            
+            
+        //     $('.nav li a').click(function(){
+                
+        //         var idx =$(this).parent().index()
+                
+                
+        //         $('html,body').animate({
+        //             scrollTop:spot[idx]
+        //         })
+        //     })
+            
+        // })
+        
+        
+        
+        // a를 클릭하면 화면이 이동한다. 
+        
+        
+        // 펑션을 셋팅한다.
+        
+        // <a>를 클릭 하면 화면이 이동하게하라.    
+        // 클릭을 하면 무엇인가 되게 환경을 설정하라.
+        //     click이 제대로 먹는지 콘솔로 확인한다.
+        //     클릭이 되는것을 확인한다.
+        //         안먹으면 경로가 제대로 설정이 되었는지 확인한다. 
+        //         안먹으면 마크업상 a에 보이드0이 셋팅되어있는지 확인다.
+            
+    
+    
+            
+        
+        // <a>를 클릭 하면 화면이 이동하게하라.    
+        //     .animate({ scrollTop: ' '}) 를 활용하여 화면을 이동시키라
+        //     임의의 값으로 테스트하라.
+            
+        // scrollTop: '' 안에 초기에 div의 위치를 대입시키면 <a>를 클릭 시 화면이 이동한다.
+            
+
+        // 각각의 div의 위치를 알아내도록 셋팅한다.
+        // 알아낸 각각의 div의 현재 위치를 글로벌 변수에 담는다. 
+        //     경로가 지정된 function 안에서는 this를 잘활용하여 선택자를 활용해야한다.
+            
+        
+        
+        // $(function(){
+            
+        //     var spot=[];
+        //     $('.section div').each(function(){
+                
+        //         spot.push($(this).offset().top)
+                
+        //     })
+            
+            
+        //     $('.nav a').click(function(){
+        //         var idx=$(this).parent().index()
+        //         $('html,body').animate({
+        //             scrollTop:spot[idx]
+        //         })
+                
+        //     })
+            
+            
+            
+        // })
+        
+        
+        
+        // // div에 id 부여, .nav a에 id호출 설정하였을 때
+        //   $(function(){
+            
+        //   $('.nav a').click(function(){
+               
+        //       var target = $(this).attr('href');
+               
+        //       $('body,html').animate({
+        //           scrollTop:$(target).offset().top
+        //       })
+        //       return false;
+        //   })
+            
+        // })
+        
+        
+        
+          
+        $(function(){
+            
+            var spot = []
+            
+                $('.section>div').each(function(){
+                    
+                    spot.push($(this).offset().top)
+                    
+                })
+            
+            
+            
+          $('.nav a').click(function(){
+               
+               
+                var idx = $(this).parent().index();
+                 $('body,html').animate({
+                        scrollTop:spot[idx]
+                    })
+                    
+                
+               
+              ////////////////////////////////////////
+               
+              var target = $(this).attr('href');
+               
+              $('body,html').animate({
+                  scrollTop:$(target).offset().top
+              })
+              return false;
+              
+              ////////////////////////////////////
+               
+              var aa = location.hash;
+                $('body,html').animate({
+                  scrollTop:$(aa).offset().top
+              });
+            
+              
+          })
+           
+        })
+        
+        
+        
+        //     $(function(){
+            
+        //     var spot = []
+        //     var aa = []
+        //         $('.section>div').each(function(){
+                    
+        //             spot.push($(this).offset().top)
+        //             aa.push($(this).offset().top + $(this).height())
+        //         })
+                
+                
+                
+        //         $(window).scroll(function(){
+        //             var sct = $(this).scrollTop();
+                    
+        //             $('.section>div').each(function(i){
+                        
+        //                 if(sct >= spot[i] && sct <= aa[i]){
+        //                     $('.nav li').eq(i).addClass('on');
+        //                 }else{
+        //                   $('.nav li').eq(i).removeClass('on');
+        //                 }
+        //             })
+        //         })
+        //   })
+        
+        
+    </script>
+    
+</head>
+<body>
+    <div class="nav">
+        <ul>
+            <li class ="on "><a href="javascript:void(0)">오리</a></li>
+            <li><a href="javascript:void(0)">고양이</a></li>
+            <li><a href="javascript:void(0)">하늘</a></li>
+            <li><a href="javascript:void(0)">사람</a></li>
+            <li><a href="javascript:void(0)">사람둘</a></li>
+        </ul>
+    </div>
+    <div class="section">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</body>
+</html>
