@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">        
+        <title>Styling radios &amp; checkboxes using CSS3</title>
+        <link rel="stylesheet" media="screen" href="styles.css" >
+    </head>
+    <style>
+input[type="checkbox"],input[type="radio"] {
+-webkit-appearance: none;
+box-sizing: border-box;
+border: 1px solid #83789e;
+box-shadow: 0 0px 2px #c5a9d5;
+cursor: pointer;
+cursor: pointer;
+height: 14px;
+width: 14px;
+background: -moz-linear-gradient(top, #c5a9d5 0%, #8d6cac 36%, #332c3c 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c5a9d5), color-stop(36%,#8d6cac), color-stop(100%,#332c3c));
+background: -webkit-linear-gradient(top, #c5a9d5 0%,#8d6cac 36%,#332c3c 100%);
+background: -o-linear-gradient(top, #c5a9d5 0%,#8d6cac 36%,#332c3c 100%);
+background: -ms-linear-gradient(top, #c5a9d5 0%,#8d6cac 36%,#332c3c 100%);
+background: linear-gradient(to bottom, #c5a9d5 0%,#8d6cac 36%,#332c3c 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c5a9d5', endColorstr='#332c3c',GradientType=0 );
+border: 1px solid #83789e;
+border-radius: 3px;
+}
+input[type="checkbox"]:hover,input[type="checkbox"]:checked,input[type="radio"]:hover,input[type="radio"]:checked {
+-webkit-appearance: none;
+box-sizing: border-box;
+border-radius:3px;
+border: 1px solid #332c3c;
+box-shadow: 0 1px 15px #c5a9d5;
+cursor: pointer;
+cursor: pointer;
+height: 14px;
+width: 14px;
+background: -moz-linear-gradient(top, #332c3c 0%, #8d6cac 36%, #c5a9d5 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#332c3c), color-stop(36%,#8d6cac), color-stop(100%,#c5a9d5));
+background: -webkit-linear-gradient(top, #332c3c 0%, #8d6cac 36%, #c5a9d5 100%);
+background: -o-linear-gradient(top, #332c3c 0%, #8d6cac 36%, #c5a9d5 100%);
+background: -ms-linear-gradient(top, #332c3c 0%, #8d6cac 36%, #c5a9d5 100%);
+background: linear-gradient(to bottom, #332c3c 0%, #8d6cac 36%, #c5a9d5 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#332c3c', endColorstr='#c5a9d5',GradientType=0 );
+}
+input#Form_Checkbox {
+position: relative;
+top: 0px;
+left: 4px;
+}
+    </style>  
+    <body>
+        <h1>Styling radios &amp; checkboxes using CSS3</h1>
+        <h2>*only for webkit</h2>
+    
+        <div class="col">
+            <h3>Radios</h3>
+            <p><input type="radio" name="radio" id="radio1" /><label for="radio1">Radio 1 </label></p>
+            <p><input type="radio" name="radio" id="radio2" /><label for="radio2">Radio 2</label></p>
+            <p><input type="radio" name="radio" id="radio3" disabled /><label for="radio3">Radio 3 disabled</label></p>
+            <p><input type="radio" name="radio" id="radio4" disabled checked /><label for="radio4">Radio 4 disabled checked </label></p>
+        </div>
+        
+        <div class="col">
+            <h3>Checkboxes</h3>
+            <p><input type="checkbox" name="checkbox1" id="checkbox1" /><label for="checkbox1">Checkbox 1 </label></p>
+            <p><input type="checkbox" name="checkbox2" id="checkbox2" /><label for="checkbox2">Checkbox 2 </label></p>
+            <p><input type="checkbox" name="checkbox3" id="checkbox3" disabled /><label for="checkbox3">Checkbox 3 disabled</label></p>
+            <p><input type="checkbox" name="checkbox4" id="checkbox4" disabled checked /><label for="checkbox4">Checkbox 4  disabled checked</label></p>
+        </div>
+    </body>
+</html>

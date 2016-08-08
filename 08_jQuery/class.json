@@ -1,0 +1,34 @@
+{
+    "team1":[{
+        'userName':'서진석',
+        'pcNum':'07',
+        'class':'스마트 웹 컨텐츠',
+        'address':'서울'
+        
+    },{
+        'userName':'장혜정',
+        'pcNum':'08',
+        'class':'스마트 웹 컨텐츠',
+        'address':'서울'
+        
+    },{
+        'userName':'박태준',
+        'pcNum':'09',
+        'class':'스마트 웹 컨텐츠',
+        'address':'서울'
+        
+    }],
+    'team2':[{
+        'userName':'임채만',
+        'pcNum':'10',
+        'class':'스마트 웹 컨텐츠'
+    },{
+        'userName':'최유지',
+        'pcNum':'11',
+        'class':'스마트 웹 컨텐츠'
+    },{
+        'userName':'김범영',
+        'pcNum':'12',
+        'class':'스마트 웹 컨텐츠'
+    }]
+}

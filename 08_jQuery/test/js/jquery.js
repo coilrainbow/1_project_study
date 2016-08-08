@@ -1,15 +1,15 @@
-// // A hover menu start
-// $(function(){
-//     $("nav ul li").hover(function(){
+// A hover menu start
+$(function(){
+    $("nav ul li").hover(function(){
         
-//         $(this).css({
-//             backgroundColor:'#000',
-//         }).children('a').css({color:'#FFF'}).stop().animate({left:'20px'},300)}, function(){
-//         $(this).css({backgroundColor:'#CCC'}).children('a').css({color:'#000'}).stop().animate({left:'0px'},300);
-//     });
-// })
+        $(this).css({
+            backgroundColor:'#000',
+        }).children('a').css({color:'#FFF'}).stop().animate({left:'20px'},300)}, function(){
+        $(this).css({backgroundColor:'#CCC'}).children('a').css({color:'#000'}).stop().animate({left:'0px'},300);
+    });
+})
 
-// // A hover menu end
+// A hover menu end
 
 
 
@@ -46,187 +46,187 @@ $(window).load(function(){
 
         
         
-// // C slide banner  start
+// C slide banner  start
 
-// $(function(){
-//     var idx=Math.floor(Math.random()*4)
-//     var slideWidth =$('.slidebanner').width();
+$(function(){
+    var idx=Math.floor(Math.random()*4)
+    var slideWidth =$('.slidebanner').width();
 
     
-//     //reboot give addClass'on' for first li    
-//     $('.slidebanner li').eq(idx).addClass('on').children('img').css({
-//         display:'block'
-//     })
+    //reboot give addClass'on' for first li    
+    $('.slidebanner li').eq(idx).addClass('on').children('img').css({
+        display:'block'
+    })
     
     
     
-//     // loof start
-//     var loof =setInterval(function(){
-//         $('.next').click()
-//     },4500)
+    // loof start
+    var loof =setInterval(function(){
+        $('.next').click()
+    },4500)
     
-//     $('.slidebanner').mouseenter(function(){
-//         clearInterval(loof)
-//     }).mouseleave(function(){
-//         loof =setInterval(function(){
-//         $('.next').click()
-//         },4500)
-//     })
-//     // loof end
+    $('.slidebanner').mouseenter(function(){
+        clearInterval(loof)
+    }).mouseleave(function(){
+        loof =setInterval(function(){
+        $('.next').click()
+        },4500)
+    })
+    // loof end
 
 
 
 
 
-//     //next btn start
-//     $('.next').click(function(){
+    //next btn start
+    $('.next').click(function(){
 
-//         $('.slidebanner li').eq(idx).removeClass('on').children('img').animate({
-//             left:-slideWidth
-//         }).parent().next().addClass('on').children('img').css({
-//             display:'block',
-//             left:slideWidth
-//         }).animate({
-//             left:'0'
-//         })
-//         idx++
-//         console.log(idx)
+        $('.slidebanner li').eq(idx).removeClass('on').children('img').animate({
+            left:-slideWidth
+        }).parent().next().addClass('on').children('img').css({
+            display:'block',
+            left:slideWidth
+        }).animate({
+            left:'0'
+        })
+        idx++
+        console.log(idx)
         
-//         if(idx == $('.slidebanner li').length){
-//             idx=0
+        if(idx == $('.slidebanner li').length){
+            idx=0
             
-//             $('.slidebanner li').eq(idx).children('img').css({
-//             left:slideWidth
-//             }).animate({
-//                 left:0
-//             }).parent().addClass('on')
-//         }
+            $('.slidebanner li').eq(idx).children('img').css({
+            left:slideWidth
+            }).animate({
+                left:0
+            }).parent().addClass('on')
+        }
         
-//     })
-//     //next btn end
+    })
+    //next btn end
 
-//     //prev btn start
-//     $('.prev').click(function(){
-//          $('.slidebanner li').eq(idx).removeClass('on').children('img').animate({
-//             left:slideWidth
-//         }).parent().prev().addClass('on').children('img').css({
-//             display:'block',
-//             left:-slideWidth
-//         }).animate({
-//             left:'0'
-//         })
-//         idx--
-//         console.log(idx)
+    //prev btn start
+    $('.prev').click(function(){
+         $('.slidebanner li').eq(idx).removeClass('on').children('img').animate({
+            left:slideWidth
+        }).parent().prev().addClass('on').children('img').css({
+            display:'block',
+            left:-slideWidth
+        }).animate({
+            left:'0'
+        })
+        idx--
+        console.log(idx)
         
-//         if(idx < 0){
-//             idx = $('.slidebanner li').length-1
+        if(idx < 0){
+            idx = $('.slidebanner li').length-1
             
-//             $('.slidebanner li').eq(idx).children('img').css({
-//                 display:'block',
-//                 left:-slideWidth
-//             }).animate({
-//                 left:0
-//             }).parent().addClass('on')
-//         }
+            $('.slidebanner li').eq(idx).children('img').css({
+                display:'block',
+                left:-slideWidth
+            }).animate({
+                left:0
+            }).parent().addClass('on')
+        }
         
-//     })
-//     //prev btn end
+    })
+    //prev btn end
   
     
-//   //click move start
-//     $('.slidebanner li a').click(function(){
-//         idx =$(this).parent().index()
-//         var his  = $('.slidebanner li.on').index()
+  //click move start
+    $('.slidebanner li a').click(function(){
+        idx =$(this).parent().index()
+        var his  = $('.slidebanner li.on').index()
               
-//         // console.log(idx)
-//         // console.log(his +' : his')
+        // console.log(idx)
+        // console.log(his +' : his')
         
-//         if(idx > his){
-//             $('.slidebanner li.on').removeClass('on').children('img').animate({
-//                 left:-slideWidth
-//             })
-//             $('.slidebanner li').eq(idx).addClass('on').children('img').css({
-//                 display:'block',
-//                 left:'100%'
-//             }).animate({
-//                 left:'0'
-//             })
-//         }else if(idx < his){
-//             $('.slidebanner li.on').removeClass('on').children('img').animate({
-//                 left:slideWidth
-//             })
-//             $('.slidebanner li').eq(idx).addClass('on').children('img').css({
-//                 display:'block',
-//                 left:'-100%'
-//             }).animate({
-//                 left:'0'
-//             })
-//         }
-//     })
+        if(idx > his){
+            $('.slidebanner li.on').removeClass('on').children('img').animate({
+                left:-slideWidth
+            })
+            $('.slidebanner li').eq(idx).addClass('on').children('img').css({
+                display:'block',
+                left:'100%'
+            }).animate({
+                left:'0'
+            })
+        }else if(idx < his){
+            $('.slidebanner li.on').removeClass('on').children('img').animate({
+                left:slideWidth
+            })
+            $('.slidebanner li').eq(idx).addClass('on').children('img').css({
+                display:'block',
+                left:'-100%'
+            }).animate({
+                left:'0'
+            })
+        }
+    })
   
-//   //click a end
+  //click a end
   
-// })
+})
 
-// // C slide banner end
-
-
+// C slide banner end
 
 
-// // D fade banner start
 
-    // $(function(){
+
+// D fade banner start
+
+    $(function(){
         
-    //     fadeIdx=0
+        fadeIdx=0
         
-    //     $('.fadebanner li').eq(fadeIdx).addClass('on')
+        $('.fadebanner li').eq(fadeIdx).addClass('on')
             
-    //     var fadeloof = setInterval(function(){
-    //         $('.fadebanner li').eq(fadeIdx).removeClass('on').children('img')
-    //         .fadeOut(1000)
-    //         .parent().next().addClass('on').children('img').fadeIn(1300)
+        var fadeloof = setInterval(function(){
+            $('.fadebanner li').eq(fadeIdx).removeClass('on').children('img')
+            .fadeOut(1000)
+            .parent().next().addClass('on').children('img').fadeIn(1300)
             
-    //         fadeIdx++
+            fadeIdx++
             
-    //         if(fadeIdx == $('.fadebanner li').size()){
+            if(fadeIdx == $('.fadebanner li').size()){
                 
-    //             fadeIdx = 0
-    //              $('.fadebanner li').eq(fadeIdx).addClass('on').children('img')
-    //             .fadeIn(1000)
-    //         }
-    //         console.log(fadeIdx)
-    //     },4800)
+                fadeIdx = 0
+                 $('.fadebanner li').eq(fadeIdx).addClass('on').children('img')
+                .fadeIn(1000)
+            }
+            console.log(fadeIdx)
+        },4800)
         
-    //     $('.fadebanner').mouseenter(function(){
+        $('.fadebanner').mouseenter(function(){
             
-    //         clearInterval(fadeloof)
+            clearInterval(fadeloof)
             
-    //     }).mouseleave(function(){
+        }).mouseleave(function(){
             
-    //         fadeloof =setInterval(function(){
-    //         $('.fadebanner li').eq(fadeIdx).removeClass('on').children('img')
-    //         .fadeOut(1000)
-    //         .parent().next().addClass('on').children('img').fadeIn(1000)
+            fadeloof =setInterval(function(){
+            $('.fadebanner li').eq(fadeIdx).removeClass('on').children('img')
+            .fadeOut(1000)
+            .parent().next().addClass('on').children('img').fadeIn(1000)
             
-    //         fadeIdx++
+            fadeIdx++
             
-    //         if(fadeIdx == $('.fadebanner li').size()){
+            if(fadeIdx == $('.fadebanner li').size()){
                 
-    //             fadeIdx = 0
-    //              $('.fadebanner li').eq(fadeIdx).addClass('on').children('img')
-    //             .fadeIn(1000)
-    //         }
-    //         // console.log(fadeIdx)
-    //         },4800)
+                fadeIdx = 0
+                 $('.fadebanner li').eq(fadeIdx).addClass('on').children('img')
+                .fadeIn(1000)
+            }
+            // console.log(fadeIdx)
+            },4800)
             
-    //     })
+        })
         
 
             
        
-    // })
+    })
     
-// // D fade banner end
+// D fade banner end
 
 
 
