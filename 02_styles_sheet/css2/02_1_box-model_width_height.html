@@ -1,7 +1,7 @@
 <!--
         width   가로 . auto 나의 부모만큼 늘어나라.  
-        min-width 최소 값은 유지한다.
-        max-width
+        min-width 최소 값 이하 작아지지 않는다..
+        max-width 최대 값 이상 커지지 않는다.
 
         height  세로 . auto 나의 컨텐츠만큼 늘어나라 
         min-height
@@ -16,7 +16,7 @@
 
 
 
-<!-- 1-->
+ <!--1-->
 <!--<!doctype html>-->
 <!--<html lang="en">-->
 <!--<head>-->
@@ -33,10 +33,13 @@
 <!--        margin:20px;-->
 <!--       }-->
        
+        /*박스모델 사이즈 값을 잘 계산을 해야한다. */
+        /*ex>전체 가로의 값은= width + padding + border + margin (감싸고 있는 양쪽 모두 더해야한다.)*/
+        /*크롬에서 f12 개발자도구를 활용하라. */
+       
 <!--    </style>-->
-        <!--박스모델 사이즈 값을 잘 계산을 해야한다. 
-<!--        ex>전체 가로의 값은= width+padding+border+margin (감싸고 있는 양쪽 모두 더해야한다.)-->-->
-        <!--크롬에서 f12 개발자도구를 활용하라. -->
+    
+        
     
 <!--</head>-->
 <!--<body>-->
@@ -49,7 +52,7 @@
 
 
 
-<!-- 2 -->
+ <!--2 -->
 <!--<!doctype html>-->
 <!--<html lang="en">-->
 <!--<head>-->
@@ -57,16 +60,17 @@
 <!--    <title>Document</title>-->
     
 <!--    <style>-->
-<!--    html의 부모는 바탕화면 사이즈-->
-<!--    body는 기본적으로 8픽셀식 마진을 가지고있다.-->
-<!--    body의 부모는 html.-->
+    /*html의 부모는 바탕화면 사이즈*/
+    /*body의 부모는 html.*/
+    /*body는 기본적으로 8픽셀식 마진을 가지고있다.*/
+    
 
-<!--     ****박스형태는 위드값이 기본적으로 오토임. -->
-<!--         width:auto; 는 나의 부모 갖고있는 width 값 만큼 커져라*** -->
+    /* ****박스형태는 위드값이 기본적으로 오토임. */
+    /*     width:auto; 는 나의 부모 갖고있는 width 값 만큼 커져라*** */
 
-<!--    html{border:1px red solid}-->
-<!--    body{border:2px red solid}-->
-<!--    div {border:3px red solid; width:100%;}-->
+    /*html{border:3px solid #F00}*/
+    /*body{border:2px solid #0F0}*/
+    /*div {border:1px solid #00F; width:100%;}*/
 
 <!--    </style>-->
     
@@ -99,13 +103,13 @@
 <!--        width:350px; -->
 <!--    }-->
 <!--    .menu div{ -->
-<!--        border:1px red solid;-->
+<!--        border:1px solid #00F;-->
 <!--        width: auto;-->
         
 <!--    }-->
     
-<!--    /*부모에 설정된 width값을 변하면 자식요소 width:auto; 도 함께 변한다.*/-->
-<!--    /*잘 활용하면 두뇌 노가다를 줄일 수 있다.*/-->
+    /*부모에 설정된 width값을 변경하면 자식요소 width:auto; 도 함께 변한다.*/
+    /*잘 활용하면 두뇌 노가다를 줄일 수 있다.*/
 <!--    </style>-->
     
 <!--</head>-->
@@ -141,7 +145,7 @@
 <!--    <style>-->
 <!--        .menu{-->
 <!--            border:5px red solid;-->
-<!--            width:350px;-->
+<!--            width:500px;-->
 <!--        }-->
 <!--        .menu div {-->
 <!--            border:5px blue solid;-->
@@ -149,7 +153,7 @@
 <!--            margin:20px;-->
 <!--        }-->
 <!--    </style>-->
-     <!--width값 auto는 사이즈 변동시 유동적으로 변화된다.-->
+<!--     width값 auto는 사이즈 변동시 유동적으로 변화된다.-->
 <!--</head>-->
 <!--<body>-->
 <!--    <div class="menu">-->

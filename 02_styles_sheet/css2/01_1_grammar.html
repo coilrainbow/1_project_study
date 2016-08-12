@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>css</title>
     <link rel="stylesheet" href="01-1_external.css">
+    <!-- 익스터널 방식. 외부에서 css파일을 따로 만들어 불러온다.  style 코드만 따로 작성되어있다.-->
+    <!-- 불러오는 방식은 위와 같다.-->
+    <!-- html파일의 위치에 따라 href 안의 경로는 달라질 수 있다.-->
 
 <style>
         span {border:1px #F00 solid;}
@@ -29,11 +32,11 @@
     <div class="box">box</div>
     <div class="box">box</div>
     <div class="임의의 이름">text</div> -->
-<!-- 스타일 안에서 디자인을 할땐 {}로 감쌈. : : 으로 열고 ;로 닫음. ; = 하나 이상의 것을 더 넣을때 . 끝에는 ; 안넣어도 됨 -->
+<!-- 스타일 안에서 디자인을 할땐 {}로 감쌈.  :으로 열고;로 닫음. ; = 하나 이상의 것을 더 넣을때 . 끝에는 ; 안넣어도 됨 -->
 
 <h2>인터널 형식</h2>
 <p>인터널 형식</p>
-<p class="blue" style="width:100px">인터널 형식</p>
+<p class="blue">인터널 형식</p>
 <p>인터널 형식</p>
 <p class="yellow">인터널 형식</p>
 <span class="s2">span</span>
@@ -41,18 +44,19 @@
 
 
 <!-- inline 방식의 스타일링 : 테그에 직접적으로 속성을 집어넣어 단독적으로 작성하는 방법 -->
-<div style="border:1px red solid;">div</div>
-<div style="border:1px blue solid; width:150px; height:100%;">div1<br/>div1</div>
-<span style="border:3px green solid;">span</span>
-<span style="border:1px red solid;">span</span>
-
-
+<!--우선순위가 가장 높다-->
 <h2>인라인 형식</h2>
 <p style="border:3px red solid; background-color:green;">인라인 형식</p>
 <p style="border:1px red solid; ">인라인 형식</p>
 <p style="border:7px red solid; background-color:green;">인라인 형식</p>
 <p style="border:1px red solid; ">인라인 형식</p>
 <p style="border:6px blue solid; background-color:yellow">인라인형식</p>
+
+
+<div style="border:1px red solid;">div</div>
+<div style="border:1px blue solid; width:150px; height:100%;">div1<br/>div1</div>
+<span style="border:3px green solid;">span</span>
+<span style="border:1px red solid;">span</span>
 
 </body>
 </html>
